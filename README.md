@@ -1,2 +1,4 @@
 # HugoBrunet13.github.io
-Read me
+
+Hugo BRUNET - hugo.brunet@devinci.fr
+Jean Mickael NOUNAHON - jean-mickael.nounahon@devinci.fr
