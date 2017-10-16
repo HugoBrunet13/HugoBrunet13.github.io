@@ -1,15 +1,18 @@
+body{
+    text-align: center;
+}
 
 .index-content a:hover{
     color:black;
     text-decoration:none;
 }
-/*.index-content{
+.index-content{
     margin-bottom:20px;
     padding:50px 0px;
     margin-right: auto;
     margin-left: auto;
     
-}*/
+}
 
 /*.index-content .row{
     margin-top:20px;
@@ -49,4 +52,4 @@
         margin-top: 20px;
         margin: auto;
     }
-}   
+} 
