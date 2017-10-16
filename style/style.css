@@ -1,3 +1,10 @@
+.centreVerticalement {
+ display: inline-block;
+ vertical-align: middle;
+ float: none;
+}
+
+
 .index-content a:hover{
     color:black;
     text-decoration:none;
