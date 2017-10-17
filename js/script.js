@@ -19,13 +19,14 @@ $(document).ready(function() {
 	// }
 
 	$("#boutonRecherche").click(function(){
-		if ($("#numBlock").val()!=null){
-			RechercherBlock($("#numBlock").val());
-		} else if($("#numTransac").val()!=null){
-			RechercherTransaction($("#numTransac").val());
-		} else if ($("#adresse").val()!=null){
-			RechercherAdresse($("#adresse").val());
-		}
+		console.log("test");
+		// if ($("#numBlock").val()!=null){
+		// 	RechercherBlock($("#numBlock").val());
+		// } else if($("#numTransac").val()!=null){
+		// 	RechercherTransaction($("#numTransac").val());
+		// } else if ($("#adresse").val()!=null){
+		// 	RechercherAdresse($("#adresse").val());
+		// }
 	});
 
 
