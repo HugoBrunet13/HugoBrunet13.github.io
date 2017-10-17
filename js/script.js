@@ -46,7 +46,7 @@ $(document).ready(function() {
 
 	function MiseEnFormeInfoBlock(data){
 		$("#infoBlock").show();
-		$("#infoBlock").append("uououououfreoifgerjerkfkrejhkerjg");
+		$("#infoBlock").append("info1;info2,info3....");
 	}
 
 	function MiseEnFormeInfoTransaction(data){
