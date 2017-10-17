@@ -1,5 +1,9 @@
 $(document).ready(function() {
-	console.log("test1111");
+
+	$(".input-group-addon").submit(fuction(){
+		console.log($(".form-control"));
+	});
+
 	$.ajax({
 		url : " https://bitcoin.mubiz.com/blocks",
 		dataType : "json",
