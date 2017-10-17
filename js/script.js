@@ -2,14 +2,14 @@ $(document).ready(function() {
 
 
 	function RechercherBlock(indexBLock,urlWS){
-		$("#numBlock").empty();
+		$("#numBlock")="";
 		var retourAjax = AppelWS(indexBLock,urlWS,"#infoBlock");
 		var data = retourAjax.responseJSON;
 		MiseEnFormeInfoBlock(data);
 	}
 
  	function RechercherTransaction(idTransaction,urlWS){
- 		$("#numTransac").empty();
+ 		$("#numTransac")"";
  	// 	var retourAjax = AppelWS(idTransaction,urlWS,"#infoTranscation");
 		// var data = retourAjax.responseJSON;
 		// console.log(data);
@@ -18,7 +18,7 @@ $(document).ready(function() {
  	}
 
 	function RechercherAdresse(adresse,urlWS){
-		$("#adresse").empty();
+		$("#adresse")="";
 		// var retourAjax = AppelWS(adresse,urlWS,"#infoAdresse");
 		// var data = retourAjax.responseJSON;
 		// console.log(data);
@@ -27,7 +27,6 @@ $(document).ready(function() {
 	}
 
 	function AppelWS(param,urlWS,divResultat){
-		console.log("dans la fonction appel ws");
 		var appelAjax = $.ajax({
 			url : urlWS+param+"/",
 			dataType : "json",
@@ -51,15 +50,17 @@ $(document).ready(function() {
 
 	function MiseEnFormeInfoBlock(data){
 		$("#infoBlock").show();
-		$("#infoBlock").append("info1;info2,info3....");
+		$("#infoBlock").append("infoblock1;infoblock2,info3block....");
 	}
 
 	function MiseEnFormeInfoTransaction(data){
 		$("#infoTransaction").show();
+		$("#infoTransaction").append("infotransac1;transac2....");
 	}
 
 	function MiseEnFormeInfoAdresse(data){
 		$("#infoAdresse").show();
+		$("#infoAdresse").append("infoAdresse;infoAdresse2....");
 	}
 
 
