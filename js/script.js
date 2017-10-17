@@ -50,11 +50,11 @@ $(document).ready(function() {
 	}
 
 	function MiseEnFormeInfoTransaction(data){
-		//$('#ReponseWS').append(data.hash);
+		$("#infoTransaction").show();
 	}
 
 	function MiseEnFormeInfoAdresse(data){
-		//$('#ReponseWS').append(data.hash);
+		$("#infoAdresse").show();
 	}
 
 
@@ -71,15 +71,15 @@ $(document).ready(function() {
 	
 	$("#boutonRecherche").click(function(){
 		if ($("#numBlock").val()!=""){
-			CacherDivInfo();
+			CacherViderDivInfo();
 			RechercherBlock($("#numBlock").val(),"https://bitcoin.mubiz.com/block/");
 		} 
 		if($("#numTransac").val()!=""){
-			CacherDivInfo();
+			CacherViderDivInfo();
 			RechercherTransaction($("#numTransac").val(),"https://bitcoin.mubiz.com/transaction/");
 		} 
 		if ($("#adresse").val()!=""){
-			CacherDivInfo();
+			CacherViderDivInfo();
 			RechercherAdresse($("#adresse").val(),"https://bitcoin.mubiz.com/address/");
 		}
 	});
