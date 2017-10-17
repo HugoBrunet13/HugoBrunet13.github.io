@@ -1,6 +1,6 @@
 $(document).ready(function() {
 
-	$(".input-group-addon").submit(fuction(){
+	$(".input-group-addon").submit(function(){
 		console.log($(".form-control"));
 	});
 
