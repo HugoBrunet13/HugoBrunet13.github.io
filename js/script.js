@@ -9,6 +9,7 @@ $(document).ready(function() {
 		async : false,
 
 		success : function(data) {
+			console.log(data);
 			$('#ReponseWS').append(data.blocks);
 		},
 
@@ -16,6 +17,4 @@ $(document).ready(function() {
 			$('#ReponseWS').append(err+" N/A");
 		}
 	});
-	
-	console.log(data);
 });
