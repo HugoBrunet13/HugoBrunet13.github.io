@@ -19,11 +19,13 @@ $(document).ready(function() {
 
 
 	$("#boutonRecherche").click(function(){
-		if ($("#numBlock").val()!=null){
+		if ($("#numBlock").val()!=""){
 			RechercherBlock($("#numBlock").val(),"https://bitcoin.mubiz.com/block/");
-		} else if($("#numTransac").val()!=null){
+		} 
+		if($("#numTransac").val()!=""){
 			RechercherTransaction($("#numTransac").val(),"https://bitcoin.mubiz.com/transaction/");
-		} else if ($("#adresse").val()!=null){
+		} 
+		if ($("#adresse").val()!=""){
 			RechercherAdresse($("#adresse").val(),"https://bitcoin.mubiz.com/address/");
 		}
 	});
@@ -31,6 +33,7 @@ $(document).ready(function() {
 
 
 	function AppelWS(param,urlWS){
+		console.log("dans la fonction appel ws");
 		$.ajax({
 			url : urlWS+param+"/",
 			dataType : "json",
@@ -40,6 +43,7 @@ $(document).ready(function() {
 			async : false,
 
 			success : function(data) {
+				console.log(data);
 				return data;
 			},
 
