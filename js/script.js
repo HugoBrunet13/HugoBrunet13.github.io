@@ -1,4 +1,5 @@
 $(document).ready(function() {
+	console.log("test1111");
 	$.ajax({
 		url : " https://bitcoin.mubiz.com/blocks",
 		dataType : "json",
@@ -15,5 +16,6 @@ $(document).ready(function() {
 			$('#ReponseWS').append(err+" N/A");
 		}
 	});
-});
 	
+	console.log("test222");
+});
