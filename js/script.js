@@ -2,38 +2,26 @@ $(document).ready(function() {
 
 
 	function RechercherBlock(indexBLock,urlWS){
-		console.log(indexBLock);
-		var retourAjax = AppelWS(indexBLock,urlWS);
+		var retourAjax = AppelWS(indexBLock,urlWS,"#infoBlock");
 		var data = retourAjax.responseJSON;
-		console.log(data);
+		MiseEnFormeInfoBlock(data);
 	}
 
  	function RechercherTransaction(idTransaction,urlWS){
- 		console.log(idTransaction);
+ 		var retourAjax = AppelWS(indexBLock,urlWS,"#infoTranscation");
+		var data = retourAjax.responseJSON;
+		console.log(data);
+		MiseEnFormeInfoTransaction(data);
  	}
 
 	function RechercherAdresse(adresse,urlWS){
-		console.log(adresse);
+		var retourAjax = AppelWS(indexBLock,urlWS,"#infoAdresse");
+		var data = retourAjax.responseJSON;
+		console.log(data);
+		MiseEnFormeInfoAdresse(data);
 	}
 
-
-
-
-	$("#boutonRecherche").click(function(){
-		if ($("#numBlock").val()!=""){
-			RechercherBlock($("#numBlock").val(),"https://bitcoin.mubiz.com/block/");
-		} 
-		if($("#numTransac").val()!=""){
-			RechercherTransaction($("#numTransac").val(),"https://bitcoin.mubiz.com/transaction/");
-		} 
-		if ($("#adresse").val()!=""){
-			RechercherAdresse($("#adresse").val(),"https://bitcoin.mubiz.com/address/");
-		}
-	});
-
-
-
-	function AppelWS(param,urlWS){
+	function AppelWS(param,urlWS,divResultat){
 		console.log("dans la fonction appel ws");
 		var appelAjax = $.ajax({
 			url : urlWS+param+"/",
@@ -49,39 +37,50 @@ $(document).ready(function() {
 			},
 
 			error : function(xhr, status, err) {
-				$('#ReponseWS').append(err+" N/A");
+				$(divResultat).append(err+" N/A");
 				return null;
 			}
 		});
 		return appelAjax;
 	}
 
+	function MiseEnFormeInfoBlock(data){
+		$("#infoBlock").show();
+		$("#infoBlock").append("uououououfreoifgerjerkfkrejhkerjg");
+	}
+
+	function MiseEnFormeInfoTransaction(data){
+		//$('#ReponseWS').append(data.hash);
+	}
+
+	function MiseEnFormeInfoAdresse(data){
+		//$('#ReponseWS').append(data.hash);
+	}
 
 
-	// $(".input-group-addon").click(function(){
-	// 	console.log("ntm");
-	// 	console.log($(".form-control").val());
+	function CacherDivInfo(){
+		$("#infoBlock").hide();
+		$("#infoTransaction").hide();
+		$("#infoAdresse").hide();	
+	}
+
+	CacherDivInfo();
+	
+	$("#boutonRecherche").click(function(){
+		if ($("#numBlock").val()!=""){
+			CacherDivInfo();
+			RechercherBlock($("#numBlock").val(),"https://bitcoin.mubiz.com/block/");
+		} 
+		if($("#numTransac").val()!=""){
+			CacherDivInfo();
+			RechercherTransaction($("#numTransac").val(),"https://bitcoin.mubiz.com/transaction/");
+		} 
+		if ($("#adresse").val()!=""){
+			CacherDivInfo();
+			RechercherAdresse($("#adresse").val(),"https://bitcoin.mubiz.com/address/");
+		}
+	});
 
 
-		// $.ajax({
-		// 	url : "https://bitcoin.mubiz.com/block/"+$(".form-control").val()+"/",
-		// 	dataType : "json",
-		// 	contentType : "application/json; charset=utf-8",
-		// 	type : "GET",
-		// 	timeout:	"5000",
-		// 	async : false,
 
-		// 	success : function(data) {
-		// 		console.log(data);
-		// 		$('#ReponseWS').append(data.hash);
-		// 	},
-
-		// 	error : function(xhr, status, err) {
-		// 		$('#ReponseWS').append(err+" N/A");
-		// 	}
-
-
-	// 		//supprimer le contenu de la div d'affiche a chaque clik sur lle bouton
-	// 	});
-	// });
 });
