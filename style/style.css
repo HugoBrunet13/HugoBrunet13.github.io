@@ -87,3 +87,10 @@ body{
 #infoAdresse{
     border: solid 1px green;
 }
+
+
+    #custom-search-form {
+        margin:0;
+        margin-top: 5px;
+        padding: 0;
+    }

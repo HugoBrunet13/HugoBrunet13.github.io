@@ -26,35 +26,25 @@
 
 
 		<div class="container">
-            <form class="form-horizontal" role="form">
-                <div class="form-group">
-                    <label for="numBlock" class="col-sm-3 control-label">Numéro du block</label>
-                    <div class="col-sm-9">
-                        <input type="text" id="numBlock" placeholder="ex: 40000" class="form-control">
-                    </div>
-                </div>
-                <div class="form-group">
-                    <label for="numTransac" class="col-sm-3 control-label">Numéro de transaction</label>
-                    <div class="col-sm-9">
-                        <input type="text" id="numTransac" placeholder="ex: ????" class="form-control">
-                    </div>
-                </div>
-                <div class="form-group">
-                    <label for="adresse" class="col-sm-3 control-label">Adresse</label>
-                    <div class="col-sm-9">
-                        <input type="text" id="adresse" placeholder="ex: ????" class="form-control">
-                    </div>
-                </div>
-                <div class="form-group">
-                    <div class="col-sm-9 col-sm-offset-3">
-                        <button type="button" class="btn btn-primary btn-block" id="boutonRecherche">Rechercher</button>
-                    </div>
-                </div>
 
-            </form> <!-- /form -->
-        
 
-	         <div id="infoBlock">
+			<div class="row">
+		        <div class="span12">
+		            <form id="custom-search-form" class="form-search form-horizontal pull-right">
+		                <div class="input-append span12">
+		                    <input type="text" id="numBlock" class="search-query mac-style" placeholder="Numéro du block">
+		                </div>
+		                <div class="input-append span12">
+		                    <input type="text" id="numTransac" class="search-query mac-style" placeholder="Numéro de transaction">
+		                </div>
+		                <div class="input-append span12">
+		                    <input type="text" id="adresse" class="search-query mac-style" placeholder="Adresse">
+		                </div>
+		            </form>
+		        </div>
+			</div>
+
+	        <div id="infoBlock">
 	                info block
 	        </div>
 	        <div id="infoTransaction">
