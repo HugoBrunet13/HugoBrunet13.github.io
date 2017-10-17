@@ -1,6 +1,7 @@
 $(document).ready(function() {
 
 	$(".input-group-addon").click(function(){
+		console.log("ntm");
 		console.log($(".form-control").text());
 	});
 
