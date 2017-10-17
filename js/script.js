@@ -1,11 +1,11 @@
 $(document).ready(function() {
 
-	$(".input-group-addon").submit(function(){
-		console.log($(".form-control"));
+	$(".input-group-addon").click(function(){
+		console.log($(".form-control").text());
 	});
 
 	$.ajax({
-		url : " https://bitcoin.mubiz.com/blocks",
+		url : "https://bitcoin.mubiz.com/block/"+$(".form-control").text()+"/",
 		dataType : "json",
 		contentType : "application/json; charset=utf-8",
 		type : "GET",
@@ -14,7 +14,7 @@ $(document).ready(function() {
 
 		success : function(data) {
 			console.log(data);
-			$('#ReponseWS').append(data.blocks);
+			$('#ReponseWS').append(data.size);
 		},
 
 		error : function(xhr, status, err) {
