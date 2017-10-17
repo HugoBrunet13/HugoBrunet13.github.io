@@ -58,10 +58,13 @@ $(document).ready(function() {
 	}
 
 
-	function CacherDivInfo(){
+	function CacherViderDivInfo(){
 		$("#infoBlock").hide();
+		$("#infoBlock").empty();
 		$("#infoTransaction").hide();
+		$("#infoTransaction").empty();
 		$("#infoAdresse").hide();	
+		$("#infoAdresse").empty();	
 	}
 
 	CacherDivInfo();
