@@ -34,7 +34,7 @@ $(document).ready(function() {
 
 	function AppelWS(param,urlWS){
 		console.log("dans la fonction appel ws");
-		$.ajax({
+		var appelAjax = $.ajax({
 			url : urlWS+param+"/",
 			dataType : "json",
 			contentType : "application/json; charset=utf-8",
@@ -49,8 +49,10 @@ $(document).ready(function() {
 
 			error : function(xhr, status, err) {
 				$('#ReponseWS').append(err+" N/A");
+				return null;
 			}
 		});
+		return appelAjax;
 	}
 
 
