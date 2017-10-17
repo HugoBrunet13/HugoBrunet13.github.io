@@ -75,3 +75,15 @@ body{
         margin: auto;
     }
 }
+
+#infoBlock{
+    border: solid 1px blue;
+}
+
+#infoTransaction{
+    border: solid 1px red;
+}
+
+#infoAdresse{
+    border: solid 1px green;
+}

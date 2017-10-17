@@ -67,7 +67,7 @@ $(document).ready(function() {
 		$("#infoAdresse").empty();	
 	}
 
-	CacherDivInfo();
+	CacherViderDivInfo();
 	
 	$("#boutonRecherche").click(function(){
 		if ($("#numBlock").val()!=""){
