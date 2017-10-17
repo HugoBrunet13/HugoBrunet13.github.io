@@ -3,7 +3,8 @@ $(document).ready(function() {
 
 	function RechercherBlock(indexBLock,urlWS){
 		console.log(indexBLock);
-		var data = AppelWS(indexBLock,urlWS);
+		var retourAjax = AppelWS(indexBLock,urlWS);
+		var data = retourAjax.responseJSON;
 		console.log(data);
 	}
 
