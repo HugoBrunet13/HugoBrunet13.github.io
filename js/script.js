@@ -2,14 +2,14 @@ $(document).ready(function() {
 
 	$(".input-group-addon").click(function(){
 		console.log("ntm");
-		console.log($(".form-control").text());
+		console.log($(".form-control").val());
 
 
 
 
 
 		$.ajax({
-			url : "https://bitcoin.mubiz.com/block/"+$(".form-control").text()+"/",
+			url : "https://bitcoin.mubiz.com/block/"+$(".form-control").val()+"/",
 			dataType : "json",
 			contentType : "application/json; charset=utf-8",
 			type : "GET",
