@@ -3,8 +3,8 @@ $(document).ready(function() {
 
 	function RechercherBlock(indexBLock,urlWS){
 		console.log(indexBLock);
-		$data = AppelWS(indexBLock,urlWS);
-		console.log($data);
+		var data = AppelWS(indexBLock,urlWS);
+		console.log(data);
 	}
 
  	function RechercherTransaction(idTransaction,urlWS){
