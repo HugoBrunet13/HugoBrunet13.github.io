@@ -2,14 +2,14 @@ $(document).ready(function() {
 
 
 	function RechercherBlock(indexBLock,urlWS){
-		$("#numBlock").val()="";
+		$("#numBlock").val('');
 		var retourAjax = AppelWS(indexBLock,urlWS,"#infoBlock");
 		var data = retourAjax.responseJSON;
 		MiseEnFormeInfoBlock(data);
 	}
 
  	function RechercherTransaction(idTransaction,urlWS){
- 		$("#numTransac").val()="";
+ 		$("#numTransac").val('');
  	// 	var retourAjax = AppelWS(idTransaction,urlWS,"#infoTranscation");
 		// var data = retourAjax.responseJSON;
 		// console.log(data);
@@ -18,7 +18,7 @@ $(document).ready(function() {
  	}
 
 	function RechercherAdresse(adresse,urlWS){
-		$("#adresse").val()="";
+		$("#adresse").val('');
 		// var retourAjax = AppelWS(adresse,urlWS,"#infoAdresse");
 		// var data = retourAjax.responseJSON;
 		// console.log(data);
