@@ -2,22 +2,27 @@ $(document).ready(function() {
 
 
 	function RechercherBlock(indexBLock,urlWS){
+		$("#numBlock").empty();
 		var retourAjax = AppelWS(indexBLock,urlWS,"#infoBlock");
 		var data = retourAjax.responseJSON;
 		MiseEnFormeInfoBlock(data);
 	}
 
  	function RechercherTransaction(idTransaction,urlWS){
- 		var retourAjax = AppelWS(indexBLock,urlWS,"#infoTranscation");
-		var data = retourAjax.responseJSON;
-		console.log(data);
+ 		$("#numTransac").empty();
+ 	// 	var retourAjax = AppelWS(idTransaction,urlWS,"#infoTranscation");
+		// var data = retourAjax.responseJSON;
+		// console.log(data);
+		var data ="hu";
 		MiseEnFormeInfoTransaction(data);
  	}
 
 	function RechercherAdresse(adresse,urlWS){
-		var retourAjax = AppelWS(indexBLock,urlWS,"#infoAdresse");
-		var data = retourAjax.responseJSON;
-		console.log(data);
+		$("#adresse").empty();
+		// var retourAjax = AppelWS(adresse,urlWS,"#infoAdresse");
+		// var data = retourAjax.responseJSON;
+		// console.log(data);
+		var data ="hu";
 		MiseEnFormeInfoAdresse(data);
 	}
 
