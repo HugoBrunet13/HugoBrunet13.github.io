@@ -3,7 +3,7 @@ $(document).ready(function() {
 
 	function RechercherBlock(indexBLock,urlWS){
 		$("#numBlock").val('');
-		var retourAjax = AppelWS(indexBLock,urlWS,"#infoBlock");
+		var retourAjax = AppelWS(indexBLock,urlWS,"#erreurBlock");
 		var data = retourAjax.responseJSON;
 		MiseEnFormeInfoBlock(data);
 	}
