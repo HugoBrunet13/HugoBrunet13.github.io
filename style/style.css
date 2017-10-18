@@ -3,15 +3,15 @@ body{
 }
 
 #numBlock{
-    background: #A9CCE3;
+    background:#40d47e ;
 }
 
 #numTransac{
-    background: #ABEBC6;
+    background: #CACFD2;
 }
 
 #adresse{
-    background:#ABB2B9;
+    background:#99A3A4 ;
 }
 
 .index-content a:hover{
@@ -25,6 +25,23 @@ body{
     margin-left: auto;
     
 }
+
+::-webkit-input-placeholder { 
+    color:    #F00;
+}
+:-moz-placeholder { 
+   color:    #F00;
+   opacity:  1;
+}
+::-moz-placeholder { 
+   color:    #F00;
+   opacity:  1;
+}
+:-ms-input-placeholder { 
+   color:    #F00;
+}
+
+
 
 /*.index-content .row{
     margin-top:20px;
@@ -57,7 +74,7 @@ body{
 }
 
 .stylish-input-group .input-group-addon{
-    background: white !important; 
+    background: white !important;
 }
 .stylish-input-group .form-control{
     border-right:0; 
@@ -70,7 +87,7 @@ body{
 }
 
 #boutonRecherche{
-    background:#E5E7E9;
+    background:#212F3D;
 }
 
 
@@ -94,21 +111,21 @@ body{
     padding: 15px;
     margin: 0 auto;
     /*background-color: #fff;*/
-    background: #A9CCE3;
+    background: #E5E7E9;
     border-radius: 0.3em;
 }
 
 #infoTransaction{
     margin: 0 auto;
     /*background-color: #fff;*/
-    background: #ABEBC6;
+    background: #BDC3C7;
     border-radius: 0.3em;
 }
 
 #infoAdresse{
     margin: 0 auto;
     /*background-color: #fff;*/
-    background:  #ABB2B9;
+    background:  #797D7F  ;
     border-radius: 0.3em;
     border: solid 1px green;
 }
