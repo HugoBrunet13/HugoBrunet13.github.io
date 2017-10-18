@@ -5,9 +5,7 @@ $(document).ready(function() {
 		$("#numBlock").val('');
 		var retourAjax = AppelWS(indexBLock,urlWS,"#infoBlock");
 		var data = retourAjax.responseJSON;
-		if (data!= null){
-			MiseEnFormeInfoBlock(data);
-		}
+		MiseEnFormeInfoBlock(data);
 	}
 
  	function RechercherTransaction(idTransaction,urlWS){
@@ -41,7 +39,7 @@ $(document).ready(function() {
 			},
 
 			error : function(xhr, status, err) {
-				// $(divResultat).empty();
+				$(divResultat).text('');
 				$(divResultat).append(err+" N/A");
 			}
 		});
@@ -51,35 +49,35 @@ $(document).ready(function() {
 	function ClearResultatBlock(){
 		$("#BLOCK_hash").text('');
 		$("#BLOCK_confirmation").text('');
-		$("#BLOCK_size").val('');
-		$("#BLOCK_weight").val('');
-		$("#BLOCK_height").val('');
-		$("#BLOCK_version").val('');
-		$("#BLOCK_time").val('');
-		$("#BLOCK_medianTime").val('');
-		$("#BLOCK_difficulty").val('');
-		$("#BLOCK_previousBlockHash").val('');
-		$("#BLOCK_nextBlockHash").val('');
-		$("#BLOCK_tx").val('');
-		console.log("ok");
+		$("#BLOCK_size").text('');
+		$("#BLOCK_weight").text('');
+		$("#BLOCK_height").text('');
+		$("#BLOCK_version").text('');
+		$("#BLOCK_time").text('');
+		$("#BLOCK_medianTime").text('');
+		$("#BLOCK_difficulty").text('');
+		$("#BLOCK_previousBlockHash").text('');
+		$("#BLOCK_nextBlockHash").text('');
+		$("#BLOCK_tx").text('');
 	}
 
 	function MiseEnFormeInfoBlock(data){
 		ClearResultatBlock();
 		$("#infoBlock").show();
-
-		$("#BLOCK_hash").append(data.hash);
-		$("#BLOCK_confirmation").append(data.confirmations);
-		$("#BLOCK_size").append(data.size);
-		$("#BLOCK_weight").append(data.weight);
-		$("#BLOCK_height").append(data.height);
-		$("#BLOCK_version").append(data.version);
-		$("#BLOCK_time").append(data.time);
-		$("#BLOCK_medianTime").append(data.mediantime);
-		$("#BLOCK_difficulty").append(data.difficulty);
-		$("#BLOCK_previousBlockHash").append(data.previousblockhash);
-		$("#BLOCK_nextBlockHash").append(data.nextblockhash);
-		//$("#BLOCK_tx").append(data.tx);
+		if (data!= null){
+			$("#BLOCK_hash").append(data.hash);
+			$("#BLOCK_confirmation").append(data.confirmations);
+			$("#BLOCK_size").append(data.size);
+			$("#BLOCK_weight").append(data.weight);
+			$("#BLOCK_height").append(data.height);
+			$("#BLOCK_version").append(data.version);
+			$("#BLOCK_time").append(data.time);
+			$("#BLOCK_medianTime").append(data.mediantime);
+			$("#BLOCK_difficulty").append(data.difficulty);
+			$("#BLOCK_previousBlockHash").append(data.previousblockhash);
+			$("#BLOCK_nextBlockHash").append(data.nextblockhash);
+			//$("#BLOCK_tx").append(data.tx);
+		}
 	}
 
 	function MiseEnFormeInfoTransaction(data){
@@ -95,28 +93,25 @@ $(document).ready(function() {
 	}
 
 
-	function CacherViderDivInfo(){
+	function CacherDivInfo(){
 		$("#infoBlock").hide();
-		// $("#infoBlock").empty();
 		$("#infoTransaction").hide();
-		// $("#infoTransaction").empty();
-		$("#infoAdresse").hide();	
-		// $("#infoAdresse").empty();	
+		$("#infoAdresse").hide();		
 	}
 
-	CacherViderDivInfo();
+	CacherDivInfo();
 	
 	$("#boutonRecherche").click(function(){
 		if ($("#numBlock").val()!=""){
-			CacherViderDivInfo();
+			CacherDivInfo();
 			RechercherBlock($("#numBlock").val(),"https://bitcoin.mubiz.com/block/");
 		} 
 		if($("#numTransac").val()!=""){
-			CacherViderDivInfo();
+			CacherDivInfo();
 			RechercherTransaction($("#numTransac").val(),"https://bitcoin.mubiz.com/transaction/");
 		} 
 		if ($("#adresse").val()!=""){
-			CacherViderDivInfo();
+			CacherDivInfo();
 			RechercherAdresse($("#adresse").val(),"https://bitcoin.mubiz.com/address/");
 		}
 	});
