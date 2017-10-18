@@ -63,11 +63,11 @@ $(document).ready(function() {
 
 	function MiseEnFormeInfoBlock(data){
 		console.log(data);
-		$(".infoBlock").show();
+		// $(".infoBlock").show();
 		if (data){
 			console.log("bene");
 			ClearResultatBlock();
-			$("#erreurBlock").hide();
+			// $("#erreurBlock").hide();
 			$("#BLOCK_hash").append(data.hash);
 			$("#BLOCK_confirmation").append(data.confirmations);
 			$("#BLOCK_size").append(data.size);
@@ -82,7 +82,7 @@ $(document).ready(function() {
 			//$("#BLOCK_tx").append(data.tx);
 		} else{
 			console.log("errure mgl");
-			$(".tableBlock").hide();
+			// $(".tableBlock").hide();
 		}
 	}
 
@@ -105,11 +105,11 @@ $(document).ready(function() {
 		$("#infoAdresse").hide();		
 	}
 
-	CacherDivInfo();
+	// CacherDivInfo();
 	
 	$("#boutonRecherche").click(function(){
 		if ($("#numBlock").val()!=""){
-			CacherDivInfo();
+			// CacherDivInfo();
 			RechercherBlock($("#numBlock").val(),"https://bitcoin.mubiz.com/block/");
 		} 
 		if($("#numTransac").val()!=""){
@@ -117,7 +117,7 @@ $(document).ready(function() {
 			RechercherTransaction($("#numTransac").val(),"https://bitcoin.mubiz.com/transaction/");
 		} 
 		if ($("#adresse").val()!=""){
-			CacherDivInfo();
+			// CacherDivInfo();
 			RechercherAdresse($("#adresse").val(),"https://bitcoin.mubiz.com/address/");
 		}
 	});
