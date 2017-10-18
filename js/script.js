@@ -10,10 +10,9 @@ $(document).ready(function() {
 
  	function RechercherTransaction(idTransaction,urlWS){
  		$("#numTransac").val('');
- 	// 	var retourAjax = AppelWS(idTransaction,urlWS,"#infoTranscation");
-		// var data = retourAjax.responseJSON;
-		// console.log(data);
-		var data ="hu";
+ 	 	var retourAjax = AppelWS(idTransaction,urlWS,"#infoTranscation");
+		var data = retourAjax.responseJSON;
+	 	console.log(data);
 		MiseEnFormeInfoTransaction(data);
  	}
 
@@ -36,13 +35,11 @@ $(document).ready(function() {
 			async : false,
 
 			success : function(data) {
-				console.log(data);
-				return data;
+				
 			},
 
 			error : function(xhr, status, err) {
 				$(divResultat).append(err+" N/A");
-				return null;
 			}
 		});
 		return appelAjax;
