@@ -9,7 +9,7 @@ $(document).ready(function() {
 
  	function RechercherTransaction(idTransaction,urlWS){
  		$("#numTransac").val('');
- 	 	var retourAjax = AppelWS(idTransaction,urlWS,"#infoTransaction");
+ 	 	var retourAjax = AppelWS(idTransaction,urlWS,"#erreurTransac");
 		var data = retourAjax.responseJSON;
 		MiseEnFormeInfoTransaction(data);
  	}
@@ -59,6 +59,17 @@ $(document).ready(function() {
 		$("#BLOCK_tx").text('');
 	}
 
+	function ClearResultatTransaction(){
+		$("#TX_txid").text('');
+		$("#TX_hash").text('');
+		$("#TX_size").text('');
+		$("#TX_version").text('');
+		$("#TX_blockhash").text('');
+		$("#TX_confirmation").text('');
+		$("#TX_time").text('');
+		$("#TX_bloctime").text('');
+	}
+
 	function MiseEnFormeInfoBlock(data){
 		$("#infoBlock").show();
 		$("#tableBlock").show();
@@ -84,9 +95,23 @@ $(document).ready(function() {
 	}
 
 	function MiseEnFormeInfoTransaction(data){
-		//supprimer contenu de la div a chaque nouvel appel
 		$("#infoTransaction").show();
-		$("#infoTransaction").append("infotransac1;transac2....");
+		$("#tabletransac").show();
+		$("#erreurTransac").show();
+		if (data){
+			$("#erreurTransac").hide();
+			ClearResultatTransaction();
+			$("#TX_txid").append(data.txid);
+			$("#TX_hash").append(data.hash);
+			$("#TX_size").append(data.size);
+			$("#TX_version").append(data.version);
+			$("#TX_blockhash").append(data.blockhash);
+			$("#TX_confirmation").append(data.confirmations);
+			$("#TX_time").append(data.time);
+			$("#TX_bloctime").append(data.bloctime);
+		} else{
+			$("#tabletransac").hide();
+		}
 	}
 
 	function MiseEnFormeInfoAdresse(data){
@@ -109,7 +134,6 @@ $(document).ready(function() {
 			RechercherBlock($("#numBlock").val(),"https://bitcoin.mubiz.com/block/");
 		} 
 		if($("#numTransac").val()!=""){
-			//CacherDivInfo();
 			RechercherTransaction($("#numTransac").val(),"https://bitcoin.mubiz.com/transaction/");
 		} 
 		if ($("#adresse").val()!=""){
