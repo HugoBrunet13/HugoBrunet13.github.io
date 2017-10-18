@@ -59,23 +59,23 @@
 							<td><div id="BLOCK_hash"></div></td> 
 						</tr>
 						<tr> 
-							<td>Confirmations</td> 
+							<td>Nombre de confirmations</td> 
 							<td><div id="BLOCK_confirmation"></div></td> 
 						</tr>
 						<tr> 
-						<td>Size</td> 
+						<td>Taille du bloc</td> 
 							<td><div id="BLOCK_size"></div></td> 
 						</tr>
 						<tr> 
-							<td>Weight</td> 
+							<td>Poids du bloc</td> 
 							<td><div id="BLOCK_weight"></div></td> 
 						</tr>
 						<tr> 
-							<td>Height</td> 
+							<td>Hauteur du bloc</td> 
 							<td><div id="BLOCK_height"></div></td> 
 						</tr>
 						<tr> 
-							<td>Version</td> 
+							<td>Version du bloc</td> 
 							<td><div id="BLOCK_version"></div></td> 
 						</tr>
 						<tr> 
@@ -83,19 +83,19 @@
 							<td><div id="BLOCK_time"></div></td> 
 						</tr>
 						<tr> 
-							<td>Median time</td> 
+							<td>Temps median pour le meilleur bloc actuel</td> 
 							<td><div id="BLOCK_medianTime"></div></td> 
 						</tr>
 						<tr> 
-							<td>Difficulty</td> 
+							<td>Difficulté lors de l'émission du bloc</td> 
 							<td><div id="BLOCK_difficulty"></div></td> 
 						</tr>
 						<tr> 
-							<td>Previous block hash</td> 
+							<td>Hash du précédent bloc</td> 
 							<td><div id="BLOCK_previousBlockHash"></div></td> 
 						</tr>
 						<tr> 
-							<td>Next block hash</td> 
+							<td>Hash du bloc suivant</td> 
 							<td><div id="BLOCK_nextBlockHash"></div></td> 
 						</tr>
 						<tr> 
@@ -112,7 +112,7 @@
 				<table class="table" id="tabletransac"> 
 					<tbody> 
 						<tr> 
-							<td>Identifiant</td> 
+							<td>Identifiant de la transaction</td> 
 							<td><div id="TX_txid"></div></td> 
 						</tr>
 						<tr> 
@@ -120,27 +120,27 @@
 							<td><div id="TX_hash"></div></td> 
 						</tr>
 						<tr> 
-							<td>Size tx</td> 
+							<td>Taille de la transaction</td> 
 							<td><div id="TX_size"></div></td> 
 						</tr>
 						<tr> 
-							<td>Version</td> 
+							<td>Version de la transaction</td> 
 							<td><div id="TX_version"></div></td> 
 						</tr>
 						<tr> 
-							<td>Hash du bloc</td> 
+							<td>Hash du bloc contenant la transaction</td> 
 							<td><div id="TX_blockhash"></div></td> 
 						</tr>
 						<tr> 
-							<td>Confirmations</td> 
+							<td>Nombre de confirmations</td> 
 							<td><div id="TX_confirmations"></div></td> 
 						</tr>
 						<tr> 
-							<td>Time</td> 
+							<td>Nombre de secondes depuis le premier bloc jusqu'à la transation</td> 
 							<td><div id="TX_time"></div></td> 
 						</tr>
 						<tr> 
-							<td>Bloc Time</td> 
+							<td>Nombre de secondes depuis le premier bloc jusqu'à l'émission du bloc</td> 
 							<td><div id="TX_bloctime"></div></td> 
 						</tr>
 					</tbody> 
@@ -150,7 +150,40 @@
 
 
 	        <div id="infoAdresse">
-	                info adresse
+	        	<div id="erreurAdresse"></div>
+				<table class="table" id="tableadresse"> 
+					<tbody> 
+						<tr> 
+							<td>Hash de l'adresse</td> 
+							<td><div id="ADR_hash160"></div></td> 
+						</tr>
+						<tr> 
+							<td>Adresse bitcoin</td> 
+							<td><div id="ADR_adresse"></div></td> 
+						</tr>
+						<tr> 
+							<td>Nombre de transacitions réalisées avec cette adresse</td> 
+							<td><div id="ADR_n_tx"></div></td> 
+						</tr>
+						<tr> 
+							<td>Total reçu par cette adresse</td> 
+							<td><div id="ADR_total_received"></div></td> 
+						</tr>
+						<tr> 
+							<td>Total envoyé par cette adresse</td> 
+							<td><div id="ADR_total_sent"></div></td> 
+						</tr>
+						<tr> 
+							<td>Balance entre les bitcoins reçus et envoyés</td> 
+							<td><div id="ADR_final_balance"></div></td> 
+						</tr>
+						<tr> 
+						<td>Détails des transactions réalisées</td> 
+							<td><div id="ADR_txs"></div></td> 
+						</tr>
+						
+					</tbody> 
+				</table>
 	        </div>
 
 
