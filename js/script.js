@@ -7,8 +7,7 @@ $(document).ready(function() {
 		MiseEnFormeInfoBlock(data);
 	}
 
-	function RechercherBlockParHash(hashBlock,urlWS)
-	{
+	function RechercherBlockParHash(hashBlock,urlWS){
 		var retourAjax = AppelWS(	hashBlock,urlWS,"#erreurblock");
 		var data = retourAjax.responseJSON;
 		RechercherBlock(data.height,"https://bitcoin.mubiz.com/block/");
@@ -23,7 +22,10 @@ $(document).ready(function() {
 
 	function RechercherAdresse(adresse,urlWS){
  		$("#adresse").val('');
+ 		console.log(adresse);
+ 		console.log(urlWS);
  	 	var retourAjax = AppelWS(adresse,urlWS,"#erreurAdresse");
+ 	 	console.log(retourAjax);
 		var data = retourAjax.responseJSON;
 		console.log(data);
 		MiseEnFormeInfoTransaction(data);
