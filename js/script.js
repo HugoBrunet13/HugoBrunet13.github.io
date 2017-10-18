@@ -65,7 +65,7 @@ $(document).ready(function() {
 		console.log(data);
 		$("#infoBlock").show();
 		if (data){
-
+			$(".tableBlock").show();
 			$("#erreurblock").hide();
 
 			console.log("bene");
@@ -84,6 +84,7 @@ $(document).ready(function() {
 			//$("#BLOCK_tx").append(data.tx);
 		} else{
 			console.log("errure mgl");
+			$("#erreurblock").show();
 			$(".tableBlock").hide();
 		}
 	}
