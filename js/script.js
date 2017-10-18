@@ -25,7 +25,7 @@ $(document).ready(function() {
 		MiseEnFormeInfoAdresse(data);
 	}
 
-	function AppelWS(param,urlWS,divResultat){
+	function AppelWS(param,urlWS,divErreur){
 		var appelAjax = $.ajax({
 			url : urlWS+param+"/",
 			dataType : "json",
@@ -39,8 +39,8 @@ $(document).ready(function() {
 			},
 
 			error : function(xhr, status, err) {
-				$(divResultat).text('');
-				$(divResultat).append(err+" N/A");
+				$(divErreur).text('');
+				$(divErreur).append(err+" N/A");
 			}
 		});
 		return appelAjax;
