@@ -45,6 +45,8 @@ $(document).ready(function() {
 			},
 
 			error : function(xhr, status, err) {
+				console.log("coucou");
+				console.log("diverreur:"+divErreur);
 				$(divErreur).text('');
 				$(divErreur).append(err+" N/A");
 			}
