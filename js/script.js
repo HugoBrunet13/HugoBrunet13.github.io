@@ -63,9 +63,11 @@ $(document).ready(function() {
 
 	function MiseEnFormeInfoBlock(data){
 		console.log(data);
+		$(".infoBlock").show();
 		if (data){
+			console.log("bene");
 			ClearResultatBlock();
-			$(".tableBlock").show();
+			$("#erreurBlock").hide();
 			$("#BLOCK_hash").append(data.hash);
 			$("#BLOCK_confirmation").append(data.confirmations);
 			$("#BLOCK_size").append(data.size);
@@ -79,7 +81,8 @@ $(document).ready(function() {
 			$("#BLOCK_nextBlockHash").append(data.nextblockhash);
 			//$("#BLOCK_tx").append(data.tx);
 		} else{
-			$("#erreurBlock").show();
+			console.log("errure mgl");
+			$(".tableBlock").hide();
 		}
 	}
 
