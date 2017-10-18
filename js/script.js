@@ -62,10 +62,9 @@ $(document).ready(function() {
 	}
 
 	function MiseEnFormeInfoBlock(data){
-		ClearResultatBlock();
-		$("#infoBlock").show();
-		if ( data){
-			console.log("dans le if");
+		if (data){
+			ClearResultatBlock();
+			$(".tableBlock").show();
 			$("#BLOCK_hash").append(data.hash);
 			$("#BLOCK_confirmation").append(data.confirmations);
 			$("#BLOCK_size").append(data.size);
@@ -78,6 +77,8 @@ $(document).ready(function() {
 			$("#BLOCK_previousBlockHash").append(data.previousblockhash);
 			$("#BLOCK_nextBlockHash").append(data.nextblockhash);
 			//$("#BLOCK_tx").append(data.tx);
+		} else{
+			$("#erreurBlock").show();
 		}
 	}
 
