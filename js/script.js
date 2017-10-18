@@ -65,9 +65,11 @@ $(document).ready(function() {
 		console.log(data);
 		$("#infoBlock").show();
 		if (data){
+
+			$("#erreurblock").hide();
+
 			console.log("bene");
 			ClearResultatBlock();
-			$("#erreurBlock").hide();
 			$("#BLOCK_hash").append(data.hash);
 			$("#BLOCK_confirmation").append(data.confirmations);
 			$("#BLOCK_size").append(data.size);
