@@ -9,7 +9,7 @@ $(document).ready(function() {
 
 	function RechercherBlockParHash(hashBlock,urlWS)
 	{
-		var retourAjax = AppelWS(indexBLock,urlWS,"#erreurblock");
+		var retourAjax = AppelWS(hashBlock,urlWS,"#erreurblock");
 		var data = retourAjax.responseJSON;
 		RechercherBlock(data.height,"https://bitcoin.mubiz.com/block/");
 	}
