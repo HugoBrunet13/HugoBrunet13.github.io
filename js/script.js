@@ -11,7 +11,7 @@ $(document).ready(function() {
 	{
 		var retourAjax = AppelWS(indexBLock,urlWS,"#erreurblock");
 		var data = retourAjax.responseJSON;
-		RechercherBlock(data.height,https:"https://bitcoin.mubiz.com/block/");
+		RechercherBlock(data.height,"https://bitcoin.mubiz.com/block/");
 	}
 
  	function RechercherTransaction(idTransaction,urlWS){
