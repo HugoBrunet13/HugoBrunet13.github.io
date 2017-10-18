@@ -106,9 +106,9 @@ $(document).ready(function() {
 			$("#TX_size").append(data.size);
 			$("#TX_version").append(data.version);
 			$("#TX_blockhash").append(data.blockhash);
-			$("#TX_confirmation").append(data.confirmations);
+			$("#TX_confirmations").append(data.confirmations);
 			$("#TX_time").append(data.time);
-			$("#TX_bloctime").append(data.bloctime);
+			$("#TX_bloctime").append(data.blocktime);
 		} else{
 			$("#tabletransac").hide();
 		}
@@ -131,13 +131,15 @@ $(document).ready(function() {
 	
 	$("#boutonRecherche").click(function(){
 		if ($("#numBlock").val()!=""){
+			CacherDivInfo();
 			RechercherBlock($("#numBlock").val(),"https://bitcoin.mubiz.com/block/");
 		} 
 		if($("#numTransac").val()!=""){
+			CacherDivInfo();
 			RechercherTransaction($("#numTransac").val(),"https://bitcoin.mubiz.com/transaction/");
 		} 
 		if ($("#adresse").val()!=""){
-			// CacherDivInfo();
+			CacherDivInfo();
 			RechercherAdresse($("#adresse").val(),"https://bitcoin.mubiz.com/address/");
 		}
 	});
