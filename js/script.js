@@ -22,12 +22,10 @@ $(document).ready(function() {
 
 	function RechercherAdresse(adresse,urlWS){
  		$("#adresse").val('');
- 		console.log(adresse);
- 		console.log(urlWS);
  	 	var retourAjax = AppelWS(adresse,urlWS,"#erreurAdresse");
  	 	console.log(retourAjax);
 		var data = retourAjax.responseJSON;
-		console.log(data);
+		console.log("data:"+data);
 		MiseEnFormeInfoAdresse(data);
 	}
 
@@ -45,8 +43,6 @@ $(document).ready(function() {
 			},
 
 			error : function(xhr, status, err) {
-				console.log("coucou");
-				console.log("diverreur:"+divErreur);
 				$(divErreur).text('');
 				$(divErreur).append(err+" N/A");
 			}
