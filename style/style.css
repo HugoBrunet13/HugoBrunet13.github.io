@@ -3,15 +3,15 @@ body{
 }
 
 #numBlock{
-    background:#40d47e ;
+    background:#eff4ff;
 }
 
 #numTransac{
-    background: #CACFD2;
+    background: #ECECEC;
 }
 
 #adresse{
-    background:#99A3A4 ;
+    background:#BDC3C7 ;
 }
 
 .index-content a:hover{
@@ -26,19 +26,13 @@ body{
     
 }
 
-::-webkit-input-placeholder { 
-    color:    #F00;
+
+textarea:-moz-placeholder {
+    color: red;
 }
-:-moz-placeholder { 
-   color:    #F00;
-   opacity:  1;
-}
-::-moz-placeholder { 
-   color:    #F00;
-   opacity:  1;
-}
-:-ms-input-placeholder { 
-   color:    #F00;
+  
+textarea::-webkit-input-placeholder {
+    color: red;
 }
 
 
@@ -88,6 +82,7 @@ body{
 
 #boutonRecherche{
     background:#212F3D;
+    border: 1px solid #ccc;
 }
 
 
@@ -110,22 +105,19 @@ body{
 #infoBlock{
     padding: 15px;
     margin: 0 auto;
-    /*background-color: #fff;*/
-    background: #E5E7E9;
+    background: #eff4ff;
     border-radius: 0.3em;
 }
 
 #infoTransaction{
     margin: 0 auto;
-    /*background-color: #fff;*/
-    background: #BDC3C7;
+    background: #ECECEC;
     border-radius: 0.3em;
 }
 
 #infoAdresse{
     margin: 0 auto;
-    /*background-color: #fff;*/
-    background:  #797D7F  ;
+    background:  #BDC3C7  ;
     border-radius: 0.3em;
     border: solid 1px green;
 }
@@ -142,3 +134,8 @@ body{
     box-shadow: 0 16px 24px 2px rgba(0,0,0,0.14), 0 6px 30px 5px rgba(0,0,0,0.12), 0 8px 10px -5px rgba(0,0,0,0.3);
     color:black;
 }*/
+
+form-control {
+    border:0px;
+}
+
