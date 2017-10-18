@@ -63,10 +63,10 @@ $(document).ready(function() {
 
 	function MiseEnFormeInfoBlock(data){
 		console.log(data);
-		// $("#infoBlock").show();
+		$("#infoBlock").show();
 		// $(".tableBlock").show();
 		// $("#erreurblock").show();
-		
+
 		if (data){
 	
 			// $("#erreurblock").hide();
