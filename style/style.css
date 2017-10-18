@@ -27,16 +27,6 @@ body{
 }
 
 
-textarea:-moz-placeholder {
-    color: red;
-}
-  
-textarea::-webkit-input-placeholder {
-    color: red;
-}
-
-
-
 /*.index-content .row{
     margin-top:20px;
 }*/
@@ -128,14 +118,30 @@ textarea::-webkit-input-placeholder {
     color:black;
 }
 
-
-/*#BLOCK_nextBlockHash:hover{
+#BLOCK_nextBlockHash:hover{
     cursor: pointer;
     box-shadow: 0 16px 24px 2px rgba(0,0,0,0.14), 0 6px 30px 5px rgba(0,0,0,0.12), 0 8px 10px -5px rgba(0,0,0,0.3);
     color:black;
-}*/
+}
+
+#BLOCK_previousBlockHash:hover{
+    cursor: pointer;
+    box-shadow: 0 16px 24px 2px rgba(0,0,0,0.14), 0 6px 30px 5px rgba(0,0,0,0.12), 0 8px 10px -5px rgba(0,0,0,0.3);
+    color:black;
+}
+
+
+
+
+
+
+
+
+
+
+
+
 
 form-control {
     border:0px;
 }
-
