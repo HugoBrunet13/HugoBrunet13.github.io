@@ -11,7 +11,6 @@ $(document).ready(function() {
  		$("#numTransac").val('');
  	 	var retourAjax = AppelWS(idTransaction,urlWS,"#infoTransaction");
 		var data = retourAjax.responseJSON;
-	 	console.log(data);
 		MiseEnFormeInfoTransaction(data);
  	}
 
@@ -61,16 +60,11 @@ $(document).ready(function() {
 	}
 
 	function MiseEnFormeInfoBlock(data){
-		console.log(data);
 		$("#infoBlock").show();
-		$(".table").show();
+		$("#tableBlock").show();
 		$("#erreurblock").show();
-
 		if (data){
-	
 			$("#erreurblock").hide();
-
-			console.log("bene");
 			ClearResultatBlock();
 			$("#BLOCK_hash").append(data.hash);
 			$("#BLOCK_confirmation").append(data.confirmations);
@@ -85,8 +79,7 @@ $(document).ready(function() {
 			$("#BLOCK_nextBlockHash").append(data.nextblockhash);
 			//$("#BLOCK_tx").append(data.tx);
 		} else{
-			console.log("erreur mgl");
-			$(".table").hide();
+			$("#tableBlock").hide();
 		}
 	}
 

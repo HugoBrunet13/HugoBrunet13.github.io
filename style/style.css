@@ -75,13 +75,22 @@ body{
 }
 
 #infoBlock{
-    border: solid 1px blue;
+    padding: 15px;
+    margin: 0 auto;
+    background-color: #fff;
+    border-radius: 0.3em;
 }
 
 #infoTransaction{
     border: solid 1px red;
+    margin: 0 auto;
+    background-color: #fff;
+    border-radius: 0.3em;
 }
 
 #infoAdresse{
+    margin: 0 auto;
+    background-color: #fff;
+    border-radius: 0.3em;
     border: solid 1px green;
 }
