@@ -155,7 +155,8 @@ $(document).ready(function() {
 	});
 
 	$("#TX_blockhash").click(function(){
-		RechercherBlockParHash($("#TX_blockhash").val(),"https://bitcoin.mubiz.com/block_hash/");
+		console.log($("#TX_blockhash").text());
+		RechercherBlockParHash($("#TX_blockhash").text(),"https://bitcoin.mubiz.com/block_hash/");
 	});
 
 	
