@@ -39,6 +39,7 @@ $(document).ready(function() {
 			},
 
 			error : function(xhr, status, err) {
+				$(divResultat).empty();
 				$(divResultat).append(err+" N/A");
 			}
 		});
@@ -46,7 +47,7 @@ $(document).ready(function() {
 	}
 
 	function ClearResultatBlock(){
-		$("#BLOCK_hash").val('');
+		$("#BLOCK_hash").empty();
 		$("#BLOCK_confirmation").val('');
 		$("#BLOCK_size").val('');
 		$("#BLOCK_weight").val('');
@@ -65,7 +66,7 @@ $(document).ready(function() {
 		$("#infoBlock").show();
 
 		$("#BLOCK_hash").append(data.hash);
-		$("#BLOCK_confirmation").append(data.confirmation);
+		$("#BLOCK_confirmation").append(data.confirmations);
 		$("#BLOCK_size").append(data.size);
 		$("#BLOCK_weight").append(data.weight);
 		$("#BLOCK_height").append(data.height);
