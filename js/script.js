@@ -3,7 +3,7 @@ $(document).ready(function() {
 
 	function RechercherBlock(indexBLock,urlWS){
 		$("#numBlock").val('');
-		var retourAjax = AppelWS(indexBLock,urlWS,"#erreurBlock");
+		var retourAjax = AppelWS(indexBLock,urlWS,"#erreurblock");
 		var data = retourAjax.responseJSON;
 		MiseEnFormeInfoBlock(data);
 	}
@@ -62,6 +62,7 @@ $(document).ready(function() {
 	}
 
 	function MiseEnFormeInfoBlock(data){
+		console.log(data);
 		if (data){
 			ClearResultatBlock();
 			$(".tableBlock").show();
