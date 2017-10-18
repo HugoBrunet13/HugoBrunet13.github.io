@@ -64,8 +64,11 @@ $(document).ready(function() {
 	function MiseEnFormeInfoBlock(data){
 		console.log(data);
 		$("#infoBlock").show();
+		$(".tableBlock").show();
+		$("#erreurblock").show();
+		
 		if (data){
-			$(".tableBlock").show();
+	
 			$("#erreurblock").hide();
 
 			console.log("bene");
@@ -83,8 +86,7 @@ $(document).ready(function() {
 			$("#BLOCK_nextBlockHash").append(data.nextblockhash);
 			//$("#BLOCK_tx").append(data.tx);
 		} else{
-			console.log("errure mgl");
-			$("#erreurblock").show();
+			console.log("erreur mgl");
 			$(".tableBlock").hide();
 		}
 	}
