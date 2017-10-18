@@ -1,6 +1,5 @@
 $(document).ready(function() {
 
-
 	function RechercherBlock(indexBLock,urlWS){
 		$("#numBlock").val('');
 		var retourAjax = AppelWS(indexBLock,urlWS,"#erreurblock");
@@ -64,12 +63,12 @@ $(document).ready(function() {
 	function MiseEnFormeInfoBlock(data){
 		console.log(data);
 		$("#infoBlock").show();
-		$(".tableBlock").show();
+		$(".table").show();
 		$("#erreurblock").show();
 
 		if (data){
 	
-			// $("#erreurblock").hide();
+			$("#erreurblock").hide();
 
 			console.log("bene");
 			ClearResultatBlock();
@@ -87,7 +86,7 @@ $(document).ready(function() {
 			//$("#BLOCK_tx").append(data.tx);
 		} else{
 			console.log("erreur mgl");
-			// $(".tableBlock").hide();
+			$(".table").hide();
 		}
 	}
 
