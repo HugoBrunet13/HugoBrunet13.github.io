@@ -5,7 +5,9 @@ $(document).ready(function() {
 		$("#numBlock").val('');
 		var retourAjax = AppelWS(indexBLock,urlWS,"#infoBlock");
 		var data = retourAjax.responseJSON;
-		MiseEnFormeInfoBlock(data);
+		if (data!= null){
+			MiseEnFormeInfoBlock(data);
+		}
 	}
 
  	function RechercherTransaction(idTransaction,urlWS){
@@ -47,8 +49,8 @@ $(document).ready(function() {
 	}
 
 	function ClearResultatBlock(){
-		$("#BLOCK_hash").empty();
-		$("#BLOCK_confirmation").val('');
+		$("#BLOCK_hash").text('');
+		$("#BLOCK_confirmation").text('');
 		$("#BLOCK_size").val('');
 		$("#BLOCK_weight").val('');
 		$("#BLOCK_height").val('');
@@ -59,6 +61,7 @@ $(document).ready(function() {
 		$("#BLOCK_previousBlockHash").val('');
 		$("#BLOCK_nextBlockHash").val('');
 		$("#BLOCK_tx").val('');
+		conosle.log("ok");
 	}
 
 	function MiseEnFormeInfoBlock(data){
