@@ -41,7 +41,7 @@ $(document).ready(function() {
 			},
 
 			error : function(xhr, status, err) {
-				$(divResultat).empty();
+				// $(divResultat).empty();
 				$(divResultat).append(err+" N/A");
 			}
 		});
@@ -61,7 +61,7 @@ $(document).ready(function() {
 		$("#BLOCK_previousBlockHash").val('');
 		$("#BLOCK_nextBlockHash").val('');
 		$("#BLOCK_tx").val('');
-		conosle.log("ok");
+		console.log("ok");
 	}
 
 	function MiseEnFormeInfoBlock(data){
