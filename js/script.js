@@ -11,7 +11,6 @@ $(document).ready(function() {
 	{
 		var retourAjax = AppelWS(	hashBlock,urlWS,"#erreurblock");
 		var data = retourAjax.responseJSON;
-		console.log(data);
 		RechercherBlock(data.height,"https://bitcoin.mubiz.com/block/");
 	}
 
@@ -23,9 +22,10 @@ $(document).ready(function() {
  	}
 
 	function RechercherAdresse(adresse,urlWS){
- 		$("#numAdresse").val('');
+ 		$("#adresse").val('');
  	 	var retourAjax = AppelWS(adresse,urlWS,"#erreurAdresse");
 		var data = retourAjax.responseJSON;
+		console.log(data);
 		MiseEnFormeInfoTransaction(data);
 	}
 
