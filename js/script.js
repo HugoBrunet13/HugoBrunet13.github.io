@@ -63,13 +63,13 @@ $(document).ready(function() {
 
 	function MiseEnFormeInfoBlock(data){
 		console.log(data);
-		$("#infoBlock").show();
-		$(".tableBlock").show();
-		$("#erreurblock").show();
+		// $("#infoBlock").show();
+		// $(".tableBlock").show();
+		// $("#erreurblock").show();
 		
 		if (data){
 	
-			$("#erreurblock").hide();
+			// $("#erreurblock").hide();
 
 			console.log("bene");
 			ClearResultatBlock();
@@ -87,7 +87,7 @@ $(document).ready(function() {
 			//$("#BLOCK_tx").append(data.tx);
 		} else{
 			console.log("erreur mgl");
-			$(".tableBlock").hide();
+			// $(".tableBlock").hide();
 		}
 	}
 
