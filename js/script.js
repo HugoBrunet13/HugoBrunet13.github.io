@@ -7,6 +7,13 @@ $(document).ready(function() {
 		MiseEnFormeInfoBlock(data);
 	}
 
+	function RechercherBlockParHash(hashBlock,urlWS)
+	{
+		var retourAjax = AppelWS(indexBLock,urlWS,"#erreurblock");
+		var data = retourAjax.responseJSON;
+		RechercherBlock(data.height,https:"https://bitcoin.mubiz.com/block/");
+	}
+
  	function RechercherTransaction(idTransaction,urlWS){
  		$("#numTransac").val('');
  	 	var retourAjax = AppelWS(idTransaction,urlWS,"#erreurTransac");
@@ -143,6 +150,12 @@ $(document).ready(function() {
 			RechercherAdresse($("#adresse").val(),"https://bitcoin.mubiz.com/address/");
 		}
 	});
+
+	$("#TX_blockhash").click(function(){
+		RechercherBlockParHash($("#TX_blockhash").val(),"https://bitcoin.mubiz.com/block_hash/");
+	});
+
+	
 
 
 
