@@ -28,7 +28,7 @@ $(document).ready(function() {
  	 	console.log(retourAjax);
 		var data = retourAjax.responseJSON;
 		console.log(data);
-		MiseEnFormeInfoTransaction(data);
+		MiseEnFormeInfoAdresse(data);
 	}
 
 	function AppelWS(param,urlWS,divErreur){
