@@ -10,8 +10,6 @@ $(document).ready(function() {
 	function RechercherBlockParHash(hashBlock,urlWS)
 	{
 		var retourAjax = AppelWS(hashBlock,urlWS,"#erreurblock");
-		console.log(hashBlock);
-		console.log(urlWS);
 		var data = retourAjax.responseJSON;
 		console.log(data);
 		RechercherBlock(data.height,"https://bitcoin.mubiz.com/block/");
@@ -154,9 +152,9 @@ $(document).ready(function() {
 		}
 	});
 
-	$("#TX_blockhash").click(function(){
-		console.log($("#TX_blockhash").text());
-		RechercherBlockParHash($("#TX_blockhash").text(),"https://bitcoin.mubiz.com/block_hash/");
+	$(".FindBlockByHash").click(function(){
+		CacherDivInfo();
+		RechercherBlockParHash($(".FindBlockByHash").text(),"https://bitcoin.mubiz.com/block_hash/");
 	});
 
 	

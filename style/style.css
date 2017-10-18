@@ -2,6 +2,18 @@ body{
     text-align: center;
 }
 
+#numBlock{
+    background: #A9CCE3;
+}
+
+#numTransac{
+    background: #ABEBC6;
+}
+
+#adresse{
+    background:#ABB2B9;
+}
+
 .index-content a:hover{
     color:black;
     text-decoration:none;
@@ -77,19 +89,22 @@ body{
 #infoBlock{
     padding: 15px;
     margin: 0 auto;
-    background-color: #fff;
+    /*background-color: #fff;*/
+    background: #A9CCE3;
     border-radius: 0.3em;
 }
 
 #infoTransaction{
     margin: 0 auto;
-    background-color: #fff;
+    /*background-color: #fff;*/
+    background: #ABEBC6;
     border-radius: 0.3em;
 }
 
 #infoAdresse{
     margin: 0 auto;
-    background-color: #fff;
+    /*background-color: #fff;*/
+    background:  #ABB2B9;
     border-radius: 0.3em;
     border: solid 1px green;
 }
