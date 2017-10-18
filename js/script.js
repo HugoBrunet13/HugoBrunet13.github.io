@@ -93,11 +93,11 @@ $(document).ready(function() {
 
 	function CacherViderDivInfo(){
 		$("#infoBlock").hide();
-		$("#infoBlock").empty();
+		// $("#infoBlock").empty();
 		$("#infoTransaction").hide();
-		$("#infoTransaction").empty();
+		// $("#infoTransaction").empty();
 		$("#infoAdresse").hide();	
-		$("#infoAdresse").empty();	
+		// $("#infoAdresse").empty();	
 	}
 
 	CacherViderDivInfo();
