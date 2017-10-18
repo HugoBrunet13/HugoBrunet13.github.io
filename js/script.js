@@ -10,7 +10,7 @@ $(document).ready(function() {
 
  	function RechercherTransaction(idTransaction,urlWS){
  		$("#numTransac").val('');
- 	 	var retourAjax = AppelWS(idTransaction,urlWS,"#infoTranscation");
+ 	 	var retourAjax = AppelWS(idTransaction,urlWS,"#infoTransaction");
 		var data = retourAjax.responseJSON;
 	 	console.log(data);
 		MiseEnFormeInfoTransaction(data);
@@ -45,10 +45,37 @@ $(document).ready(function() {
 		return appelAjax;
 	}
 
+	function ClearResultatBlock(){
+		$("#BLOCK_hash").val('');
+		$("#BLOCK_confirmation").val('');
+		$("#BLOCK_size").val('');
+		$("#BLOCK_weight").val('');
+		$("#BLOCK_height").val('');
+		$("#BLOCK_version").val('');
+		$("#BLOCK_time").val('');
+		$("#BLOCK_medianTime").val('');
+		$("#BLOCK_difficulty").val('');
+		$("#BLOCK_previousBlockHash").val('');
+		$("#BLOCK_nextBlockHash").val('');
+		$("#BLOCK_tx").val('');
+	}
+
 	function MiseEnFormeInfoBlock(data){
-		//supprimer contenu de la div a chaque nouvel appel
+		ClearResultatBlock();
 		$("#infoBlock").show();
-		$("#infoBlock").append("infoblock1;infoblock2,info3block....");
+
+		$("#BLOCK_hash").append(data.hash);
+		$("#BLOCK_confirmation").append(data.confirmation);
+		$("#BLOCK_size").append(data.size);
+		$("#BLOCK_weight").append(data.weight);
+		$("#BLOCK_height").append(data.height);
+		$("#BLOCK_version").append(data.version);
+		$("#BLOCK_time").append(data.time);
+		$("#BLOCK_medianTime").append(data.mediantime);
+		$("#BLOCK_difficulty").append(data.difficulty);
+		$("#BLOCK_previousBlockHash").append(data.previousblockhash);
+		$("#BLOCK_nextBlockHash").append(data.nextblockhash);
+		//$("#BLOCK_tx").append(data.tx);
 	}
 
 	function MiseEnFormeInfoTransaction(data){
