@@ -22,7 +22,7 @@ $(document).ready(function() {
 
 	function RechercherAdresse(adresse,urlWS){
  		$("#adresse").val('');
- 	 	var retourAjax = AppelWS(adresse,urlWS,"#erreurAdresse");
+ 	 	var retourAjax = AppelWS2(adresse,urlWS,"#erreurAdresse");
  	 	console.log(retourAjax);
 		var data = retourAjax.responseJSON;
 		console.log("data:"+data);
@@ -32,6 +32,27 @@ $(document).ready(function() {
 	function AppelWS(param,urlWS,divErreur){
 		var appelAjax = $.ajax({
 			url : urlWS+param+"/",
+			dataType : "json",
+			contentType : "application/json; charset=utf-8",
+			type : "GET",
+			timeout:	"5000",
+			async : false,
+
+			success : function(data) {
+				
+			},
+
+			error : function(xhr, status, err) {
+				$(divErreur).text('');
+				$(divErreur).append(err+" N/A");
+			}
+		});
+		return appelAjax;
+	}
+
+	function AppelWS2(param,urlWS,divErreur){
+		var appelAjax = $.ajax({
+			url : urlWS+param,
 			dataType : "json",
 			contentType : "application/json; charset=utf-8",
 			type : "GET",
@@ -177,7 +198,7 @@ $(document).ready(function() {
 		} 
 		if ($("#adresse").val()!=""){
 			CacherDivInfo();
-			RechercherAdresse($("#adresse").val(),"https://blockchain.info/fr/rawaddr/$");
+			RechercherAdresse($("#adresse").val(),"https://blockchain.info/fr/rawaddr/");
 		}
 	});
 
