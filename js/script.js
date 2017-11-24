@@ -177,7 +177,7 @@ $(document).ready(function() {
 		} 
 		if ($("#adresse").val()!=""){
 			CacherDivInfo();
-			RechercherAdresse($("#adresse").val(),"https://blockchain.info/fr/");
+			RechercherAdresse($("#adresse").val(),"https://blockchain.info/fr/rawaddr/");
 		}
 	});
 
