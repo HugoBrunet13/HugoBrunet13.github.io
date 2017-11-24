@@ -114,6 +114,7 @@ $(document).ready(function() {
 		$("#erreurblock").show();
 		var listetx="";
 		for (var i = 0; i < 10; i++) {
+			console.log(i.);
 			listeTx = listetx+data.tx[i]+"\n";
 			if (!data.tx[i+1]) {
 				break;
