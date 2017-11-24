@@ -80,6 +80,7 @@ $(document).ready(function() {
 		$("#ADR_hash160").text('');
 		$("#ADR_adresse").text('');
 		$("#ADR_n_tx").text('');
+		$("#ADR_n_unredeemed").text('');
 		$("#ADR_total_received").text('');
 		$("#ADR_total_sent").text('');
 		$("#ADR_final_balance").text('');
@@ -90,7 +91,7 @@ $(document).ready(function() {
 		$("#infoBlock").show();
 		$("#tableBlock").show();
 		$("#erreurblock").show();
-		var listeTx = data.tx[1]+"\n"+data.tx[2]+"\n"+data.tx[3];
+		var listeTx = data.tx[0]+"\n"+data.tx[1]+"\n"+data.tx[2]+ data.tx[3]+"\n"+data.tx[4]+"\n"+data.tx[5]+data.tx[6]+"\n"+data.tx[7]+"\n"+data.tx[8];
 		if (data){
 			$("#erreurblock").hide();
 			ClearResultatBlock();
@@ -176,7 +177,7 @@ $(document).ready(function() {
 		} 
 		if ($("#adresse").val()!=""){
 			CacherDivInfo();
-			RechercherAdresse($("#adresse").val(),"https://bitcoin.mubiz.com/address/");
+			RechercherAdresse($("#adresse").val(),"https://blockchain.info/fr/");
 		}
 	});
 
