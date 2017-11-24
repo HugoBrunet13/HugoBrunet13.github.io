@@ -90,6 +90,7 @@ $(document).ready(function() {
 		$("#infoBlock").show();
 		$("#tableBlock").show();
 		$("#erreurblock").show();
+		var listeTx = data.tx[1]+"\n"+data.tx[2]+"\n"+data.tx[3];
 		if (data){
 			$("#erreurblock").hide();
 			ClearResultatBlock();
@@ -104,10 +105,7 @@ $(document).ready(function() {
 			$("#BLOCK_difficulty").append(data.difficulty);
 			$("#BLOCK_previousBlockHash").append(data.previousblockhash);
 			$("#BLOCK_nextBlockHash").append(data.nextblockhash);
-			//$("#BLOCK_tx").append(data.tx);
-			console.log(data.tx[1]);
-			console.log("  ----------  ");
-			console.log(data.tx)
+			$("#BLOCK_tx").append(listeTx);	
 		} else{
 			$("#tableBlock").hide();
 		}
