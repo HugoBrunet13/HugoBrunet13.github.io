@@ -56,7 +56,7 @@ $(document).ready(function() {
 			dataType : "json",
 			contentType : "application/json; charset=utf-8",
 			type : "GET",
-			timeout:	"5000",
+			timeout: "5000",
 			async : false,
 
 			success : function(data) {
@@ -65,7 +65,7 @@ $(document).ready(function() {
 
 			error : function(xhr, status, err) {
 				$(divErreur).text('');
-				$(divErreur).append(err+" N/A");
+				$(divErreur).append(err);
 			}
 		});
 		return appelAjax;
@@ -112,7 +112,13 @@ $(document).ready(function() {
 		$("#infoBlock").show();
 		$("#tableBlock").show();
 		$("#erreurblock").show();
-		var listeTx = data.tx[0]+"\n"+data.tx[1]+"\n"+data.tx[2]+ data.tx[3]+"\n"+data.tx[4]+"\n"+data.tx[5]+data.tx[6]+"\n"+data.tx[7]+"\n"+data.tx[8];
+		var listetx="";
+		for (var i = 0; i < 10; i++) {
+			listeTx = listetx+data.tx[i]+"\n";
+			if (!data.tx[i+1]) {
+				break;
+			}
+		}
 		if (data){
 			$("#erreurblock").hide();
 			ClearResultatBlock();
