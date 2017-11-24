@@ -105,6 +105,9 @@ $(document).ready(function() {
 			$("#BLOCK_previousBlockHash").append(data.previousblockhash);
 			$("#BLOCK_nextBlockHash").append(data.nextblockhash);
 			//$("#BLOCK_tx").append(data.tx);
+			console.log(data.tx[1]);
+			console.log("  ----------  ");
+			console.log(data.tx)
 		} else{
 			$("#tableBlock").hide();
 		}
