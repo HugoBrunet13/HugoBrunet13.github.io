@@ -112,7 +112,7 @@ $(document).ready(function() {
 		$("#infoBlock").show();
 		$("#tableBlock").show();
 		$("#erreurblock").show();
-		var listetx="";
+		var listeTx="";
 		for (var i = 0; i < 10; i++) {
 			console.log(i);
 			listeTx = listeTx+data.tx[i]+"\n";
