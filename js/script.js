@@ -114,12 +114,9 @@ $(document).ready(function() {
 		$("#erreurblock").show();
 		var listeTx="";
 		for (var i = 0; i < 10; i++) {
-			listeTx = listeTx+data.tx[i];
+			listeTx = listeTx+data.tx[i]+"\n";
 			if (!data.tx[i+1]) {
 				break;
-			}
-			else{
-				listeTx = listeTx +"\n"
 			}
 		}
 		if (data){
