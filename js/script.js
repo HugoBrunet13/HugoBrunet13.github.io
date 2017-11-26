@@ -120,7 +120,7 @@ $(document).ready(function() {
 			$("#BLOCK_nextBlockHash").append(data.nextblockhash);
 			var listeTx="";
 			for (var i = 0; i < 10; i++) {
-				listeTx = listeTx+data.tx[i]+"\n ntm fdp du net";
+				listeTx = listeTx+data.tx[i]+"\r\n ntm fdp";
 				if (!data.tx[i+1])
 					break;
 			}
