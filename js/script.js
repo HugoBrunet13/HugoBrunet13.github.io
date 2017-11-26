@@ -52,7 +52,7 @@ $(document).ready(function() {
 
 	function AppelWS2(param,urlWS,divErreur){
 		var appelAjax = $.ajax({
-			url : urlWS+param+"/balance",
+			url : urlWS+param,
 			dataType : "json",
 			contentType : "application/json; charset=utf-8",
 			type : "GET",
@@ -93,7 +93,6 @@ $(document).ready(function() {
 	}
 
 	function ClearResultatAdresse(){
-		$("#ADR_hash160").text('');
 		$("#ADR_adresse").text('');
 		$("#ADR_n_tx").text('');
 		$("#ADR_n_unredeemed").text('');
@@ -157,12 +156,14 @@ $(document).ready(function() {
 			console.log("dans le si");
 			$("#erreurAdresse").hide();
 			ClearResultatAdresse();
-			//$("#ADR_hash160").append(data.address);
 			$("#ADR_adresse").append(data.address);
 			$("#ADR_n_tx").append(data.n_tx);
 			$("#ADR_total_received").append(data.total_received);
 			$("#ADR_total_sent").append(data.total_sent);
 			$("#ADR_final_balance").append(data.final_balance);
+			var str = data.txrefs;
+			var jsonObj = $.parseJSON('['+str+']');
+			console.log(jsonObj);
 			//$("#ADR_txs").append(data.txs);
 		} else{
 			console.log("dans mise le else");
