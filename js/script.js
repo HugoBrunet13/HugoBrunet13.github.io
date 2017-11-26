@@ -161,10 +161,7 @@ $(document).ready(function() {
 			console.log(str);
 			// var jsonObj = $.parseJSON(str);
 			// console.log(jsonObj)
-			$.each(str, function(i, item) {
-     			console.log(str[i].tx_hash);
-			});​
-			
+			$.each(str, function(i, item) { console.log(str[i].tx_hash) });​
 			//$("#ADR_txs").append(data.txs);
 		} else{
 			console.log("dans mise le else");
