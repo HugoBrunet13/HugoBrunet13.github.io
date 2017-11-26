@@ -83,7 +83,7 @@ $(document).ready(function() {
 		$("#BLOCK_tx").text('');
 	}
 
-	function ClearResultatTransaction(){
+	function ClearResultatAdressetTransaction(){
 		$("#TX_txid").text('');
 		$("#TX_hash").text('');
 		$("#TX_size").text('');
@@ -111,7 +111,7 @@ $(document).ready(function() {
 		for (var i = 0; i < 10; i++) {
 			listeTx = listeTx+data.tx[i]+"\n";
 			if (!data.tx[i+1])
-				return false;
+				break;
 		}
 		if (data){
 			$("#erreurblock").hide();
