@@ -97,7 +97,7 @@ $(document).ready(function() {
 		$("#ADR_total_received").text('');
 		$("#ADR_total_sent").text('');
 		$("#ADR_final_balance").text('');
-		$("#ADR_txs").text('');
+		$("#ADR_txs2").text('');
 	}
 
 	function MiseEnFormeInfoBlock(data){
@@ -160,8 +160,11 @@ $(document).ready(function() {
 			var str = data.txrefs;
 			
 for (var i in str) {
-  
-    console.log(str[i]["tx_hash"]);
+  ("#ADR_txs2").append(str[i]["tx_hash"]);
+
+
+  		// <div id="ADR_txs"></div>
+    // console.log();
 }
 
 
