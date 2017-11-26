@@ -157,8 +157,8 @@ $(document).ready(function() {
 			console.log("dans le si");
 			$("#erreurAdresse").hide();
 			ClearResultatAdresse();
-			$("#ADR_hash160").append(data.address);
-			$("#ADR_adresse").append(data.adress);
+			//$("#ADR_hash160").append(data.address);
+			$("#ADR_adresse").append(data.address);
 			$("#ADR_n_tx").append(data.n_tx);
 			$("#ADR_total_received").append(data.total_received);
 			$("#ADR_total_sent").append(data.total_sent);
