@@ -78,9 +78,6 @@ $(document).ready(function() {
 		$("#BLOCK_weight").text('');
 		$("#BLOCK_height").text('');
 		$("#BLOCK_version").text('');
-		$("#BLOCK_time").text('');
-		$("#BLOCK_medianTime").text('');
-		$("#BLOCK_difficulty").text('');
 		$("#BLOCK_previousBlockHash").text('');
 		$("#BLOCK_nextBlockHash").text('');
 		$("#BLOCK_tx").text('');
@@ -93,8 +90,6 @@ $(document).ready(function() {
 		$("#TX_version").text('');
 		$("#TX_blockhash").text('');
 		$("#TX_confirmation").text('');
-		$("#TX_time").text('');
-		$("#TX_bloctime").text('');
 	}
 
 	function ClearResultatAdresse(){
@@ -115,9 +110,8 @@ $(document).ready(function() {
 		var listeTx="";
 		for (var i = 0; i < 10; i++) {
 			listeTx = listeTx+data.tx[i]+"\n";
-			if (!data.tx[i+1]) {
-				break;
-			}
+			if (!data.tx[i+1])
+				return false;
 		}
 		if (data){
 			$("#erreurblock").hide();
@@ -128,9 +122,6 @@ $(document).ready(function() {
 			$("#BLOCK_weight").append(data.weight);
 			$("#BLOCK_height").append(data.height);
 			$("#BLOCK_version").append(data.version);
-			$("#BLOCK_time").append(data.time);
-			$("#BLOCK_medianTime").append(data.mediantime);
-			$("#BLOCK_difficulty").append(data.difficulty);
 			$("#BLOCK_previousBlockHash").append(data.previousblockhash);
 			$("#BLOCK_nextBlockHash").append(data.nextblockhash);
 			$("#BLOCK_tx").append(listeTx);	
@@ -152,8 +143,6 @@ $(document).ready(function() {
 			$("#TX_version").append(data.version);
 			$("#TX_blockhash").append(data.blockhash);
 			$("#TX_confirmations").append(data.confirmations);
-			$("#TX_time").append(data.time);
-			$("#TX_bloctime").append(data.blocktime);
 		} else{
 			$("#tabletransac").hide();
 		}

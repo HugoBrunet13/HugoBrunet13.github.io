@@ -32,12 +32,12 @@
                 <div class="form-group">
                   <!--   <label for="numBlock" class="col-sm-3 control-label">Numéro du block</label> -->
                     <div class="col-sm-12">
-                        <input type="text" id="numBlock" placeholder="Numéro du block" class="form-control">
+                        <input type="text" id="numBlock" placeholder="Valid bitcoin block id" class="form-control">
                     </div>
                 </div>
                 <div class="form-group">
                     <div class="col-sm-12">
-                        <input type="text" id="numTransac" placeholder="Numéro d'une transaction" class="form-control">
+                        <input type="text" id="numTransac" placeholder="Valid bitcoin transaction id" class="form-control">
                     </div>
                 </div>
                 <div class="form-group">
@@ -55,47 +55,35 @@
 				<table class="table" id="tableBlock"> 
 					<tbody> 
 						<tr> 
-							<td>Hash</td> 
+							<td>Hash of the block</td> 
 							<td><div id="BLOCK_hash"></div></td> 
 						</tr>
 						<tr> 
-							<td>Nombre de confirmations</td> 
+							<td>Number of confirmations</td> 
 							<td><div id="BLOCK_confirmation"></div></td> 
 						</tr>
 						<tr> 
-						<td>Taille du bloc</td> 
+						<td>Size of the block</td> 
 							<td><div id="BLOCK_size"></div></td> 
 						</tr>
 						<tr> 
-							<td>Poids du bloc</td> 
+							<td>Weight of the block (unit?)</td> 
 							<td><div id="BLOCK_weight"></div></td> 
 						</tr>
 						<tr> 
-							<td>Hauteur du bloc</td> 
+							<td>Height of the block</td> 
 							<td><div id="BLOCK_height"></div></td> 
 						</tr>
 						<tr> 
-							<td>Version du bloc</td> 
+							<td>Version of the block</td> 
 							<td><div id="BLOCK_version"></div></td> 
 						</tr>
 						<tr> 
-							<td>Time</td> 
-							<td><div id="BLOCK_time"></div></td> 
-						</tr>
-						<tr> 
-							<td>Temps median pour le meilleur bloc actuel</td> 
-							<td><div id="BLOCK_medianTime"></div></td> 
-						</tr>
-						<tr> 
-							<td>Difficulté lors de l'émission du bloc</td> 
-							<td><div id="BLOCK_difficulty"></div></td> 
-						</tr>
-						<tr> 
-							<td>Hash du précédent bloc</td> 
+							<td>Hash previous block</td> 
 							<td><div id="BLOCK_previousBlockHash"></div></td> 
 						</tr>
 						<tr> 
-							<td>Hash du bloc suivant</td> 
+							<td>Hash next block</td> 
 							<td><div id="BLOCK_nextBlockHash"></div></td> 
 						</tr>
 						<tr> 
@@ -112,36 +100,24 @@
 				<table class="table" id="tabletransac"> 
 					<tbody> 
 						<tr> 
-							<td>Identifiant de la transaction</td> 
-							<td><div id="TX_txid"></div></td> 
-						</tr>
-						<tr> 
-							<td>Hash</td> 
+							<td>Hash of the transaction</td> 
 							<td><div id="TX_hash"></div></td> 
 						</tr>
 						<tr> 
-							<td>Taille de la transaction</td> 
+							<td>Size of the transaction (unit)</td> 
 							<td><div id="TX_size"></div></td> 
 						</tr>
 						<tr> 
-							<td>Version de la transaction</td> 
+							<td>Version of the transaction</td> 
 							<td><div id="TX_version"></div></td> 
 						</tr>
 						<tr> 
-							<td>Hash du bloc contenant la transaction</td> 
+							<td>Hash of the bloc containing the transaction</td> 
 							<td><div id="TX_blockhash"></div></td> 
 						</tr>
 						<tr> 
-							<td>Nombre de confirmations</td> 
+							<td>Number of confirmations</td> 
 							<td><div id="TX_confirmations"></div></td> 
-						</tr>
-						<tr> 
-							<td>Nombre de secondes depuis le premier bloc jusqu'à la transation</td> 
-							<td><div id="TX_time"></div></td> 
-						</tr>
-						<tr> 
-							<td>Nombre de secondes depuis le premier bloc jusqu'à l'émission du bloc</td> 
-							<td><div id="TX_bloctime"></div></td> 
 						</tr>
 					</tbody> 
 				</table>
