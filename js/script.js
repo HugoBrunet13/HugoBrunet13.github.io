@@ -159,12 +159,12 @@ $(document).ready(function() {
 			$("#ADR_final_balance").append(data.final_balance);
 			var str = data.txrefs;
 			console.log(str);
+			console.log(typeof(str));
 			// var jsonObj = $.parseJSON(str);
-			// console.log(jsonObj)
-			$.each(str, function(i, item){console.log(str[i].tx_hash);});
+			// console.log(jsonObj);
+			//$.each(str, function(i, item){console.log(str[i].tx_hash);});
 			//$("#ADR_txs").append(data.txs);
 		} else{
-			console.log("dans mise le else");
 			$("#tableadresse").hide();
 		}
 	}
