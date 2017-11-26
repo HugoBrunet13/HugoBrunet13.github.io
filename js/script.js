@@ -149,7 +149,6 @@ $(document).ready(function() {
 		$("#infoAdresse").show();
 		$("#tableadresse").show();
 		$("#erreurAdresse").show();
-		console.log(data);
 		if (data){
 			$("#erreurAdresse").hide();
 			ClearResultatAdresse();
@@ -160,10 +159,11 @@ $(document).ready(function() {
 			$("#ADR_final_balance").append(data.final_balance);
 			var str = data.txrefs;
 			console.log(str);
-			// var jsonObj = $.parseJSON(data);
-			// $.each(data, function(i, item) {
-   //  			console.log(alert(data[i].PageName));
-			// });​
+			// var jsonObj = $.parseJSON(str);
+			// console.log(jsonObj)
+			$.each(str, function(i, item) {
+     			console.log((str[i].tx_hash));
+			});​
 			
 			//$("#ADR_txs").append(data.txs);
 		} else{
