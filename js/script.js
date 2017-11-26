@@ -52,7 +52,7 @@ $(document).ready(function() {
 
 	function AppelWS2(param,urlWS,divErreur){
 		var appelAjax = $.ajax({
-			url : urlWS+param,
+			url : urlWS+param+"/balance,
 			dataType : "json",
 			contentType : "application/json; charset=utf-8",
 			type : "GET",
@@ -157,8 +157,8 @@ $(document).ready(function() {
 			console.log("dans le si");
 			$("#erreurAdresse").hide();
 			ClearResultatAdresse();
-			$("#ADR_hash160").append(data.hash160);
-			$("#ADR_adresse").append(data.adresse);
+			$("#ADR_hash160").append(data.adress);
+			$("#ADR_adresse").append(data.adress);
 			$("#ADR_n_tx").append(data.n_tx);
 			$("#ADR_total_received").append(data.total_received);
 			$("#ADR_total_sent").append(data.total_sent);
@@ -193,7 +193,7 @@ $(document).ready(function() {
 		} 
 		if ($("#adresse").val()!=""){
 			CacherDivInfo();
-			RechercherAdresse($("#adresse").val(),"https://blockchain.info/fr/rawaddr/");
+			RechercherAdresse($("#adresse").val(),"https://api.blockcypher.com/v1/btc/main/addrs/");
 		}
 	});
 
