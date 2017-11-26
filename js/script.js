@@ -114,6 +114,7 @@ $(document).ready(function() {
 				break;
 		}
 		if (data){
+			console.log("data ok");
 			$("#erreurblock").hide();
 			ClearResultatBlock();
 			$("#BLOCK_hash").append(data.hash);
@@ -126,6 +127,7 @@ $(document).ready(function() {
 			$("#BLOCK_nextBlockHash").append(data.nextblockhash);
 			$("#BLOCK_tx").append(listeTx);	
 		} else{
+			console.log("pas data")
 			$("#tableBlock").hide();
 		}
 	}
