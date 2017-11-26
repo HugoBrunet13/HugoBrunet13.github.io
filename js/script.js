@@ -165,7 +165,7 @@ for (var i in str) {
 }
 
 
-			$.each(data.txrefs, function(i, item) { console.log(data.txrefs[i].tx_hash); });​
+//			$.each(data.txrefs, function(i, item) { console.log(data.txrefs[i].tx_hash); });​
 			
 			console.log(str);
 			console.log(typeof(str));
