@@ -157,15 +157,16 @@ $(document).ready(function() {
 			$("#ADR_total_received").append(data.total_received);
 			$("#ADR_total_sent").append(data.total_sent);
 			$("#ADR_final_balance").append(data.final_balance);
-			var str = data.txrefs;
+			var str = data;//.txrefs;
 			
+for (var i in str) {
+  
+    console.log(str[i]["tx_hash"]);
+}
 
-			$.each(data.txrefs, function(i, item) {
-    			console.log(data.txrefs[i].tx_hash);
-			});​
+
+			$.each(data.txrefs, function(i, item) { console.log(data.txrefs[i].tx_hash); });​
 			
-
-
 			console.log(str);
 			console.log(typeof(str));
 			// var jsonObj = $.parseJSON(str);
