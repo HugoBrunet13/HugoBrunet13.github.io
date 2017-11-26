@@ -159,8 +159,12 @@ $(document).ready(function() {
 			$("#ADR_total_sent").append(data.total_sent);
 			$("#ADR_final_balance").append(data.final_balance);
 			var str = data.txrefs;
-			var jsonObj = $.parseJSON(str);
-			console.log(jsonObj);
+			console.log(str);
+			// var jsonObj = $.parseJSON(data);
+			// $.each(data, function(i, item) {
+   //  			console.log(alert(data[i].PageName));
+			// });​
+			
 			//$("#ADR_txs").append(data.txs);
 		} else{
 			console.log("dans mise le else");
