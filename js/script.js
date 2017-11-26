@@ -121,7 +121,7 @@ $(document).ready(function() {
 			$("#BLOCK_nextBlockHash").append(data.nextblockhash);
 			var listeTx="";
 			for (var i = 0; i < 10; i++) {
-				listeTx = listeTx+data.tx[i]+"\n";
+				listeTx = listeTx+data.tx[i]+"\n\n\n";
 				if (!data.tx[i+1])
 					break;
 			}
