@@ -157,7 +157,7 @@ $(document).ready(function() {
 			$("#ADR_total_received").append(data.total_received);
 			$("#ADR_total_sent").append(data.total_sent);
 			$("#ADR_final_balance").append(data.final_balance);
-			var str = data;//.txrefs;
+			var str = data.txrefs;
 			
 for (var i in str) {
   
@@ -167,8 +167,8 @@ for (var i in str) {
 
 //			$.each(data.txrefs, function(i, item) { console.log(data.txrefs[i].tx_hash); });​
 			
-			console.log(str);
-			console.log(typeof(str));
+			//console.log(str);
+			//console.log(typeof(str));
 			// var jsonObj = $.parseJSON(str);
 			// console.log(jsonObj);
 			//$.each(str, function(i, item){console.log(str[i].tx_hash);});
