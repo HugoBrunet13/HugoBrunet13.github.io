@@ -23,9 +23,7 @@ $(document).ready(function() {
 	function RechercherAdresse(adresse,urlWS){
  		$("#adresse").val('');
  	 	var retourAjax = AppelWS2(adresse,urlWS,"#erreurAdresse");
- 	 	console.log(retourAjax);
 		var data = retourAjax.responseJSON;
-		console.log("data:"+data);
 		MiseEnFormeInfoAdresse(data);
 	}
 
@@ -148,12 +146,11 @@ $(document).ready(function() {
 	}
 
 	function MiseEnFormeInfoAdresse(data){
-		console.log("dans mise en forme");
 		$("#infoAdresse").show();
 		$("#tableadresse").show();
 		$("#erreurAdresse").show();
+		console.log(data);
 		if (data){
-			console.log("dans le si");
 			$("#erreurAdresse").hide();
 			ClearResultatAdresse();
 			$("#ADR_adresse").append(data.address);
@@ -162,7 +159,7 @@ $(document).ready(function() {
 			$("#ADR_total_sent").append(data.total_sent);
 			$("#ADR_final_balance").append(data.final_balance);
 			var str = data.txrefs;
-			var jsonObj = $.parseJSON('['+str+']');
+			var jsonObj = $.parseJSON(str);
 			console.log(jsonObj);
 			//$("#ADR_txs").append(data.txs);
 		} else{
