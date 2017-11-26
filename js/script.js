@@ -162,7 +162,7 @@ $(document).ready(function() {
 			// var jsonObj = $.parseJSON(str);
 			// console.log(jsonObj)
 			$.each(str, function(i, item) {
-     			console.log((str[i].tx_hash));
+     			console.log(str[i].tx_hash);
 			});​
 			
 			//$("#ADR_txs").append(data.txs);
