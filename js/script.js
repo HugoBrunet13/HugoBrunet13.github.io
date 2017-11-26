@@ -107,12 +107,6 @@ $(document).ready(function() {
 		$("#infoBlock").show();
 		$("#tableBlock").show();
 		$("#erreurblock").show();
-		var listeTx="";
-		for (var i = 0; i < 10; i++) {
-			listeTx = listeTx+data.tx[i]+"\n";
-			if (!data.tx[i+1])
-				break;
-		}
 		if (data){
 			console.log("data ok");
 			$("#erreurblock").hide();
@@ -125,6 +119,12 @@ $(document).ready(function() {
 			$("#BLOCK_version").append(data.version);
 			$("#BLOCK_previousBlockHash").append(data.previousblockhash);
 			$("#BLOCK_nextBlockHash").append(data.nextblockhash);
+			var listeTx="";
+			for (var i = 0; i < 10; i++) {
+				listeTx = listeTx+data.tx[i]+"\n";
+				if (!data.tx[i+1])
+					break;
+			}
 			$("#BLOCK_tx").append(listeTx);	
 		} else{
 			console.log("pas data")
