@@ -52,7 +52,7 @@ $(document).ready(function() {
 
 	function AppelWS2(param,urlWS,divErreur){
 		var appelAjax = $.ajax({
-			url : urlWS+param+"/balance,
+			url : urlWS+param+"/balance",
 			dataType : "json",
 			contentType : "application/json; charset=utf-8",
 			type : "GET",
@@ -157,7 +157,7 @@ $(document).ready(function() {
 			console.log("dans le si");
 			$("#erreurAdresse").hide();
 			ClearResultatAdresse();
-			$("#ADR_hash160").append(data.adress);
+			$("#ADR_hash160").append(data.address);
 			$("#ADR_adresse").append(data.adress);
 			$("#ADR_n_tx").append(data.n_tx);
 			$("#ADR_total_received").append(data.total_received);
