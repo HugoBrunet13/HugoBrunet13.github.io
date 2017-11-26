@@ -158,6 +158,9 @@ $(document).ready(function() {
 			$("#ADR_total_sent").append(data.total_sent);
 			$("#ADR_final_balance").append(data.final_balance);
 			var str = data.txrefs;
+			$.each(data.txrefs, function(i, item) {
+    alert(data.txrefs[i].tx_hash);
+});​
 			console.log(str);
 			console.log(typeof(str));
 			// var jsonObj = $.parseJSON(str);
