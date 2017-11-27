@@ -182,17 +182,6 @@ $(document).ready(function() {
 	
 
 	//----------------------------------------------------------------------------
-
-
-	var oA = document.getElementById('BLOCK_tx');
-
-	oA.onclick = function()
-	{
-	  alert('coucou');
-	  return false;
-	};
-
-
 	CacherDivInfo();	
 	$("#boutonRecherche").click(function(){
 		if ($("#numBlock").val()!=""){
@@ -222,6 +211,8 @@ $(document).ready(function() {
 		CacherDivInfo();
 		RechercherBlockParHash($("#BLOCK_nextBlockHash").text(),"https://bitcoin.mubiz.com/block_hash/");
 	});
+
+	
 	$("#ADR_txs").click(function(){
 		console.log("ok");
 		CacherDivInfo();
