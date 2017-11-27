@@ -157,25 +157,11 @@ $(document).ready(function() {
 			$("#ADR_total_received").append(data.total_received);
 			$("#ADR_total_sent").append(data.total_sent);
 			$("#ADR_final_balance").append(data.final_balance);
-			var str = data.txrefs;
 			
-for (var i in str) {
-  $("#ADR_txs2").append("<div id=\"ADR_txs\">"+str[i]["tx_hash"]+"</div></br>");
+			for (var i in data.txrefs) {
+	  			$("#ADR_txs2").append("<div id=\"ADR_txs\">"+data.txrefs[i]["tx_hash"]+"</div>");
+			}
 
-
-  		// <div id="ADR_txs"></div>
-    // console.log();
-}
-
-
-//			$.each(data.txrefs, function(i, item) { console.log(data.txrefs[i].tx_hash); });​
-			
-			//console.log(str);
-			//console.log(typeof(str));
-			// var jsonObj = $.parseJSON(str);
-			// console.log(jsonObj);
-			//$.each(str, function(i, item){console.log(str[i].tx_hash);});
-			//$("#ADR_txs").append(data.txs);
 		} else{
 			$("#tableadresse").hide();
 		}
@@ -219,5 +205,9 @@ for (var i in str) {
 	$("#BLOCK_nextBlockHash").click(function(){
 		CacherDivInfo();
 		RechercherBlockParHash($("#BLOCK_nextBlockHash").text(),"https://bitcoin.mubiz.com/block_hash/");
+	});
+	$("#ADR_txs").click(function(){
+		CacherDivInfo();
+		RechercherTransaction($("#ADR_txs").text(),"https://bitcoin.mubiz.com/transaction/");
 	});
 });	
