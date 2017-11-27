@@ -200,6 +200,7 @@ $(document).ready(function() {
 		RechercherBlockParHash($("#TX_blockhash").text(),"https://bitcoin.mubiz.com/block_hash/");
 	});
 	$("#BLOCK_previousBlockHash").click(function(){
+		console.log("ok");
 		CacherDivInfo();
 		RechercherBlockParHash($("#BLOCK_previousBlockHash").text(),"https://bitcoin.mubiz.com/block_hash/");
 	});
