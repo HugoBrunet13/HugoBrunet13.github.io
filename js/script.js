@@ -78,7 +78,7 @@ $(document).ready(function() {
 		$("#BLOCK_version").text('');
 		$("#BLOCK_previousBlockHash").text('');
 		$("#BLOCK_nextBlockHash").text('');
-		$("#BLOCK_tx").text('');
+		$("#BLOCK_tx2").text('');
 	}
 
 	function ClearResultatTransaction(){
@@ -115,13 +115,11 @@ $(document).ready(function() {
 			$("#BLOCK_version").append(data.version);
 			$("#BLOCK_previousBlockHash").append(data.previousblockhash);
 			$("#BLOCK_nextBlockHash").append(data.nextblockhash);
-			var listeTx="";
 			for (var i = 0; i < 10; i++) {
-				listeTx = listeTx+data.tx[i]+"\r\n";
+				$("#BLOCK_tx2").append("<div id=\"BLOCK_tx\">"+data.tx[i]+"</div>");	
 				if (!data.tx[i+1])
 					break;
 			}
-			$("#BLOCK_tx").append(listeTx);	
 		} else{
 			$("#tableBlock").hide();
 		}
@@ -157,11 +155,9 @@ $(document).ready(function() {
 			$("#ADR_total_received").append(data.total_received);
 			$("#ADR_total_sent").append(data.total_sent);
 			$("#ADR_final_balance").append(data.final_balance);
-			
 			for (var i in data.txrefs) {
 	  			$("#ADR_txs2").append("<div id=\"ADR_txs\">"+data.txrefs[i]["tx_hash"]+"</div>");
 			}
-
 		} else{
 			$("#tableadresse").hide();
 		}
@@ -211,4 +207,10 @@ $(document).ready(function() {
 		CacherDivInfo();
 		RechercherTransaction($("#ADR_txs").text(),"https://bitcoin.mubiz.com/transaction/");
 	});
+	$("#BLOCK_tx").click(function(){
+		CacherDivInfo();
+		RechercherBlockParHash($("#BLOCK_tx").text(),"https://bitcoin.mubiz.com/transaction/");
+	});
+
+
 });	
