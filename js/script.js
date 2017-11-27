@@ -153,7 +153,7 @@ $(document).ready(function() {
 			$("#infoAdresse").hide();
 			$("#tableadresse").hide();
 		}
-		if (data){
+		else{
 			console.log(data);
 			$("#erreurAdresse").hide();
 			ClearResultatAdresse();
@@ -165,9 +165,6 @@ $(document).ready(function() {
 			for (var i in data.txrefs) {
 	  			$("#ADR_txs2").append("<div id=\"ADR_txs\">"+data.txrefs[i]["tx_hash"]+"</div>");
 			}
-		} else{
-			console.log("tout tes morts");
-			$("#tableadresse").hide();
 		}
 	}
 
