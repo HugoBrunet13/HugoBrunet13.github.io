@@ -41,6 +41,7 @@ $(document).ready(function() {
 			},
 
 			error : function(xhr, status, err) {
+				console.log("fdp");
 				$(divErreur).text('');
 				$(divErreur).append(err+" N/A");
 			}
@@ -148,6 +149,7 @@ $(document).ready(function() {
 		$("#tableadresse").show();
 		$("#erreurAdresse").show();
 		if (data){
+			console.log("data pas vide");
 			$("#erreurAdresse").hide();
 			ClearResultatAdresse();
 			$("#ADR_adresse").append(data.address);
@@ -159,6 +161,7 @@ $(document).ready(function() {
 	  			$("#ADR_txs2").append("<div id=\"ADR_txs\">"+data.txrefs[i]["tx_hash"]+"</div>");
 			}
 		} else{
+			console.log("tout tes morts");
 			$("#tableadresse").hide();
 		}
 	}
