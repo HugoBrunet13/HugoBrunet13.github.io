@@ -116,7 +116,7 @@ $(document).ready(function() {
 			$("#BLOCK_nextBlockHash").append(data.nextblockhash);
 			for (var i = 0; i < 10; i++) {
 				console.log(data.tx[i]);
-				$("#BLOCK_tx2").append("<div id=\"BLOCK_tx\">"+data.tx[i]+"</div>");	
+				$("#BLOCK_tx2").append("<div id=\"BLOCK_tx\" onclick=\"test("+data.tx[i]+")\">"+data.tx[i]+"</div>");	
 				if (!data.tx[i+1])
 					break;
 			}
@@ -174,6 +174,11 @@ $(document).ready(function() {
 		$("#infoAdresse").hide();		
 	}
 
+	function test(transac){
+		console.log("ok");
+		CacherDivInfo();
+		RechercherTransaction(transac,"https://api.blockcypher.com/v1/btc/main/txs/");
+	}
 	
 
 	//----------------------------------------------------------------------------
