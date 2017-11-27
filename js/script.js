@@ -41,7 +41,6 @@ $(document).ready(function() {
 			},
 
 			error : function(xhr, status, err) {
-				console.log("fdp");
 				$(divErreur).text('');
 				$(divErreur).append(err+" N/A");
 			}
@@ -117,6 +116,7 @@ $(document).ready(function() {
 			$("#BLOCK_previousBlockHash").append(data.previousblockhash);
 			$("#BLOCK_nextBlockHash").append(data.nextblockhash);
 			for (var i = 0; i < 10; i++) {
+				console.log(data.tx[i]);
 				$("#BLOCK_tx2").append("<div id=\"BLOCK_tx\">"+data.tx[i]+"</div>");	
 				if (!data.tx[i+1])
 					break;
@@ -212,6 +212,7 @@ $(document).ready(function() {
 		RechercherTransaction($("#ADR_txs").text(),"https://bitcoin.mubiz.com/transaction/");
 	});
 	$("#BLOCK_tx").click(function(){
+		console.log("ok");
 		CacherDivInfo();
 		RechercherBlockParHash($("#BLOCK_tx").text(),"https://bitcoin.mubiz.com/transaction/");
 	});
