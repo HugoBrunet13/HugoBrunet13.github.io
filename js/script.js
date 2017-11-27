@@ -146,8 +146,13 @@ $(document).ready(function() {
 
 	function MiseEnFormeInfoAdresse(data){
 		$("#infoAdresse").show();
-		$("#tableadresse").show();
-		$("#erreurAdresse").show();
+		$("#tableadresse").show();		
+		if(data.error){
+			$("#erreurAdresse").show();
+			$("#erreurAdresse").append(data.error);
+			$("#infoAdresse").hide();
+			$("#tableadresse").hide();
+		}
 		if (data){
 			console.log(data);
 			$("#erreurAdresse").hide();
