@@ -207,6 +207,7 @@ $(document).ready(function() {
 		RechercherBlockParHash($("#BLOCK_nextBlockHash").text(),"https://bitcoin.mubiz.com/block_hash/");
 	});
 	$("#ADR_txs").click(function(){
+		console.log("ok");
 		CacherDivInfo();
 		RechercherTransaction($("#ADR_txs").text(),"https://bitcoin.mubiz.com/transaction/");
 	});
