@@ -34,7 +34,7 @@ $(document).ready(function() {
 			contentType : "application/json; charset=utf-8",
 			type : "GET",
 			timeout:	"5000",
-			async : false,
+			async : true,
 
 			success : function(data) {
 				
@@ -203,7 +203,6 @@ $(document).ready(function() {
 		RechercherBlockParHash($("#TX_blockhash").text(),"https://bitcoin.mubiz.com/block_hash/");
 	});
 	$("#BLOCK_previousBlockHash").click(function(){
-		console.log("ok");
 		CacherDivInfo();
 		RechercherBlockParHash($("#BLOCK_previousBlockHash").text(),"https://bitcoin.mubiz.com/block_hash/");
 	});
@@ -212,7 +211,7 @@ $(document).ready(function() {
 		RechercherBlockParHash($("#BLOCK_nextBlockHash").text(),"https://bitcoin.mubiz.com/block_hash/");
 	});
 
-	
+
 	$("#ADR_txs").click(function(){
 		console.log("ok");
 		CacherDivInfo();
