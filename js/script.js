@@ -160,7 +160,7 @@ $(document).ready(function() {
 			var str = data.txrefs;
 			
 for (var i in str) {
-  $("#ADR_txs2").append(str[i]["tx_hash"]);
+  $("#ADR_txs2").append("<div id=\"ADR_txs\">"+str[i]["tx_hash"]+"</div></br>");
 
 
   		// <div id="ADR_txs"></div>
