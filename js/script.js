@@ -148,14 +148,12 @@ $(document).ready(function() {
 		$("#infoAdresse").show();
 		$("#tableadresse").show();		
 		if(data.error){
-			console.log(data);
 			$("#erreurAdresse").show();
 			$("#erreurAdresse").append(data.error);
-			$("#infoAdresse").hide();
+			$("#infoAdresse").show();
 			$("#tableadresse").hide();
 		}
 		else if(data){
-			console.log(data);
 			$("#erreurAdresse").hide();
 			ClearResultatAdresse();
 			$("#ADR_adresse").append(data.address);
