@@ -130,6 +130,7 @@ $(document).ready(function() {
 		$("#tabletransac").show();
 		$("#erreurTransac").show();
 		if (data){
+			console.log(data);
 			$("#erreurTransac").hide();
 			ClearResultatTransaction();
 			$("#TX_hash").append(data.hash);
