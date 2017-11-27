@@ -214,7 +214,7 @@ $(document).ready(function() {
 	$("#BLOCK_tx").click(function(){
 		console.log("ok");
 		CacherDivInfo();
-		RechercherBlockParHash($("#BLOCK_tx").text(),"https://bitcoin.mubiz.com/transaction/");
+		RechercherTransaction($("#BLOCK_tx").text(),"https://bitcoin.mubiz.com/transaction/");
 	});
 
 
