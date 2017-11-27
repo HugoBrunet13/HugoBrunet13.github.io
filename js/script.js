@@ -82,12 +82,11 @@ $(document).ready(function() {
 	}
 
 	function ClearResultatTransaction(){
-		$("#TX_txid").text('');
 		$("#TX_hash").text('');
 		$("#TX_size").text('');
-		$("#TX_version").text('');
 		$("#TX_blockhash").text('');
-		$("#TX_confirmation").text('');
+		$("#TX_confirmations").text('');
+		$("#TX_adresses2").text('');
 	}
 
 	function ClearResultatAdresse(){
@@ -133,12 +132,13 @@ $(document).ready(function() {
 		if (data){
 			$("#erreurTransac").hide();
 			ClearResultatTransaction();
-			$("#TX_txid").append(data.txid);
 			$("#TX_hash").append(data.hash);
 			$("#TX_size").append(data.size);
-			$("#TX_version").append(data.version);
-			$("#TX_blockhash").append(data.blockhash);
+			$("#TX_blockhash").append(data.block_hash);
 			$("#TX_confirmations").append(data.confirmations);
+			for (var i in data.adresses) {
+	  			$("#TX_adresses2").append("<div id=\"TX_adresses\">"+data.adresses[i]+"</div>");
+			}
 		} else{
 			$("#tabletransac").hide();
 		}
@@ -186,7 +186,7 @@ $(document).ready(function() {
 		} 
 		if($("#numTransac").val()!=""){
 			CacherDivInfo();
-			RechercherTransaction($("#numTransac").val(),"https://bitcoin.mubiz.com/transaction/");
+			RechercherTransaction($("#numTransac").val(),"https://api.blockcypher.com/v1/btc/main/txs/");
 		} 
 		if ($("#adresse").val()!=""){
 			CacherDivInfo();
@@ -214,7 +214,13 @@ $(document).ready(function() {
 	$("#BLOCK_tx").click(function(){
 		console.log("ok");
 		CacherDivInfo();
-		RechercherTransaction($("#BLOCK_tx").text(),"https://bitcoin.mubiz.com/transaction/");
+		RechercherTransaction($("#BLOCK_tx").text(),"https://api.blockcypher.com/v1/btc/main/txs/");
+	});
+
+	$("#TX_adresses").click(function(){
+		console.log("ok");
+		CacherDivInfo();
+		RechercherAdresse($("#adresse").val(),"https://api.blockcypher.com/v1/btc/main/addrs/");
 	});
 
 
