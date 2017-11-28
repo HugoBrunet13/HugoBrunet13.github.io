@@ -116,7 +116,7 @@ $(document).ready(function() {
 			$("#BLOCK_nextBlockHash").append(data.nextblockhash);
 			for (var i = 0; i < 10; i++) {
 				console.log(data.tx[i]);
-				$("#BLOCK_tx2").append("<div id=\"BLOCK_tx\" onclick=\"RechercherTransaction(data.tx[i])\">	"+data.tx[i]+"</div>");	
+				$("#BLOCK_tx2").append("<div id=\"BLOCK_tx\" onclick=\"RechercherTransaction(data.tx[i],\"https://api.blockcypher.com/v1/btc/main/txs/\")\">	"+data.tx[i]+"</div>");	
 				if (!data.tx[i+1])
 					break;
 			}
@@ -217,11 +217,11 @@ $(document).ready(function() {
 		CacherDivInfo();
 		RechercherTransaction($("#ADR_txs").text(),"https://bitcoin.mubiz.com/transaction/");
 	});
-	$("#BLOCK_tx").click(function(){
+	/*$("#BLOCK_tx").click(function(){
 		console.log("ok");
 		CacherDivInfo();
 		RechercherTransaction($("#BLOCK_tx").text(),"https://api.blockcypher.com/v1/btc/main/txs/");
-	});
+	});*/
 
 	$("#TX_adresses").click(function(){
 		console.log("ok");
