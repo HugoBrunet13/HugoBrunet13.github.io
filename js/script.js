@@ -118,7 +118,7 @@ $(document).ready(function() {
 			for (var i = 0; i < 10; i++) {
 				console.log(data.tx[i]);
 				//$("#BLOCK_tx2").append("<div onclick="appelle d'une fct qui renvoit le nomdeladiv" id=\"BLOCK_tx"+cpt+"\" "+ data.tx[i] +"<\\div>");
-				$("#BLOCK_tx2").append("<div class=\"BLOCK_tx\" id=\"tx"+cpt+"\"> " + data.tx[i] + " </div>");
+				$("#BLOCK_tx2").append("<div class=\"BLOCK_tx\" id=\"BLOCK_tx"+cpt+"\"> " + data.tx[i] + " </div>");
 				cpt = cpt+1;
 				if (!data.tx[i+1])
 					break;
@@ -128,7 +128,6 @@ $(document).ready(function() {
 		} else{
 			$("#tableBlock").hide();
 		}
-		return data.tx;
 	}
 
 	function MiseEnFormeInfoTransaction(data){
@@ -232,56 +231,56 @@ $(document).ready(function() {
 	});
 
 
-	$("#tx0").click(function(){
+	$("#BLOCK_tx0").click(function(){
 		console.log("ok0");
 		CacherDivInfo();
-		RechercherTransaction($("#tx0").text(),"https://api.blockcypher.com/v1/btc/main/txs/");
+		RechercherTransaction($("#BLOCK_tx0").text(),"https://api.blockcypher.com/v1/btc/main/txs/");
 	});
-	$("#tx1").click(function(){
+	$("#BLOCK_tx1").click(function(){
 		console.log("ok1");
 		CacherDivInfo();
-		RechercherTransaction($("#tx1").text(),"https://api.blockcypher.com/v1/btc/main/txs/");
+		RechercherTransaction($("#BLOCK_tx1").text(),"https://api.blockcypher.com/v1/btc/main/txs/");
 	});
-	$("#tx2").click(function(){
+	$("#BLOCK_tx2").click(function(){
 		console.log("ok2");
 		CacherDivInfo();
-		console.log($("#tx2").text());
-		RechercherTransaction($("#tx2").text(),"https://api.blockcypher.com/v1/btc/main/txs/");
+		console.log($("#BLOCK_tx2").text());
+		RechercherTransaction($("#BLOCK_tx2").text(),"https://api.blockcypher.com/v1/btc/main/txs/");
 	});
-	$("#tx3").click(function(){
+	$("#BLOCK_tx3").click(function(){
 		console.log("ok3");
 		CacherDivInfo();
-		RechercherTransaction($("#tx3").text(),"https://api.blockcypher.com/v1/btc/main/txs/");
+		RechercherTransaction($("#BLOCK_tx3").text(),"https://api.blockcypher.com/v1/btc/main/txs/");
 	});
-	$("#tx4").click(function(){
+	$("#BLOCK_tx4").click(function(){
 		console.log("ok4");
 		CacherDivInfo();
-		RechercherTransaction($("#tx4").text(),"https://api.blockcypher.com/v1/btc/main/txs/");
+		RechercherTransaction($("#BLOCK_tx4").text(),"https://api.blockcypher.com/v1/btc/main/txs/");
 	});
-	$("#tx5").click(function(){
+	$("#BLOCK_tx5").click(function(){
 		console.log("ok5");
 		CacherDivInfo();
-		RechercherTransaction($("#tx5").text(),"https://api.blockcypher.com/v1/btc/main/txs/");
+		RechercherTransaction($("#BLOCK_tx5").text(),"https://api.blockcypher.com/v1/btc/main/txs/");
 	});
-	$("#tx6").click(function(){
+	$("#BLOCK_tx6").click(function(){
 		console.log("ok6");
 		CacherDivInfo();
-		RechercherTransaction($("#tx6").text(),"https://api.blockcypher.com/v1/btc/main/txs/");
+		RechercherTransaction($("#BLOCK_tx6").text(),"https://api.blockcypher.com/v1/btc/main/txs/");
 	});
-	$("#tx7").click(function(){
+	$("#BLOCK_tx7").click(function(){
 		console.log("ok7");
 		CacherDivInfo();
-		RechercherTransaction($("#tx7").text(),"https://api.blockcypher.com/v1/btc/main/txs/");
+		RechercherTransaction($("#BLOCK_tx7").text(),"https://api.blockcypher.com/v1/btc/main/txs/");
 	});
-	$("#tx8").click(function(){
+	$("#BLOCK_tx8").click(function(){
 		console.log("ok8");
 		CacherDivInfo();
-		RechercherTransaction($("#tx8").text(),"https://api.blockcypher.com/v1/btc/main/txs/");
+		RechercherTransaction($("#BLOCK_tx8").text(),"https://api.blockcypher.com/v1/btc/main/txs/");
 	});
-	$("#tx9").click(function(){
+	$("#BLOCK_tx9").click(function(){
 		console.log("ok9");
 		CacherDivInfo();
-		RechercherTransaction($("#tx9").text(),"https://api.blockcypher.com/v1/btc/main/txs/");
+		RechercherTransaction($("#BLOCK_tx9").text(),"https://api.blockcypher.com/v1/btc/main/txs/");
 	});
 
 
