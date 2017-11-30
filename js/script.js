@@ -114,17 +114,27 @@ $(document).ready(function() {
 			$("#BLOCK_version").append(data.version);
 			$("#BLOCK_previousBlockHash").append(data.previousblockhash);
 			$("#BLOCK_nextBlockHash").append(data.nextblockhash);
+			var cpt = 0;
 			for (var i = 0; i < 10; i++) {
 				console.log(data.tx[i]);
-				$("#BLOCK_tx2").append("<div id=\"BLOCK_tx\" onclick=\"RechercherTransaction(" + "\'" + (data.tx[i]) + "\'" + "," + "\'" + "https:\/\/api.blockcypher.com\/v1\/btc\/main\/txs\/" + "\'" + ")\" >" + data.tx[i] + "</div>");	
+				//$("#BLOCK_tx2").append("<div onclick="appelle d'une fct qui renvoit le nomdeladiv" id=\"BLOCK_tx"+cpt+"\" "+ data.tx[i] +"<\\div>");
+				$("#BLOCK_tx2").append("<div id=\"BLOCK_tx"+cpt+"\"> " + data.tx[i] + " </div>");
+				cpt = cpt+1;
 				if (!data.tx[i+1])
 					break;
 			}
+			//$("#BLOCK_tx2").append("<div id=\"BLOCK_tx\" onclick=\"RechercherTransaction(" + "\'" + (data.tx[i]) + "\'" + "," + "\'" + "https:\/\/api.blockcypher.com\/v1\/btc\/main\/txs\/" + "\'" + ")\" >" + data.tx[i] + "</div>");	
 			//RechercherTransaction(data.tx[i], "https:\/\/api.blockcypher.com\/v1\/btc\/main\/txs\/")
 		} else{
 			$("#tableBlock").hide();
 		}
 	}
+
+	$("#BLOCK_tx").click(function(){
+		console.log("ok");
+		CacherDivInfo();
+		RechercherTransaction($("#BLOCK_tx").text(),"https://api.blockcypher.com/v1/btc/main/txs/");
+	});
 
 	function test(data){
 		console.log(data)
@@ -222,11 +232,7 @@ $(document).ready(function() {
 		CacherDivInfo();
 		RechercherTransaction($("#ADR_txs").text(),"https://bitcoin.mubiz.com/transaction/");
 	});
-	/*$("#BLOCK_tx").click(function(){
-		console.log("ok");
-		CacherDivInfo();
-		RechercherTransaction($("#BLOCK_tx").text(),"https://api.blockcypher.com/v1/btc/main/txs/");
-	});*/
+
 
 	$("#TX_adresses").click(function(){
 		console.log("ok");
