@@ -78,7 +78,16 @@ $(document).ready(function() {
 		$("#BLOCK_version").text('');
 		$("#BLOCK_previousBlockHash").text('');
 		$("#BLOCK_nextBlockHash").text('');
-		$("#BLOCK_All_TX").text('');
+		$("#BLOCK_tx0").text('');
+		$("#BLOCK_tx1").text('');
+		$("#BLOCK_tx2").text('');
+		$("#BLOCK_tx3").text('');
+		$("#BLOCK_tx4").text('');
+		$("#BLOCK_tx5").text('');
+		$("#BLOCK_tx6").text('');
+		$("#BLOCK_tx7").text('');
+		$("#BLOCK_tx8").text('');
+		$("#BLOCK_tx9").text('');
 	}
 
 	function ClearResultatTransaction(){
@@ -175,11 +184,7 @@ $(document).ready(function() {
 		$("#infoAdresse").hide();		
 	}
 
-	// function test(transac){
-	// 	console.log("ok");
-	// 	CacherDivInfo();
-	// 	RechercherTransaction(transac,"https://api.blockcypher.com/v1/btc/main/txs/");
-	// }
+
 	
 
 	//----------------------------------------------------------------------------
