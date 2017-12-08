@@ -78,7 +78,7 @@ $(document).ready(function() {
 		$("#BLOCK_version").text('');
 		$("#BLOCK_previousBlockHash").text('');
 		$("#BLOCK_nextBlockHash").text('');
-		$("#BLOCK_tx2").text('');
+		$("#BLOCK_All_TX").text('');
 	}
 
 	function ClearResultatTransaction(){
@@ -121,8 +121,6 @@ $(document).ready(function() {
 				if (!data.tx[i+1])
 					break;
 			}
-			//$("#BLOCK_tx2").append("<div id=\"BLOCK_tx\" onclick=\"RechercherTransaction(" + "\'" + (data.tx[i]) + "\'" + "," + "\'" + "https:\/\/api.blockcypher.com\/v1\/btc\/main\/txs\/" + "\'" + ")\" >" + data.tx[i] + "</div>");	
-			//RechercherTransaction(data.tx[i], "https:\/\/api.blockcypher.com\/v1\/btc\/main\/txs\/")
 		} else{
 			$("#tableBlock").hide();
 		}
