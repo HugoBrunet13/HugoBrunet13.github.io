@@ -116,7 +116,7 @@ $(document).ready(function() {
 			$("#BLOCK_nextBlockHash").append(data.nextblockhash);
 			var cpt = 0;
 			for (var i = 0; i < 10; i++) {
-				$("#BLOCK_All_TX").append("<div class=\"BLOCK_tx\" id=\"BLOCK_tx"+cpt+"\">" + data.tx[i] + "</div>");
+				$("#BLOCK_tx"+i).append(data.tx[i]);
 				cpt = cpt+1;
 				if (!data.tx[i+1])
 					break;
