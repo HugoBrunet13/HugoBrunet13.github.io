@@ -23,6 +23,7 @@ $(document).ready(function() {
  	function TEST(){
  		console.log("yoooooo");
  	}
+ 	
 	function RechercherAdresse(adresse,urlWS){
  		$("#adresse").val('');
  	 	var retourAjax = AppelWS2(adresse,urlWS,"#erreurAdresse");
