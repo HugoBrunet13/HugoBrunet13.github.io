@@ -234,10 +234,10 @@ $(document).ready(function() {
 		CacherDivInfo();
 		RechercherTransaction($("#BLOCK_tx0").text(),"https://api.blockcypher.com/v1/btc/main/txs/");
 	});
-	$("#BLOCK_tx1").click(function(){
+	$(".BLOCK_tx").click(function(){
 		console.log("ok1");
 		CacherDivInfo();
-		RechercherTransaction($("#BLOCK_tx1").text(),"https://api.blockcypher.com/v1/btc/main/txs/");
+		RechercherTransaction($("#BLOCK_tx").text(),"https://api.blockcypher.com/v1/btc/main/txs/");
 	});
 	// $("#BLOCK_tx2").click(function(){
 	// 	console.log("okkkkkkkk");
