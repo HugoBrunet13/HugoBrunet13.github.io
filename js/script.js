@@ -20,8 +20,8 @@ $(document).ready(function() {
 		MiseEnFormeInfoTransaction(data);
  	}
 
- 	function TEST(val){
- 		console.log(val);
+ 	function TEST(){
+ 		console.log("yoooooo");
  	}
 	function RechercherAdresse(adresse,urlWS){
  		$("#adresse").val('');
