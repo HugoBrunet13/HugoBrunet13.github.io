@@ -116,7 +116,7 @@ $(document).ready(function() {
 			$("#BLOCK_nextBlockHash").append(data.nextblockhash);
 			var cpt = 0;
 			for (var i = 0; i < 10; i++) {
-				$("#BLOCK_tx2").append("<div class=\"BLOCK_tx\" id=\"BLOCK_tx"+cpt+"\">" + data.tx[i] + "</div>");
+				$("#BLOCK_All_TX").append("<div class=\"BLOCK_tx\" id=\"BLOCK_tx"+cpt+"\">" + data.tx[i] + "</div>");
 				cpt = cpt+1;
 				if (!data.tx[i+1])
 					break;
@@ -234,17 +234,17 @@ $(document).ready(function() {
 		CacherDivInfo();
 		RechercherTransaction($("#BLOCK_tx0").text(),"https://api.blockcypher.com/v1/btc/main/txs/");
 	});
-	$(".BLOCK_tx").click(function(){
+	$("#BLOCK_tx1").click(function(){
 		console.log("ok1");
 		CacherDivInfo();
 		RechercherTransaction($("#BLOCK_tx").text(),"https://api.blockcypher.com/v1/btc/main/txs/");
 	});
-	// $("#BLOCK_tx2").click(function(){
-	// 	console.log("okkkkkkkk");
-	// 	CacherDivInfo();
-	// 	console.log($("#BLOCK_tx2").text());
-	// 	RechercherTransaction($("#BLOCK_tx2").text(),"https://api.blockcypher.com/v1/btc/main/txs/");
-	// });
+	$("#BLOCK_tx2").click(function(){
+		console.log("okkkkkkkk");
+		CacherDivInfo();
+		console.log($("#BLOCK_tx2").text());
+		RechercherTransaction($("#BLOCK_tx2").text(),"https://api.blockcypher.com/v1/btc/main/txs/");
+	});
 	$("#BLOCK_tx3").click(function(){
 		console.log("ok3");
 		CacherDivInfo();
