@@ -239,12 +239,12 @@ $(document).ready(function() {
 		CacherDivInfo();
 		RechercherTransaction($("#BLOCK_tx1").text(),"https://api.blockcypher.com/v1/btc/main/txs/");
 	});
-	$("#BLOCK_tx2").click(function(){
-		console.log("okkkkkkkk");
-		CacherDivInfo();
-		console.log($("#BLOCK_tx2").text());
-		RechercherTransaction($("#BLOCK_tx2").text(),"https://api.blockcypher.com/v1/btc/main/txs/");
-	});
+	// $("#BLOCK_tx2").click(function(){
+	// 	console.log("okkkkkkkk");
+	// 	CacherDivInfo();
+	// 	console.log($("#BLOCK_tx2").text());
+	// 	RechercherTransaction($("#BLOCK_tx2").text(),"https://api.blockcypher.com/v1/btc/main/txs/");
+	// });
 	$("#BLOCK_tx3").click(function(){
 		console.log("ok3");
 		CacherDivInfo();
