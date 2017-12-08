@@ -20,6 +20,9 @@ $(document).ready(function() {
 		MiseEnFormeInfoTransaction(data);
  	}
 
+ 	function TEST(val){
+ 		console.log(val);
+ 	}
 	function RechercherAdresse(adresse,urlWS){
  		$("#adresse").val('');
  	 	var retourAjax = AppelWS2(adresse,urlWS,"#erreurAdresse");
