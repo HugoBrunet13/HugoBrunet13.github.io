@@ -1,7 +1,3 @@
-header('Access-Control-Allow-Origin: *');
-header('Access-Control-Allow-Headers: Origin, X-Requested-With, Content-Type, Accept');
-
-
 $(document).ready(function() {
 
 	function RechercherBlock(indexBLock,urlWS){
