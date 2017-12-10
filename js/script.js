@@ -136,11 +136,10 @@ $(document).ready(function() {
 			ClearResultatTransaction();
 			$("#TX_hash").append(data.hash);
 			$("#TX_size").append(data.size);
-			$("#TX_blockhash").append(data.block_hash);
+			$("#TX_blockheight").append(data.BLOCK_height);
 			$("#TX_confirmations").append(data.confirmations);
-			for (var i in data.adresses) {
-	  			$("#TX_adresses2").append("<div id=\"TX_adresses\">"+data.adresses[i]+"</div>");
-			}
+			$("#TX_adr0").append(data.adresses[0]);
+			$("#TX_adr1").append(data.confirmations[1]);
 		} else{
 			$("#tabletransac").hide();
 		}
@@ -192,7 +191,7 @@ $(document).ready(function() {
 		} 
 		if($("#numTransac").val()!=""){
 			CacherDivInfo();
-			RechercherTransaction($("#numTransac").val(),"https://blockchain.info/fr/rawtx/");
+			RechercherTransaction($("#numTransac").val(),"https://api.blockcypher.com/v1/btc/main/txs/");
 		} 
 		if ($("#adresse").val()!=""){
 			CacherDivInfo();
@@ -304,5 +303,18 @@ $(document).ready(function() {
 		CacherDivInfo();	
 		RechercherTransaction($("#ADR_tx4").text(),"https://api.blockcypher.com/v1/btc/main/txs/");
 	});
+
+	$("#TX_adr0").click(function(){
+		console.log("TX_adr0");
+		CacherDivInfo();	
+		RechercherTransaction($("#TX_adr0").text(),"https://blockchain.info/fr/rawaddr/");
+	});
+	$("#ADR_tx4").click(function(){
+		console.log("okadr4");
+		CacherDivInfo();	
+		RechercherTransaction($("#ADR_tx4").text(),"https://blockchain.info/fr/rawaddr/");
+	});
+
+
 
 });	
