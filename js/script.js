@@ -8,7 +8,7 @@ $(document).ready(function() {
 	}
 
 	function RechercherBlockParHash(hashBlock,urlWS){
-		var retourAjax = AppelWS(	hashBlock,urlWS,"#erreurblock");
+		var retourAjax = AppelWS(hashBlock,urlWS,"#erreurblock");
 		var data = retourAjax.responseJSON;
 		RechercherBlock(data.height,"https://bitcoin.mubiz.com/block/");
 	}
@@ -134,10 +134,10 @@ $(document).ready(function() {
 			ClearResultatTransaction();
 			$("#TX_hash").append(data.hash);
 			$("#TX_size").append(data.size);
-			$("#TX_blockheight").append(data.BLOCK_height);
+			$("#TX_blockheight").append(data.block_height);
 			$("#TX_confirmations").append(data.confirmations);
-			$("#TX_adr0").append(data.adresses[0]);
-			$("#TX_adr1").append(data.confirmations[1]);
+			$("#TX_adr0").append(data.addresses[0]);
+			$("#TX_adr1").append(data.addresses[1]);
 		} else{
 			$("#tabletransac").hide();
 		}
