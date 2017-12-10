@@ -15,7 +15,7 @@ $(document).ready(function() {
 
  	function RechercherTransaction(idTransaction,urlWS){
  		$("#numTransac").val('');
- 	 	var retourAjax = AppelWS(idTransaction,urlWS,"#erreurTransac");
+ 	 	var retourAjax = AppelWS2(idTransaction,urlWS,"#erreurTransac");
 		var data = retourAjax.responseJSON;
 		MiseEnFormeInfoTransaction(data);
  	}
@@ -182,6 +182,8 @@ $(document).ready(function() {
 
 	//----------------------------------------------------------------------------
 	CacherDivInfo();	
+
+
 	$("#boutonRecherche").click(function(){
 		if ($("#numBlock").val()!=""){
 			CacherDivInfo();
@@ -197,6 +199,9 @@ $(document).ready(function() {
 		}
 	});
 
+
+
+
 	$("#TX_blockhash").click(function(){
 		CacherDivInfo();
 		RechercherBlockParHash($("#TX_blockhash").text(),"https://bitcoin.mubiz.com/block_hash/");
@@ -208,20 +213,6 @@ $(document).ready(function() {
 	$("#BLOCK_nextBlockHash").click(function(){
 		CacherDivInfo();
 		RechercherBlockParHash($("#BLOCK_nextBlockHash").text(),"https://bitcoin.mubiz.com/block_hash/");
-	});
-
-
-	$("#ADR_txs").click(function(){
-		console.log("ok");
-		CacherDivInfo();
-		RechercherTransaction($("#ADR_txs").text(),"https://bitcoin.mubiz.com/transaction/");
-	});
-
-
-	$("#TX_adresses").click(function(){
-		console.log("ok");
-		CacherDivInfo();
-		RechercherAdresse($("#adresse").val(),"https://api.blockcypher.com/v1/btc/main/addrs/");
 	});
 
 
@@ -276,6 +267,22 @@ $(document).ready(function() {
 		RechercherTransaction($("#BLOCK_tx9").text(),"https://api.blockcypher.com/v1/btc/main/txs/");
 	});
 
+
+
+
+	$("#TX_adr0").click(function(){
+		console.log("TX_adr0");
+		CacherDivInfo();	
+		RechercherTransaction($("#TX_adr0").text(),"https://blockchain.info/fr/rawaddr/");
+	});
+	$("#TX_adr1").click(function(){
+		console.log("TX_adr1");
+		CacherDivInfo();	
+		RechercherTransaction($("#TX_adr1").text(),"https://blockchain.info/fr/rawaddr/");
+	});
+
+
+
 	$("#ADR_tx0").click(function(){
 		console.log("okadr0");
 		CacherDivInfo();	
@@ -302,16 +309,9 @@ $(document).ready(function() {
 		RechercherTransaction($("#ADR_tx4").text(),"https://api.blockcypher.com/v1/btc/main/txs/");
 	});
 
-	$("#TX_adr0").click(function(){
-		console.log("TX_adr0");
-		CacherDivInfo();	
-		RechercherTransaction($("#TX_adr0").text(),"https://blockchain.info/fr/rawaddr/");
-	});
-	$("#ADR_tx4").click(function(){
-		console.log("okadr4");
-		CacherDivInfo();	
-		RechercherTransaction($("#ADR_tx4").text(),"https://blockchain.info/fr/rawaddr/");
-	});
+
+
+
 
 
 
