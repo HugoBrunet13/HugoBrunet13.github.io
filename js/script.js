@@ -34,7 +34,7 @@ $(document).ready(function() {
 			dataType : "json",
 			contentType : "application/json; charset=utf-8",
 			type : "GET",
-			timeout:	"5000",
+			timeout:"5000",
 			async : false,
 			success : function(data) {
 				
@@ -54,7 +54,7 @@ $(document).ready(function() {
 			dataType : "json",
 			contentType : "application/json; charset=utf-8",
 			type : "GET",
-			timeout:	"5000",
+			timeout:"5000",
 			async : false,
 			success : function(data) {
 				
@@ -129,7 +129,7 @@ $(document).ready(function() {
 		$("#infoTransaction").show();
 		$("#tabletransac").show();
 		$("#erreurTransac").show();
-		if (data){
+		if (!data.error && data){
 			console.log(data);
 			$("#erreurTransac").hide();
 			ClearResultatTransaction();
@@ -201,8 +201,6 @@ $(document).ready(function() {
 	});
 
 
-
-
 	$("#TX_blockheight").click(function(){
 		CacherDivInfo();
 		RechercherBlock($("#TX_blockheight").text(),"https://bitcoin.mubiz.com/block/");
@@ -215,7 +213,6 @@ $(document).ready(function() {
 		CacherDivInfo();
 		RechercherBlockParHash($("#BLOCK_nextBlockHash").text(),"https://bitcoin.mubiz.com/block_hash/");
 	});
-
 
 
 
