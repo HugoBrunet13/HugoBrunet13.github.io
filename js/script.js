@@ -82,9 +82,10 @@ $(document).ready(function() {
 	function ClearResultatTransaction(){
 		$("#TX_hash").text('');
 		$("#TX_size").text('');
-		$("#TX_blockhash").text('');
+		$("#TX_blockheight").text('');
 		$("#TX_confirmations").text('');
-		$("#TX_adresses2").text('');
+		$("#TX_adr0").text('');
+		$("#TX_adr1").text('');
 	}
 
 	function ClearResultatAdresse(){
@@ -202,9 +203,9 @@ $(document).ready(function() {
 
 
 
-	$("#TX_blockhash").click(function(){
+	$("#TX_blockheight").click(function(){
 		CacherDivInfo();
-		RechercherBlockParHash($("#TX_blockhash").text(),"https://bitcoin.mubiz.com/block_hash/");
+		RechercherBlockParHash($("#TX_blockheight").text(),"https://bitcoin.mubiz.com/block_hash/");
 	});
 	$("#BLOCK_previousBlockHash").click(function(){
 		CacherDivInfo();
@@ -214,6 +215,8 @@ $(document).ready(function() {
 		CacherDivInfo();
 		RechercherBlockParHash($("#BLOCK_nextBlockHash").text(),"https://bitcoin.mubiz.com/block_hash/");
 	});
+
+
 
 
 	$("#BLOCK_tx0").click(function(){
