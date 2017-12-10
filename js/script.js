@@ -51,7 +51,6 @@ $(document).ready(function() {
 	function AppelWS2(param,urlWS,divErreur){
 		var appelAjax = $.ajax({
 			url : urlWS+param,
-			url : urlWS+param,
 			dataType : "json",
 			contentType : "application/json; charset=utf-8",
 			type : "GET",
