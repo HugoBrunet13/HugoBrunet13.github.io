@@ -24,6 +24,7 @@ $(document).ready(function() {
  		$("#adresse").val('');
  	 	var retourAjax = AppelWS(adresse,urlWS,"#erreurAdresse");
 		var data = retourAjax.responseJSON;
+		console.log(data);
 		MiseEnFormeInfoAdresse(data);
 	}
 
@@ -39,7 +40,6 @@ $(document).ready(function() {
 			success : function(data) {
 				
 			},
-
 			error : function(xhr, status, err) {
 				$(divErreur).text('');
 				$(divErreur).append(err+" N/A");
@@ -127,7 +127,7 @@ $(document).ready(function() {
 
 	function MiseEnFormeInfoAdresse(data){
 		$("#infoAdresse").show();
-		$("#tableadresse").show();		
+		$("#tableadresse").show();
 		if(data.error){
 			$("#erreurAdresse").show();
 			$("#erreurAdresse").append(data.error);
