@@ -1,3 +1,7 @@
+header('Access-Control-Allow-Origin: *');
+header('Access-Control-Allow-Headers: Origin, X-Requested-With, Content-Type, Accept');
+
+
 $(document).ready(function() {
 
 	function RechercherBlock(indexBLock,urlWS){
@@ -15,7 +19,7 @@ $(document).ready(function() {
 
  	function RechercherTransaction(idTransaction,urlWS){
  		$("#numTransac").val('');
- 	 	var retourAjax = AppelWS(idTransaction,urlWS,"#erreurTransac");
+ 	 	var retourAjax = AppelWS2(idTransaction,urlWS,"#erreurTransac");
 		var data = retourAjax.responseJSON;
 		MiseEnFormeInfoTransaction(data);
  	}
@@ -55,7 +59,7 @@ $(document).ready(function() {
 			contentType : "application/json; charset=utf-8",
 			type : "GET",
 			timeout: "5000",
-			async : false,
+			async : true,
 
 			success : function(data) {
 				
