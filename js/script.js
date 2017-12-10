@@ -17,6 +17,7 @@ $(document).ready(function() {
  		$("#numTransac").val('');
  	 	var retourAjax = AppelWS(idTransaction,urlWS,"#erreurTransac");
 		var data = retourAjax.responseJSON;
+		console.log(data);
 		MiseEnFormeInfoTransaction(data);
  	}
 
