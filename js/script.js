@@ -48,27 +48,6 @@ $(document).ready(function() {
 		return appelAjax;
 	}
 
-	function AppelWS2(param,urlWS,divErreur){
-		var appelAjax = $.ajax({
-			url : urlWS+param,
-			dataType : "json",
-			contentType : "application/json; charset=utf-8",
-			type : "GET",
-			timeout: "5000",
-			//async : true,
-
-			success : function(data) {
-				
-			},
-
-			error : function(xhr, status, err) {
-				$(divErreur).text('');
-				$(divErreur).append(err);
-			}
-		});
-		return appelAjax;
-	}
-
 	function ClearResultatBlock(){
 		$("#BLOCK_hash").text('');
 		$("#BLOCK_confirmation").text('');
@@ -78,16 +57,7 @@ $(document).ready(function() {
 		$("#BLOCK_version").text('');
 		$("#BLOCK_previousBlockHash").text('');
 		$("#BLOCK_nextBlockHash").text('');
-		$("#BLOCK_tx0").text('');
-		$("#BLOCK_tx1").text('');
-		$("#BLOCK_tx2").text('');
-		$("#BLOCK_tx3").text('');
-		$("#BLOCK_tx4").text('');
-		$("#BLOCK_tx5").text('');
-		$("#BLOCK_tx6").text('');
-		$("#BLOCK_tx7").text('');
-		$("#BLOCK_tx8").text('');
-		$("#BLOCK_tx9").text('');
+		$(".BLOCK_tx").text('');
 	}
 
 	function ClearResultatTransaction(){
@@ -105,11 +75,7 @@ $(document).ready(function() {
 		$("#ADR_total_received").text('');
 		$("#ADR_total_sent").text('');
 		$("#ADR_final_balance").text('');
-		$("#ADR_tx0").text('');
-		$("#ADR_tx1").text('');
-		$("#ADR_tx2").text('');
-		$("#ADR_tx3").text('');
-		$("#ADR_tx4").text('');
+		$(".ADR_tx").text('');
 	}
 
 	function MiseEnFormeInfoBlock(data){
