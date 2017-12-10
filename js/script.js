@@ -291,5 +291,30 @@ $(document).ready(function() {
 		RechercherTransaction($("#BLOCK_tx9").text(),"https://api.blockcypher.com/v1/btc/main/txs/");
 	});
 
+	$("#ADR_tx0").click(function(){
+		console.log("okadr0");
+		CacherDivInfo();	
+		RechercherTransaction($("#ADR_tx0").text(),"https://api.blockcypher.com/v1/btc/main/txs/");
+	});
+	$("#ADR_tx1").click(function(){
+		console.log("okadr1");
+		CacherDivInfo();	
+		RechercherTransaction($("#ADR_tx1").text(),"https://api.blockcypher.com/v1/btc/main/txs/");
+	});
+	$("#ADR_tx2").click(function(){
+		console.log("okadr2");
+		CacherDivInfo();	
+		RechercherTransaction($("#ADR_tx2").text(),"https://api.blockcypher.com/v1/btc/main/txs/");
+	});
+	$("#ADR_tx3").click(function(){
+		console.log("okadr3");
+		CacherDivInfo();	
+		RechercherTransaction($("#ADR_tx3").text(),"https://api.blockcypher.com/v1/btc/main/txs/");
+	});
+	$("#ADR_tx4").click(function(){
+		console.log("okadr4");
+		CacherDivInfo();	
+		RechercherTransaction($("#ADR_tx4").text(),"https://api.blockcypher.com/v1/btc/main/txs/");
+	});
 
 });	
