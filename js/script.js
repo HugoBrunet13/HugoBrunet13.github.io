@@ -41,7 +41,7 @@ $(document).ready(function() {
 			},
 			error : function(xhr, status, err) {
 				$(divErreur).text('');
-				$(divErreur).append(err+" N/A");
+				$(divErreur).append(err);
 			}
 		});
 		return appelAjax;
@@ -61,7 +61,6 @@ $(document).ready(function() {
 			},
 			error : function(xhr, status, err) {
 				$(divErreur).text('');
-				$(divErreur).append(err+" N/A");
 			}
 		});
 		return appelAjax;
@@ -140,6 +139,7 @@ $(document).ready(function() {
 			$("#TX_adr0").append(data.addresses[0]);
 			$("#TX_adr1").append(data.addresses[1]);
 		} else{
+			$("#erreurTransac").append(data.error);
 			$("#tabletransac").hide();
 		}
 	}
