@@ -205,7 +205,7 @@ $(document).ready(function() {
 
 	$("#TX_blockheight").click(function(){
 		CacherDivInfo();
-		RechercherBlockParHash($("#TX_blockheight").text(),"https://bitcoin.mubiz.com/block_hash/");
+		RechercherBlock($("#TX_blockheight").text(),"https://bitcoin.mubiz.com/block/");
 	});
 	$("#BLOCK_previousBlockHash").click(function(){
 		CacherDivInfo();
