@@ -17,12 +17,7 @@ $(document).ready(function() {
  		$("#numTransac").val('');
  	 	var retourAjax = AppelWS(idTransaction,urlWS,"#erreurTransac");
 		var data = retourAjax.responseJSON;
-		console.log(data);
 		MiseEnFormeInfoTransaction(data);
- 	}
-
- 	function TEST(){
- 		console.log("yoooooo");
  	}
  	
 	function RechercherAdresse(adresse,urlWS){
@@ -110,7 +105,11 @@ $(document).ready(function() {
 		$("#ADR_total_received").text('');
 		$("#ADR_total_sent").text('');
 		$("#ADR_final_balance").text('');
-		$("#ADR_txs2").text('');
+		$("#ADR_tx0").text('');
+		$("#ADR_tx1").text('');
+		$("#ADR_tx2").text('');
+		$("#ADR_tx3").text('');
+		$("#ADR_tx4").text('');
 	}
 
 	function MiseEnFormeInfoBlock(data){
@@ -177,8 +176,12 @@ $(document).ready(function() {
 			$("#ADR_total_received").append(data.total_received);
 			$("#ADR_total_sent").append(data.total_sent);
 			$("#ADR_final_balance").append(data.final_balance);
-			for (var i in data.txrefs) {
-	  			$("#ADR_txs2").append("<div id=\"ADR_txs\">"+data.txrefs[i]["tx_hash"]+"</div>");
+			var cpt = 0;
+			for (var i = 0; i < 5; i++) {
+				$("#ADR_tx"+i).append(data.txrefs[i]["tx_hash"]);
+				cpt = cpt+1;
+				if (!ddata.txrefs[i+1])
+					break;
 			}
 		}
 	}
@@ -248,9 +251,8 @@ $(document).ready(function() {
 		RechercherTransaction($("#BLOCK_tx").text(),"https://api.blockcypher.com/v1/btc/main/txs/");
 	});
 	$("#BLOCK_tx2").click(function(){
-		console.log("okkkkkkkk");
-		CacherDivInfo();
-		console.log($("#BLOCK_tx2").text());
+		console.log("ok2");
+		CacherDivInfo();	
 		RechercherTransaction($("#BLOCK_tx2").text(),"https://api.blockcypher.com/v1/btc/main/txs/");
 	});
 	$("#BLOCK_tx3").click(function(){
