@@ -15,14 +15,14 @@ $(document).ready(function() {
 
  	function RechercherTransaction(idTransaction,urlWS){
  		$("#numTransac").val('');
- 	 	var retourAjax = AppelWS2(idTransaction,urlWS,"#erreurTransac");
+ 	 	var retourAjax = AppelWS(idTransaction,urlWS,"#erreurTransac");
 		var data = retourAjax.responseJSON;
 		MiseEnFormeInfoTransaction(data);
  	}
  	
 	function RechercherAdresse(adresse,urlWS){
  		$("#adresse").val('');
- 	 	var retourAjax = AppelWS2(adresse,urlWS,"#erreurAdresse");
+ 	 	var retourAjax = AppelWS(adresse,urlWS,"#erreurAdresse");
 		var data = retourAjax.responseJSON;
 		MiseEnFormeInfoAdresse(data);
 	}
