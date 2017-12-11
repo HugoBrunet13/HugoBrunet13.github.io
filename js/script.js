@@ -166,7 +166,7 @@ $(document).ready(function() {
 			for (var i = 0; i < 5; i++) {
 				$("#ADR_tx"+i).append(data.txrefs[i]["TX_hash"]);
 				cpt = cpt+1;
-				if (!data.txs[i+1])
+				if (!data.txrefs[i+1])
 					break;
 			}
 		}
