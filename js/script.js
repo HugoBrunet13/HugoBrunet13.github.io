@@ -164,7 +164,7 @@ $(document).ready(function() {
 			$("#ADR_final_balance").append(data.final_balance);
 			var cpt = 0;
 			for (var i = 0; i < 5; i++) {
-				$("#ADR_tx"+i).append(data.txrefs[i]["TX_hash"]);
+				$("#ADR_tx"+i).append(data.txrefs[i]["tx_hash"]);
 				cpt = cpt+1;
 				if (!data.txrefs[i+1])
 					break;
