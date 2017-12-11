@@ -272,13 +272,14 @@ $(document).ready(function() {
 
 	$("#TX_adr0").click(function(){
 		console.log("TX_adr0");
-		CacherDivInfo();	
-		RechercherTransaction($("#TX_adr0").text(),"https://api.blockcypher.com/v1/btc/main/addrs/");
+		CacherDivInfo();
+		RechercherAdresse($("#TX_adr0").val(),"https://api.blockcypher.com/v1/btc/main/addrs/");
 	});
 	$("#TX_adr1").click(function(){
 		console.log("TX_adr1");
 		CacherDivInfo();	
-		RechercherTransaction($("#TX_adr1").text(),"https://api.blockcypher.com/v1/btc/main/addrs/");
+		RechercherAdresse($("#TX_adr0").val(),"https://api.blockcypher.com/v1/btc/main/addrs/");
+	});
 	});
 
 
