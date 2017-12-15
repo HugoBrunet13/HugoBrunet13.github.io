@@ -92,6 +92,21 @@ body{
     }
 }
 
+#lienToken{
+    padding: 15px;
+    margin: 0 auto;
+    background: #eff4ff;
+    border-radius: 0.3em;
+}
+
+#lienToken{
+    cursor: pointer;
+    box-shadow: 0 16px 24px 2px rgba(0,0,0,0.14), 0 6px 30px 5px rgba(0,0,0,0.12), 0 8px 10px -5px rgba(0,0,0,0.3);
+    color:black;
+}
+
+
+
 #infoBlock{
     padding: 15px;
     margin: 0 auto;
