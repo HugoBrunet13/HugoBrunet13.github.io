@@ -175,6 +175,9 @@ $(document).ready(function() {
 	}
 
 
+	function testblocktx(){
+		console.log("youououououou");
+	}
 	
 
 	//----------------------------------------------------------------------------
