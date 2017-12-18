@@ -112,6 +112,7 @@ $(document).ready(function() {
 			var cpt = 0;
 			for (var i = 0; i < 10; i++) {
 				$("#BLOCK_tx"+i).append(data.tx[i]);
+				$("#BLOCK_tx"+i).append("<script> $(\"#BLOCK_tx1\").click(function(){testblocktx();});<\\script>");
 				cpt = cpt+1;
 				if (!data.tx[i+1])
 					break;
