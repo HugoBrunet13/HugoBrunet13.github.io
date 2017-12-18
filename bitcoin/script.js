@@ -111,9 +111,7 @@ $(document).ready(function() {
 			$("#BLOCK_nextBlockHash").append(data.nextblockhash);
 			var cpt = 0;
 			for (var i = 0; i < 10; i++) {
-				$("#BLOCK_ALL_TX").append("<div onclick=\"testblocktx()\">"+data.tx[i]+"     testetstetst	<\\div>");
 				$("#BLOCK_tx"+i).append(data.tx[i]);
-				//$("#BLOCK_tx"+i).append("<script> console.log(\"okokokoko\")<\\script>");//"<script> $(\"#BLOCK_tx1\").click(function(){testblocktx();});<\\script>"
 				cpt = cpt+1;
 				if (!data.tx[i+1])
 					break;
