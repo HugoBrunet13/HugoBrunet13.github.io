@@ -112,7 +112,7 @@ $(document).ready(function() {
 			//var cpt = 0;
 			console.log(data.tx.length);
 			for (var i = 0; i < data.tx.length; i++) {
-				$("#listOfTx").append(<a href=testblocktx()><div class="BLOCK_tx">data.tx[i]</div></a>);
+				$("#listOfTx").append("<a href="testblocktx()"><div class=\"BLOCK_tx\">"data.tx[i]"</div></a>");
 				// cpt = cpt+1;
 				// if (!data.tx[i+1])
 				// 	break;
