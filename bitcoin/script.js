@@ -110,7 +110,8 @@ $(document).ready(function() {
 			$("#BLOCK_previousBlockHash").append(data.previousblockhash);
 			$("#BLOCK_nextBlockHash").append(data.nextblockhash);
 			//var cpt = 0;
-			for (var i = 0; i < data.tx.length(); i++) {
+			console.log(data.tx.length);
+			for (var i = 0; i < data.tx.length; i++) {
 				$("#listOfTx").append("<a href="testblocktx()"><div class=\"BLOCK_tx\">"data.tx[i]"</div></a>");
 				// cpt = cpt+1;
 				// if (!data.tx[i+1])
