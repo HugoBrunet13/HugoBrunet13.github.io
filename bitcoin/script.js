@@ -109,12 +109,12 @@ $(document).ready(function() {
 			$("#BLOCK_version").append(data.version);
 			$("#BLOCK_previousBlockHash").append(data.previousblockhash);
 			$("#BLOCK_nextBlockHash").append(data.nextblockhash);
-			var cpt = 0;
-			for (var i = 0; i < 10; i++) {
-				$("#BLOCK_tx"+i).append(data.tx[i]);
-				cpt = cpt+1;
-				if (!data.tx[i+1])
-					break;
+			//var cpt = 0;
+			for (var i = 0; i < data.tx.length(); i++) {
+				$("#listOfTx").append("<a href="testblocktx()"><div class=\"BLOCK_tx\">"data.tx[i]"</div></a>");
+				// cpt = cpt+1;
+				// if (!data.tx[i+1])
+				// 	break;
 			}
 		} else{
 			$("#tableBlock").hide();
