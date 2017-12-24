@@ -23,7 +23,10 @@
 
 		<h1>Bitcoin</h1>
 
+
+
 		<div class="container">
+
 
             <form class="form-horizontal" role="form">
                 <div class="form-group">
@@ -44,7 +47,40 @@
                 </div>
                 <button type="button" class="btn btn-primary btn-block" id="boutonRecherche">Rechercher</button>
             </form> <!-- /form -->
-        
+
+	        <div id="infoTransaction">
+	            <div id="erreurTransac"></div>
+				<table class="table" id="tabletransac"> 
+					<tbody> 
+						<tr> 
+							<td>Hash of the transaction</td> 
+							<td><div id="TX_hash"></div></td> 
+						</tr>
+						<tr> 
+							<td>Size of the transaction (unit)</td> 
+							<td><div id="TX_size"></div></td> 
+						</tr>
+						<tr> 
+							<td>Height of the bloc containing the transaction</td> 
+							<td><div id="TX_blockheight"></div></td> 
+						</tr>
+						<tr> 
+							<td>Number of confirmations</td> 
+							<td><div id="TX_confirmations"></div></td> 
+						</tr>
+						<tr> 
+							<td>Adresses</td> 
+							<td>
+								<div id="TX_ALL_ADR">
+									<div class="TX_adr" id="TX_adr0"></div>
+									<div class="TX_adr" id="TX_adr1"></div>
+								</div>
+							</td> 
+						</tr>
+					</tbody> 
+				</table>
+	        </div>
+
         </div> <!-- ./container -->
 
 

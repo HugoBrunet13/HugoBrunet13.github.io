@@ -23,7 +23,10 @@
 
 		<h1>Bitcoin</h1>
 
+
+
 		<div class="container">
+
 
             <form class="form-horizontal" role="form">
                 <div class="form-group">
@@ -45,6 +48,66 @@
                 <button type="button" class="btn btn-primary btn-block" id="boutonRecherche">Rechercher</button>
             </form> <!-- /form -->
         
+
+	        <div id="infoBlock">               
+	            <div id="erreurblock"></div>
+				<table class="table" id="tableBlock"> 
+					<tbody> 
+						<tr> 
+							<td>Hash of the block</td> 
+							<td><div id="BLOCK_hash"></div></td> 
+						</tr>
+						<tr> 
+							<td>Number of confirmations</td> 
+							<td><div id="BLOCK_confirmation"></div></td> 
+						</tr>
+						<tr> 
+						<td>Size of the block</td> 
+							<td><div id="BLOCK_size"></div></td> 
+						</tr>
+						<tr> 
+							<td>Weight of the block (unit?)</td> 
+							<td><div id="BLOCK_weight"></div></td> 
+						</tr>
+						<tr> 
+							<td>Height of the block</td> 
+							<td><div id="BLOCK_height"></div></td> 
+						</tr>
+						<tr> 
+							<td>Version of the block</td> 
+							<td><div id="BLOCK_version"></div></td> 
+						</tr>
+						<tr> 
+							<td>Hash previous block</td> 
+							<td><div id="BLOCK_previousBlockHash"></div></td> 
+						</tr>
+						<tr> 
+							<td>Hash next block</td> 
+							<td><div id="BLOCK_nextBlockHash"></div></td> 
+						</tr>
+						<tr> 
+							<td>Transactions</td> 
+							<td>
+							<div id="BLOCK_All_TX">
+								<div id="listOfTx"></div>
+
+								<!-- <a href="javascript:testblocktx()">testest</a>
+								<div class="BLOCK_tx" id="BLOCK_tx0"></div>
+								<div class="BLOCK_tx" id="BLOCK_tx1"></div>
+								<div class="BLOCK_tx" id="BLOCK_tx2"></div>
+								<div class="BLOCK_tx" id="BLOCK_tx3"></div>
+								<div class="BLOCK_tx" id="BLOCK_tx4"></div>
+								<div class="BLOCK_tx" id="BLOCK_tx5"></div>
+								<div class="BLOCK_tx" id="BLOCK_tx6"></div>
+								<div class="BLOCK_tx" id="BLOCK_tx7"></div>
+								<div class="BLOCK_tx" id="BLOCK_tx8"></div>
+								<div class="BLOCK_tx" id="BLOCK_tx9"></div> -->
+							</div>
+							</td> 
+						</tr>
+					</tbody> 
+				</table>
+	        </div><!--infoBlock-->
         </div> <!-- ./container -->
 
 

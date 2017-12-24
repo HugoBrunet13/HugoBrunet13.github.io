@@ -182,20 +182,23 @@ $(document).ready(function() {
 	
 
 	//----------------------------------------------------------------------------
-	CacherDivInfo();	
+	//CacherDivInfo();	
 
 
 	$("#boutonRecherche").click(function(){
 		if ($("#numBlock").val()!=""){
-			CacherDivInfo();
+			//CacherDivInfo();
+			loadPage("block.html");
 			RechercherBlock($("#numBlock").val(),"https://bitcoin.mubiz.com/block/");
 		} 
 		if($("#numTransac").val()!=""){
-			CacherDivInfo();
+			//CacherDivInfo();
+			loadPage("transaction.html");
 			RechercherTransaction($("#numTransac").val(),"https://api.blockcypher.com/v1/btc/main/txs/");
 		} 
 		if ($("#adresse").val()!=""){
-			CacherDivInfo();
+			// CacherDivInfo();
+			loadPage("adresse.html");
 			RechercherAdresse($("#adresse").val(),"https://api.blockcypher.com/v1/btc/main/addrs/");
 		}
 	});
