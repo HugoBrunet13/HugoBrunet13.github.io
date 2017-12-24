@@ -188,18 +188,18 @@ $(document).ready(function() {
 	$("#boutonRecherche").click(function(){
 		if ($("#numBlock").val()!=""){
 			//CacherDivInfo();
-			window.open("block.html").
+			window.open("block.html");
 			//load("block.html");
 			// RechercherBlock($("#numBlock").val(),"https://bitcoin.mubiz.com/block/");
 		} 
 		if($("#numTransac").val()!=""){
 			//CacherDivInfo();
-			window.open("transaction.html").
+			window.open("transaction.html");
 			// loadPage("transaction.html")
 			// RechercherTransaction($("#numTransac").val(),"https://api.blockcypher.com/v1/btc/main/txs/");
 		} 
 		if ($("#adresse").val()!=""){
-			window.open("adresse.html").
+			window.open("adresse.html");
 			// CacherDivInfo();
 			// loadPage("adresse.html");
 			// RechercherAdresse($("#adresse").val(),"https://api.blockcypher.com/v1/btc/main/addrs/");
