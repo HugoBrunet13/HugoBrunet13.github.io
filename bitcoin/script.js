@@ -188,34 +188,37 @@ $(document).ready(function() {
 	$("#boutonRecherche").click(function(){
 		if ($("#numBlock").val()!=""){
 			//CacherDivInfo();
-			loadPage("block.html");
-			RechercherBlock($("#numBlock").val(),"https://bitcoin.mubiz.com/block/");
+			window.open("block.html").
+			//load("block.html");
+			// RechercherBlock($("#numBlock").val(),"https://bitcoin.mubiz.com/block/");
 		} 
 		if($("#numTransac").val()!=""){
 			//CacherDivInfo();
-			loadPage("transaction.html");
-			RechercherTransaction($("#numTransac").val(),"https://api.blockcypher.com/v1/btc/main/txs/");
+			window.open("transaction.html").
+			// loadPage("transaction.html")
+			// RechercherTransaction($("#numTransac").val(),"https://api.blockcypher.com/v1/btc/main/txs/");
 		} 
 		if ($("#adresse").val()!=""){
+			window.open("adresse.html").
 			// CacherDivInfo();
-			loadPage("adresse.html");
-			RechercherAdresse($("#adresse").val(),"https://api.blockcypher.com/v1/btc/main/addrs/");
+			// loadPage("adresse.html");
+			// RechercherAdresse($("#adresse").val(),"https://api.blockcypher.com/v1/btc/main/addrs/");
 		}
 	});
 
 
-	$("#TX_blockheight").click(function(){
-		CacherDivInfo();
-		RechercherBlock($("#TX_blockheight").text(),"https://bitcoin.mubiz.com/block/");
-	});
-	$("#BLOCK_previousBlockHash").click(function(){
-		CacherDivInfo();
-		RechercherBlockParHash($("#BLOCK_previousBlockHash").text(),"https://bitcoin.mubiz.com/block_hash/");
-	});
-	$("#BLOCK_nextBlockHash").click(function(){
-		CacherDivInfo();
-		RechercherBlockParHash($("#BLOCK_nextBlockHash").text(),"https://bitcoin.mubiz.com/block_hash/");
-	});
+	// $("#TX_blockheight").click(function(){
+	// 	CacherDivInfo();
+	// 	RechercherBlock($("#TX_blockheight").text(),"https://bitcoin.mubiz.com/block/");
+	// });
+	// $("#BLOCK_previousBlockHash").click(function(){
+	// 	CacherDivInfo();
+	// 	RechercherBlockParHash($("#BLOCK_previousBlockHash").text(),"https://bitcoin.mubiz.com/block_hash/");
+	// });
+	// $("#BLOCK_nextBlockHash").click(function(){
+	// 	CacherDivInfo();
+	// 	RechercherBlockParHash($("#BLOCK_nextBlockHash").text(),"https://bitcoin.mubiz.com/block_hash/");
+	// });
 
 
 
