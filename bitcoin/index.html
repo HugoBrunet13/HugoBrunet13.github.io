@@ -24,28 +24,39 @@
 		<h1>Bitcoin</h1>
 
 		<div class="container">
-
-            <form class="form-horizontal" role="form">
-                <div class="form-group">
-                  <!--   <label for="numBlock" class="col-sm-3 control-label">Numéro du block</label> -->
-                    <div class="col-sm-12">
-                        <input type="text" id="numBlock" placeholder="Valid bitcoin block id" class="form-control">
-                    </div>
-                </div>
-                <div class="form-group">
-                    <div class="col-sm-12">
-                        <input type="text" id="numTransac" placeholder="Valid bitcoin transaction id" class="form-control">
-                    </div>
-                </div>
-                <div class="form-group">
-                    <div class="col-sm-12">
-                        <input type="text" id="adresse" placeholder="Address" class="form-control">
-                    </div>
-                </div>
-                <button type="button" class="btn btn-primary btn-block" id="boutonRecherche">Rechercher</button>
-            </form> <!-- /form -->
-        
-        </div> <!-- ./container -->
+			<div class="row">
+		        <div class="col-sm-6 col-sm-offset-3">
+		            <div id="imaginary_container"> 
+		                <div class="input-group stylish-input-group">
+		                    <input type="text" class="form-control"  placeholder="Block ID" >
+		                    <span class="input-group-addon">
+		                        <button type="submit" onclick="test()">
+		                            <span class="glyphicon glyphicon-search"></span>
+		                        </button>  
+		                    </span>
+		                </div>
+		                <br>
+		                <div class="input-group stylish-input-group">
+		                    <input type="text" class="form-control"  placeholder="Transaction" >
+		                    <span class="input-group-addon">
+		                        <button type="submit">
+		                            <span class="glyphicon glyphicon-search"></span>
+		                        </button>  
+		                    </span>
+		                </div>
+		                <br>
+		                <div class="input-group stylish-input-group">
+		                    <input type="text" class="form-control"  placeholder="Adress" >
+		                    <span class="input-group-addon">
+		                        <button type="submit">
+		                            <span class="glyphicon glyphicon-search"></span>
+		                        </button>  
+		                    </span>
+		                </div>
+		            </div>
+		        </div>
+			</div>
+		</div>
 
 
 		<footer><h3><i class="fa fa-btc" aria-hidden="true"></i></h3></footer>
