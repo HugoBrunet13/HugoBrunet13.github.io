@@ -4,6 +4,9 @@ $(document).ready(function() {
 		var retourAjax = AppelWS(indexBLock,urlWS);
 		var data = retourAjax.responseJSON;
 		console.log(data);
+		console.log(indexBLock);
+		console.log(urlWS);
+
 		MiseEnFormeInfoBlock(data);
 	}
 
