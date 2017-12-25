@@ -9,6 +9,7 @@ $(document).ready(function() {
 	function RechercherBlock(indexBLock,urlWS){
 		$("#Form_idBlock").val('');
 		window.location.href="block.html";
+		console.log("HUgo");
 		var retourAjax = AppelWS(indexBLock,urlWS,"#erreurblock");
 		console.log("HUgo");
 		var data = retourAjax.responseJSON;
