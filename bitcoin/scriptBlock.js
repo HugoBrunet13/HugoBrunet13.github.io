@@ -73,8 +73,6 @@ $(document).ready(function() {
 	//CacherDivInfo();	
 
 
-
-
-	RechercherBlock($("#Form_idBlock").val(),"https://bitcoin.mubiz.com/block/");
+	RechercherBlock($("#Form_idBlock").text(),"https://bitcoin.mubiz.com/block/");
 
 });	
