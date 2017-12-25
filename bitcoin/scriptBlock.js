@@ -1,14 +1,14 @@
 $(document).ready(function() {
 	function RechercherBlock(indexBLock,urlWS){
 		$("#Form_idBlock").val('');
-		var retourAjax = AppelWS(indexBLock,urlWS,"#erreurblock");
+		var retourAjax = AppelWS(indexBLock,urlWS);
 		var data = retourAjax.responseJSON;
 		console.log(data);
 		MiseEnFormeInfoBlock(data);
 	}
 
 
-	function AppelWS(param,urlWS,divErreur){
+	function AppelWS(param,urlWS){
 		var appelAjax = $.ajax({
 			url : urlWS+param+"/",
 			dataType : "json",
@@ -19,10 +19,6 @@ $(document).ready(function() {
 			success : function(data) {
 				
 			},
-			error : function(xhr, status, err) {
-				$(divErreur).text('');
-				$(divErreur).append(err);
-			}
 		});
 		return appelAjax;
 	}
@@ -43,7 +39,7 @@ $(document).ready(function() {
 		$("#infoBlock").show();
 		$("#tableBlock").show();
 		$("#erreurblock").show();
-		if (data){
+		if (!data.error){
 			$("#erreurblock").hide();
 			ClearResultatBlock();
 			$("#BLOCK_hash").append(data.hash);
@@ -63,7 +59,7 @@ $(document).ready(function() {
 				// 	break;
 			}
 		} else{
-			$("#tableBlock").hide();
+			$("#errorBlock").append(data.error).show()	;
 		}
 	}
 
