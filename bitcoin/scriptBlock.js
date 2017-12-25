@@ -75,6 +75,6 @@ $(document).ready(function() {
 
 
 
-
+	RechercherBlock(("#Form_idBlock").val(),"https://bitcoin.mubiz.com/block/");
 
 });	
