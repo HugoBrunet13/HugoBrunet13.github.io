@@ -1,7 +1,14 @@
 $(document).ready(function() {
+
+	$("#BoutonRechercheBLock").click(function(){
+		if($("#Form_idBlock").val()!=""){
+			RechercherBlock($("#Form_idBlock").val(),"https://bitcoin.mubiz.com/block/");
+		}
+	});
+
 	function RechercherBlock(indexBLock,urlWS){
-		$("#numBlock").val('');
-		window.open("block.html");
+		$("#Form_idBlock").val('');
+		window.location.href="block.html";
 		var retourAjax = AppelWS(indexBLock,urlWS,"#erreurblock");
 		var data = retourAjax.responseJSON;
 		MiseEnFormeInfoBlock(data);
@@ -292,6 +299,20 @@ $(document).ready(function() {
 	// 	RechercherTransaction($("#ADR_tx4").text(),"https://api.blockcypher.com/v1/btc/main/txs/");
 	// });
 
+
+
+
+
+	$("#BoutonRechercheTx").click(function(){
+		if($("#Form_tx").val()!=""){
+			window.location.href="transaction.html";
+		}
+	});
+	$("#BoutonRechercheAddress").click(function(){
+		if($("#Form_address").val()!=""){
+			window.location.href="adresse.html";
+		}
+	});
 
 
 
