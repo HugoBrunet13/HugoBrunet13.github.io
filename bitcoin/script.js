@@ -10,6 +10,7 @@ $(document).ready(function() {
 		$("#Form_idBlock").val('');
 		window.location.href="block.html";
 		var retourAjax = AppelWS(indexBLock,urlWS,"#erreurblock");
+		console.log("HUgo");
 		var data = retourAjax.responseJSON;
 		MiseEnFormeInfoBlock(data);
 	}
