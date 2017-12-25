@@ -1,10 +1,9 @@
 $(document).ready(function() {
 	function RechercherBlock(indexBLock,urlWS){
 		$("#Form_idBlock").val('');
-		console.log("HUgo");
 		var retourAjax = AppelWS(indexBLock,urlWS,"#erreurblock");
-		console.log("HUgo");
 		var data = retourAjax.responseJSON;
+		console.log(data);
 		MiseEnFormeInfoBlock(data);
 	}
 
