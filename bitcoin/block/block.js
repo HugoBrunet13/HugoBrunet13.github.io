@@ -40,8 +40,8 @@ $(document).ready(function() {
 				$("#listOfTx").append('<a href="transaction.html?hashTx='+data.tx[i]+'">'+data.tx[i]+'</a><br>');
 			}
 		} else{
-			document.getElementById('erreurBlock').style.visibility = 'visible';
-			$("#erreurBlock").append("Error: block not find");
+			document.getElementById('errorBlock').style.visibility = 'visible';
+			$("#errorBlock").append("Error: block not find");
 		}
 	}
 

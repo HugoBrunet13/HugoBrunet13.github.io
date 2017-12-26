@@ -26,8 +26,8 @@ $(document).ready(function() {
 		 		$("#listAdr").append('<a href="address.html?address='+data.addresses[i]+'">'+data.addresses[i]+'</a><br>');
 			 }
 		} else{
-			document.getElementById('erreurTransac').style.visibility = 'visible';
-			$("#erreurTransac").append(data.error);
+			document.getElementById('errorTransac').style.visibility = 'visible';
+			$("#errorTransac").append(data.error);
 		}
 	}
 
