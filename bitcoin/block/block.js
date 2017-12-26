@@ -41,7 +41,7 @@ $(document).ready(function() {
 			}
 		} else{
 			document.getElementById('errorBlock').style.visibility = 'visible';
-			$("#errorBlock").append("Error: block not find");
+			$("#errorBlock").append("Error: block not found");
 		}
 	}
 
