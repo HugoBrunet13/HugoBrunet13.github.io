@@ -167,3 +167,12 @@ body{
 form-control {
     border:0px;
 }
+
+
+#tableBlock{
+    visibility: hidden;
+}
+
+#erreurBlock{
+    visibility: hidden;
+}
