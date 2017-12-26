@@ -1,7 +1,7 @@
 $(document).ready(function() {
 
 	function RechercherAdresse(adresse,urlWS){
- 		$("#adresse").val('');
+ 		$("#address").val('');
  	 	var retourAjax = AppelWS2(adresse,urlWS);
 		var data = retourAjax.responseJSON;
 		MiseEnFormeInfoAdresse(data);
