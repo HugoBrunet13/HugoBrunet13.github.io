@@ -3,8 +3,6 @@ $(document).ready(function() {
 		$("#Form_idBlock").val('');
 		var retourAjax = AppelWS(indexBLock,urlWS);
 		var data = retourAjax.responseJSON;
-		console.log(data);
-		
 		MiseEnFormeInfoBlock(data);
 	}
 
@@ -49,15 +47,10 @@ $(document).ready(function() {
 			$("#BLOCK_weight").append(data.weight);
 			$("#BLOCK_height").append(data.height);
 			$("#BLOCK_version").append(data.version);
-			$("#BLOCK_previousBlockHash").append(data.previousblockhash);
-			$("#BLOCK_nextBlockHash").append(data.nextblockhash);
-			//var cpt = 0;
-			console.log(data.tx.length); 
+			$("#BLOCK_previousBlockHash").append('<a href="block.html?idBlock="'+data.previousblockhash+'">'+data.previousblockhash+'</a>');
+			$("#BLOCK_nextBlockHash")append('<a href="block.html?idBlock="'+data.nextblockhash+'">'+data.nextblockhash+'</a>');
 			for (var i = 0; i < data.tx.length; i++) {
 				$("#listOfTx").append('<a href="javascript:testblocktx()"><div class="BLOCK_tx">'+data.tx[i]+'</div></a>');
-				// cpt = cpt+1;
-				// if (!data.tx[i+1])
-				// 	break;
 			}
 		} else{
 			$("#errorBlock").append(data.error).show()	;
@@ -67,7 +60,6 @@ $(document).ready(function() {
 	//----------------------------------------------------------------------------
 	//CacherDivInfo();	
 
-	console.log("id:::::: "+GetURLParameter('idBlock'));
 
 	RechercherBlock(GetURLParameter('idBlock'),"https://bitcoin.mubiz.com/block/");
 
