@@ -3,17 +3,6 @@ body{
     text-align: center;
 }
 
-#numBlock{
-    background:#eff4ff;
-}
-
-#numTransac{
-    background: #ECECEC;
-}
-
-#adresse{
-    background:#BDC3C7 ;
-}
 
 .index-content a:hover{
     color:black;
@@ -71,10 +60,6 @@ body{
     background:transparent;
 }
 
-#boutonRecherche{
-    background:#212F3D;
-    border: 1px solid #ccc;
-}
 
 
 *[role="form"] {
@@ -93,22 +78,10 @@ body{
     }
 }
 
-#lienToken{
-    padding: 10px;
-    margin: 0 auto;
-    background: #eff4ff;
-    border-radius: 0.3em;
-}
-
-#lienToken{
-    cursor: pointer;
-    box-shadow: 0 16px 24px 2px rgba(0,0,0,0.14), 0 6px 30px 5px rgba(0,0,0,0.12), 0 8px 10px -5px rgba(0,0,0,0.3);
-    color:black;
-}
 
 
 
-#infoBlock{
+/*#infoBlock{
     padding: 15px;
     margin: 0 auto;
     background: #eff4ff;
@@ -126,41 +99,7 @@ body{
     background:  #BDC3C7  ;
     border-radius: 0.3em;
 }
-
-/*#TX_blockheight:hover{
-    cursor: pointer;
-    box-shadow: 0 16px 24px 2px rgba(0,0,0,0.14), 0 6px 30px 5px rgba(0,0,0,0.12), 0 8px 10px -5px rgba(0,0,0,0.3);
-    color:black;
-}
-#BLOCK_nextBlockHash:hover{
-    cursor: pointer;
-    box-shadow: 0 16px 24px 2px rgba(0,0,0,0.14), 0 6px 30px 5px rgba(0,0,0,0.12), 0 8px 10px -5px rgba(0,0,0,0.3);
-    color:black;
-}
-        
-#BLOCK_previousBlockHash:hover{
-    cursor: pointer;
-    box-shadow: 0 16px 24px 2px rgba(0,0,0,0.14), 0 6px 30px 5px rgba(0,0,0,0.12), 0 8px 10px -5px rgba(0,0,0,0.3);
-    color:black;
-}*/
-
-.ADR_tx:hover{
-    cursor: pointer;
-    box-shadow: 0 16px 24px 2px rgba(0,0,0,0.14), 0 6px 30px 5px rgba(0,0,0,0.12), 0 8px 10px -5px rgba(0,0,0,0.3);
-    color:black;
-}
-
-.BLOCK_tx:hover{
-    cursor: pointer;
-    box-shadow: 0 16px 24px 2px rgba(0,0,0,0.14), 0 6px 30px 5px rgba(0,0,0,0.12), 0 8px 10px -5px rgba(0,0,0,0.3);
-    color:black;
-}
-
-.TX_adr:hover{
-    cursor: pointer;
-    box-shadow: 0 16px 24px 2px rgba(0,0,0,0.14), 0 6px 30px 5px rgba(0,0,0,0.12), 0 8px 10px -5px rgba(0,0,0,0.3);
-    color:black;
-}
+*/
 
 /*-------------------------------------------------*/
 
@@ -183,19 +122,9 @@ form-control {
     visibility: hidden;
 }
 
-
 #tableBlock{
     visibility: hidden;
-/*    padding: 15px;
-    margin: 0 auto;
-    background: #eff4ff;
-    border-radius: 0.3em;*/
 }
-
 #erroBlock{
     visibility: hidden;
-/*    padding: 15px;
-    margin: 0 auto;
-    background: #eff4ff;
-    border-radius: 0.3em;*/
 }
