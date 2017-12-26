@@ -25,7 +25,6 @@ $(document).ready(function() {
 	}
 
 	function MiseEnFormeInfoBlock(data){
-		console.log("ok00");
 		if (data){
 			document.getElementById('tableBlock').style.visibility = 'visible';
 			ClearResultatBlock();

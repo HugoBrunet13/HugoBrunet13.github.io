@@ -16,12 +16,19 @@ $(document).ready(function() {
 
 	function MiseEnFormeInfoTransaction(data){
 		if (!data.error && data){
+			console.log(data);
 			document.getElementById('tableTransac').style.visibility = 'visible';
 			ClearResultatTransaction();
 			$("#TX_hash").append(data.hash);
 			$("#TX_size").append(data.size);
-			$("#TX_blockheight").append(data.block_height);
+			$("#TX_blockheight").append('<a href="block.html?hashBlock='+data.block_height+'">'+data.block_height+'</a>'); //todo lien vers block
 			$("#TX_confirmations").append(data.confirmations);
+
+
+
+			// for (var i = 0; i < data.tx.length; i++) {
+			// 	$("#listOfTx").append('<a href="javascript:testblocktx()"><div class="BLOCK_tx">'+data.tx[i]+'</div></a>');
+			// }
 			//Todo list Adresse
 		} else{
 			document.getElementById('erreurTransac').style.visibility = 'visible';
