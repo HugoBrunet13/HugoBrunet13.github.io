@@ -176,6 +176,13 @@ form-control {
     visibility: hidden;
 }
 
+#tableAddress{
+    visibility: hidden;
+}
+#errorAddress{
+    visibility: hidden;
+}
+
 
 #tableBlock{
     visibility: hidden;

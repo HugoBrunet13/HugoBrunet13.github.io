@@ -16,7 +16,6 @@ $(document).ready(function() {
 
 	function MiseEnFormeInfoTransaction(data){
 		if (!data.error && data){
-			console.log(data);
 			document.getElementById('tableTransac').style.visibility = 'visible';
 			ClearResultatTransaction();
 			$("#TX_hash").append(data.hash);

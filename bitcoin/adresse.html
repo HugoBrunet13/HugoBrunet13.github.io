@@ -62,46 +62,37 @@
 			</div>	
         	<br>
        
-	        <div id="infoAdresse">
-	        	<div id="erreurAdresse"></div>
-				<table class="table" id="tableadresse"> 
-					<tbody> 
-						<tr> 
-							<td>Address</td> 
-							<td><div id="ADR_adresse"></div></td> 
-						</tr>
-						<tr> 
-							<td>Number of transactions</td> 
-							<td><div id="ADR_n_tx"></div></td> 
-						</tr>
-						<tr> 
-							<td>Total received</td> 
-							<td><div id="ADR_total_received"></div></td> 
-						</tr>
-						<tr> 
-							<td>Total send</td> 
-							<td><div id="ADR_total_sent"></div></td> 
-						</tr>
-						<tr> 
-							<td>Final balance</td> 
-							<td><div id="ADR_final_balance"></div></td> 
-						</tr>
-						<tr> 
-						<td>Some transactions</td>
-							<td>
-							<div id="ADR_All_TX">
-								<div class="ADR_tx" id="ADR_tx0"></div>
-								<div class="ADR_tx" id="ADR_tx1"></div>
-								<div class="ADR_tx" id="ADR_tx2"></div>
-								<div class="ADR_tx" id="ADR_tx3"></div>
-								<div class="ADR_tx" id="ADR_tx4"></div>
-							</div>
-							</td> 
-						</tr>
-						
-					</tbody> 
-				</table>
-	        </div>
+
+        	<div id="errorAddress"></div>
+			<table class="table" id="tableAddress"> 
+				<tbody> 
+					<tr> 
+						<td>Address</td> 
+						<td><div id="ADR_address"></div></td> 
+					</tr>
+					<tr> 
+						<td>Number of transactions</td> 
+						<td><div id="ADR_n_tx"></div></td> 
+					</tr>
+					<tr> 
+						<td>Total received</td> 
+						<td><div id="ADR_total_received"></div></td> 
+					</tr>
+					<tr> 
+						<td>Total send</td> 
+						<td><div id="ADR_total_sent"></div></td> 
+					</tr>
+					<tr> 
+						<td>Final balance</td> 
+						<td><div id="ADR_final_balance"></div></td> 
+					</tr>
+					<tr> 
+					<td>Transactions</td>
+						<td><div id="listTx"></div></td> 
+					</tr>					
+				</tbody> 
+			</table>
+	      
 
 
         </div> <!-- ./container -->
@@ -113,5 +104,6 @@
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 		<script src="script.js"></script>
+		<script src="address.js"></script>
 	</body>
 </html>
