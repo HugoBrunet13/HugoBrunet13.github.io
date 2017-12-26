@@ -3,6 +3,7 @@ $(document).ready(function() {
 		$("#Form_idBlock").val('');
 		var retourAjax = AppelWS(indexBLock,urlWS);
 		var data = retourAjax.responseJSON;
+		console.log(data);
 		MiseEnFormeInfoBlock(data);
 	}
 
@@ -71,6 +72,5 @@ $(document).ready(function() {
 	else if(GetURLParameter('hashBlock')){
 		RechercherBlockParHash(GetURLParameter('hashBlock'),"https://bitcoin.mubiz.com/block_hash/");
 	}
-	
 
 });	
