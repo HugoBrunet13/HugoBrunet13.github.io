@@ -48,17 +48,17 @@ $(document).ready(function() {
 
 	$("#BoutonRechercheBLock").click(function(){
 		if($("#idBlock").val()!=""){
-			window.location.href="block.html"+"?idBlock="+ $("#idBlock").val();
+			window.location.href="/bitcoin/block/block.html"+"?idBlock="+ $("#idBlock").val();
 		}
 	});
 	$("#BoutonRechercheTx").click(function(){
 		if($("#hashTx").val()!=""){
-			window.location.href="transaction.html"+"?hashTx="+ $("#hashTx").val();
+			window.location.href="/bitcoin/transaction/transaction.html"+"?hashTx="+ $("#hashTx").val();
 		}
 	});
 	$("#BoutonRechercheAddress").click(function(){
 		if($("#address").val()!=""){
-			window.location.href="address.html"+"?address="+ $("#address").val();
+			window.location.href="/bitcoin/address/address.html"+"?address="+ $("#address").val();
 		}
 	});
 });	
