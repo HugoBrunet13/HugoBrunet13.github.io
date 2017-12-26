@@ -37,7 +37,7 @@ $(document).ready(function() {
 			$("#BLOCK_previousBlockHash").append('<a href="block.html?hashBlock='+data.previousblockhash+'">'+data.previousblockhash+'</a>');
 			$("#BLOCK_nextBlockHash").append('<a href="block.html?hashBlock='+data.nextblockhash+'">'+data.nextblockhash+'</a>');
 			for (var i = 0; i < data.tx.length; i++) {
-				$("#listOfTx").append('<a href="transaction.html?hashTx='+data.tx[i]+'">'+data.tx[i]+'</a><br>');
+				$("#listOfTx").append('<a href="../transaction/transaction.html?hashTx='+data.tx[i]+'">'+data.tx[i]+'</a><br>');
 			}
 		} else{
 			document.getElementById('errorBlock').style.visibility = 'visible';

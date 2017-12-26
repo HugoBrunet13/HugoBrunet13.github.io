@@ -27,7 +27,7 @@ $(document).ready(function() {
 			$("#ADR_total_sent").append(data.total_sent);
 			$("#ADR_final_balance").append(data.final_balance);
 			for (var i = 0; i < data.txrefs.length; i++) {
-		 		$("#listTx").append('<a href="transaction.html?hashTx='+data.txrefs[i]["tx_hash"]+'">'+data.txrefs[i]["tx_hash"]+'</a><br>');
+		 		$("#listTx").append('<a href="../transaction/transaction.html?hashTx='+data.txrefs[i]["tx_hash"]+'">'+data.txrefs[i]["tx_hash"]+'</a><br>');
 			}
 		} else{
 			document.getElementById('errorAddress').style.visibility = 'visible';
