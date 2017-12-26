@@ -31,11 +31,10 @@ $(document).ready(function() {
 		 		$("#listTx").append('<a href="transaction.html?hashTx='+data.txrefs[i]["tx_hash"]+'">'+data.txrefs[i]["tx_hash"]+'</a><br>');
 			}
 		} else{
-				document.getElementById('errorAddress').style.visibility = 'visible';
-				$("#errorAddress").append(data.error);
-			}
-
+			document.getElementById('errorAddress').style.visibility = 'visible';
+			$("#errorAddress").append(data.error);
 		}
+
 	}
 
 	if (GetURLParameter('address')){
