@@ -11,6 +11,11 @@ function GetURLParameter(sParam) {
 	}
 }
 
+function CacherDivInfo(){
+		$("#infoBlock").hide();
+		$("#infoTransaction").hide();
+		$("#infoAdresse").hide();		
+	}
 
 $(document).ready(function() {
 
