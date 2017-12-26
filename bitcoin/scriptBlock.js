@@ -43,9 +43,8 @@ $(document).ready(function() {
 
 	function MiseEnFormeInfoBlock(data){
 		console.log(typeof data);
-		$("#infoBlock").show();
 		if (data){
-			$("#erreurBlock").hide();
+			$("#tableBlock").show();
 			ClearResultatBlock();
 			$("#BLOCK_hash").append(data.hash);
 			$("#BLOCK_confirmation").append(data.confirmations);
@@ -59,8 +58,8 @@ $(document).ready(function() {
 				$("#listOfTx").append('<a href="javascript:testblocktx()"><div class="BLOCK_tx">'+data.tx[i]+'</div></a>');
 			}
 		} else{
-			$("#tableBlock").hide();
-			$("#erreurBlock").append("Error: block not find");
+			//$("#tableBlock").hide();
+			$("#erreurBlock").append("Error: block not find").show();
 		}
 	}
 
