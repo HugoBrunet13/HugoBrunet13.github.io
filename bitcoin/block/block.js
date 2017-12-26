@@ -1,15 +1,15 @@
 $(document).ready(function() {
-	function RechercherBlock(indexBLock,urlWS){
+	function BlockIdResearch(indexBLock,urlWS){
 		$("#idBlock").val('');
 		var retourAjax = AppelWS(indexBLock,urlWS);
 		var data = retourAjax.responseJSON;
 		MiseEnFormeInfoBlock(data);
 	}
 
-	function RechercherBlockParHash(hashBlock,urlWS){
+	function BlockHashResearch(hashBlock,urlWS){
 		var retourAjax = AppelWS(hashBlock,urlWS);
 		var data = retourAjax.responseJSON;
-		RechercherBlock(data.height,"https://bitcoin.mubiz.com/block/");
+		BlockIdResearch(data.height,"https://bitcoin.mubiz.com/block/");
 	}
 
 	function ClearResultatBlock(){
@@ -48,10 +48,10 @@ $(document).ready(function() {
 	//----------------------------------------------------------------------------
 
 	if (GetURLParameter('idBlock')){
-		RechercherBlock(GetURLParameter('idBlock'),"https://bitcoin.mubiz.com/block/");
+		BlockIdResearch(GetURLParameter('idBlock'),"https://bitcoin.mubiz.com/block/");
 	}
 	else if(GetURLParameter('hashBlock')){
-		RechercherBlockParHash(GetURLParameter('hashBlock'),"https://bitcoin.mubiz.com/block_hash/");
+		BlockHashResearch(GetURLParameter('hashBlock'),"https://bitcoin.mubiz.com/block_hash/");
 	}
 
 });	

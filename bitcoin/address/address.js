@@ -1,10 +1,10 @@
 $(document).ready(function() {
 
-	function RechercherAdresse(adresse,urlWS){
+	function AddressResearch(adresse,urlWS){
  		$("#address").val('');
  	 	var retourAjax = AppelWS2(adresse,urlWS);
 		var data = retourAjax.responseJSON;
-		MiseEnFormeInfoAdresse(data);
+		InfoAddressFormatting(data);
 	}
 
 	function ClearResultatAdresse(){
@@ -16,8 +16,7 @@ $(document).ready(function() {
 		$("#listTx").text('');
 	}
 
-
-	function MiseEnFormeInfoAdresse(data){
+	function InfoAddressFormatting(data){
 		if(!data.error && data){
 			document.getElementById('tableAddress').style.visibility = 'visible';
 			ClearResultatAdresse();
@@ -38,6 +37,6 @@ $(document).ready(function() {
 	}
 
 	if (GetURLParameter('address')){
-		RechercherAdresse(GetURLParameter('address'),"https://api.blockcypher.com/v1/btc/main/addrs/");
+		AddressResearch(GetURLParameter('address'),"https://api.blockcypher.com/v1/btc/main/addrs/");
 	}
 });	

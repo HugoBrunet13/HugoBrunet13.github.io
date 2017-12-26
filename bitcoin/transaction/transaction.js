@@ -1,5 +1,5 @@
 $(document).ready(function() {
-	function RechercherTransaction(idTransaction,urlWS){
+	function TransactionResearch(idTransaction,urlWS){
  		$("#hashTx").val('');
  	 	var retourAjax = AppelWS2(idTransaction,urlWS);
 		var data = retourAjax.responseJSON;
@@ -23,7 +23,7 @@ $(document).ready(function() {
 			$("#TX_blockheight").append('<a href="block.html?idBlock='+data.block_height+'">'+data.block_height+'</a>'); //todo lien vers block
 			$("#TX_confirmations").append(data.confirmations);
 			for (var i = 0; i < data.addresses.length; i++) {
-		 		$("#listAdr").append('<a href="adresse.html?address='+data.addresses[i]+'">'+data.addresses[i]+'</a><br>');
+		 		$("#listAdr").append('<a href="address.html?address='+data.addresses[i]+'">'+data.addresses[i]+'</a><br>');
 			 }
 		} else{
 			document.getElementById('erreurTransac').style.visibility = 'visible';
@@ -32,7 +32,7 @@ $(document).ready(function() {
 	}
 
 	if (GetURLParameter('hashTx')){
-		RechercherTransaction(GetURLParameter('hashTx'),"https://api.blockcypher.com/v1/btc/main/txs/");
+		TransactionResearch(GetURLParameter('hashTx'),"https://api.blockcypher.com/v1/btc/main/txs/");
 	}
 
 });	
