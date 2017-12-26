@@ -21,14 +21,12 @@ $(document).ready(function() {
 			ClearResultatTransaction();
 			$("#TX_hash").append(data.hash);
 			$("#TX_size").append(data.size);
-			$("#TX_blockheight").append('<a href="block.html?hashBlock='+data.block_height+'">'+data.block_height+'</a>'); //todo lien vers block
+			$("#TX_blockheight").append('<a href="block.html?idBlock='+data.block_height+'">'+data.block_height+'</a>'); //todo lien vers block
 			$("#TX_confirmations").append(data.confirmations);
 
-
-
-			// for (var i = 0; i < data.tx.length; i++) {
-			// 	$("#listOfTx").append('<a href="javascript:testblocktx()"><div class="BLOCK_tx">'+data.tx[i]+'</div></a>');
-			// }
+			for (var i = 0; i < data.addresses.length; i++) {
+		 		$("#listAdr").append('<a href="adresse.html?address='+data.addresses[i]+'">'+data.addresses[i]+'</a>');
+			 }
 			//Todo list Adresse
 		} else{
 			document.getElementById('erreurTransac').style.visibility = 'visible';
