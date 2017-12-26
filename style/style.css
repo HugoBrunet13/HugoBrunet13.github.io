@@ -169,31 +169,19 @@ form-control {
 }
 
 
-#block{
-    background: #eff4ff;
-}
-
-#transaction{
-    background: #ECECEC;
-}
-
-#address{
-    background:  #BDC3C7  ;
-}
-
 
 #tableBlock{
     visibility: hidden;
-    padding: 15px;
+/*    padding: 15px;
     margin: 0 auto;
     background: #eff4ff;
-    border-radius: 0.3em;
+    border-radius: 0.3em;*/
 }
 
 #erreurBlock{
     visibility: hidden;
-    padding: 15px;
+/*    padding: 15px;
     margin: 0 auto;
     background: #eff4ff;
-    border-radius: 0.3em;
+    border-radius: 0.3em;*/
 }
