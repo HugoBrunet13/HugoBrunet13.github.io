@@ -4,9 +4,7 @@ $(document).ready(function() {
 		var retourAjax = AppelWS(indexBLock,urlWS);
 		var data = retourAjax.responseJSON;
 		console.log(data);
-		console.log(indexBLock);
-		console.log(urlWS);
-
+		
 		MiseEnFormeInfoBlock(data);
 	}
 
@@ -66,11 +64,11 @@ $(document).ready(function() {
 		}
 	}
 
-
 	//----------------------------------------------------------------------------
 	//CacherDivInfo();	
 
+	console.log("id:::::: "+GetURLParameter('idBlock'));
 
-	RechercherBlock($("#Form_idBlock").text(),"https://bitcoin.mubiz.com/block/");
+	RechercherBlock(GetURLParameter('idBlock'),"https://bitcoin.mubiz.com/block/");
 
 });	

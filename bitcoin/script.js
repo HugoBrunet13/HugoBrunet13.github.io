@@ -1,9 +1,24 @@
 $(document).ready(function() {
 
+
+	function GetURLParameter(sParam)
+	{
+		var sPageURL = window.location.search.substring(1);
+		var sURLVariables = sPageURL.split('&');
+		for (var i = 0; i < sURLVariables.length; i++)
+		{
+			var sParameterName = sURLVariables[i].split('=');
+			if (sParameterName[0] == sParam)
+			{
+				return sParameterName[1];
+			}
+		}
+	}​
+
+
 	$("#BoutonRechercheBLock").click(function(){
-		if($("#Form_idBlock").val()!=""){
-			console.log("print->"+$("#Form_idBlock").text());
-			window.location.href="block.html"+"?idBlock="+ $("#Form_idBlock").val();
+		if($("#idBlock").val()!=""){
+			window.location.href="block.html"+"?idBlock="+ $("#idBlock").val();
 		}
 	});
 
@@ -307,13 +322,13 @@ $(document).ready(function() {
 
 
 	$("#BoutonRechercheTx").click(function(){
-		if($("#Form_tx").val()!=""){
-			window.location.href="transaction.html";
+		if($("#hashTx").val()!=""){
+			window.location.href="transaction.html"+"?hashTx="+ $("#hashTx").val();
 		}
 	});
 	$("#BoutonRechercheAddress").click(function(){
-		if($("#Form_address").val()!=""){
-			window.location.href="adresse.html";
+		if($("#address").val()!=""){
+			window.location.href="adresse.html"+"?address="+ $("#address").val();
 		}
 	});
 
