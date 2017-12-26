@@ -2,7 +2,7 @@ $(document).ready(function() {
 
 	$("#BoutonRechercheBLock").click(function(){
 		if($("#Form_idBlock").val()!=""){
-			window.location.href="block.html"+"?id="+$("#Form_idBlock").text();
+			window.location.href="block.html"+"?idBlock="+ $(".Form_idBlock").text();
 		}
 	});
 
