@@ -60,9 +60,9 @@ $(document).ready(function() {
 				$("#listOfTx").append('<a href="javascript:testblocktx()"><div class="BLOCK_tx">'+data.tx[i]+'</div></a>');
 			}
 		} else if (typeof data === 'undefined'){
-			$("#errorBlock").append("Error: block not find").show()
+			$("#errorBlock").append("Error: block not find").show();
 		}else{
-			$("#errorBlock").append(data.error).show()	;
+			$("#errorBlock").append(data.error).show();
 		}
 	}
 
