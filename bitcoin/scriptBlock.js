@@ -41,6 +41,7 @@ $(document).ready(function() {
 	}
 
 	function MiseEnFormeInfoBlock(data){
+		console.log(data);
 		$("#infoBlock").show();
 		$("#tableBlock").show();
 		$("#erreurblock").show();
