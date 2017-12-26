@@ -30,7 +30,7 @@ $(document).ready(function() {
 			for (var i = 0; i < data.txrefs.length; i++) {
 		 		$("#listTx").append('<a href="transaction.html?hashTx='+data.txrefs[i]["tx_hash"]+'">'+data.txrefs[i]["tx_hash"]+'</a><br>');
 			}
-			else{
+		} else{
 				document.getElementById('errorAddress').style.visibility = 'visible';
 				$("#errorAddress").append(data.error);
 			}
