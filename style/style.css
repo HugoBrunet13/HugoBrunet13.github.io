@@ -169,6 +169,13 @@ form-control {
 }
 
 
+#tableTransac{
+    visibility: hidden;
+}
+#erreurTransac{
+    visibility: hidden;
+}
+
 
 #tableBlock{
     visibility: hidden;

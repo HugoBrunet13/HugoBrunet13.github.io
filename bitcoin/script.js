@@ -11,6 +11,39 @@ function GetURLParameter(sParam) {
 	}
 }
 
+function AppelWS(param,urlWS){
+	var appelAjax = $.ajax({
+		url : urlWS+param+"/",
+		dataType : "json",
+		contentType : "application/json; charset=utf-8",
+		type : "GET",
+		timeout:"5000",
+		async : false,
+		success : function(data) {
+			
+		},
+	});
+	return appelAjax;
+}
+
+function AppelWS2(param,urlWS,divErreur){
+	var appelAjax = $.ajax({
+		url : urlWS+param,
+		dataType : "json",
+		contentType : "application/json; charset=utf-8",
+		type : "GET",
+		timeout:"5000",
+		async : false,
+		success : function(data) {
+			
+		},
+		error : function(xhr, status, err) {
+			$(divErreur).text('');
+		}
+	});
+	return appelAjax;
+}
+
 
 $(document).ready(function() {
 

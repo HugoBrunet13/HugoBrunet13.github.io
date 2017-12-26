@@ -1,6 +1,6 @@
 $(document).ready(function() {
 	function RechercherBlock(indexBLock,urlWS){
-		$("#Form_idBlock").val('');
+		$("#idBlock").val('');
 		var retourAjax = AppelWS(indexBLock,urlWS);
 		var data = retourAjax.responseJSON;
 		MiseEnFormeInfoBlock(data);
@@ -12,22 +12,6 @@ $(document).ready(function() {
 		RechercherBlock(data.height,"https://bitcoin.mubiz.com/block/");
 	}
 
-
-	function AppelWS(param,urlWS){
-		var appelAjax = $.ajax({
-			url : urlWS+param+"/",
-			dataType : "json",
-			contentType : "application/json; charset=utf-8",
-			type : "GET",
-			timeout:"5000",
-			async : false,
-			success : function(data) {
-				
-			},
-		});
-		return appelAjax;
-	}
-
 	function ClearResultatBlock(){
 		$("#BLOCK_hash").text('');
 		$("#BLOCK_confirmation").text('');
@@ -37,6 +21,7 @@ $(document).ready(function() {
 		$("#BLOCK_version").text('');
 		$("#BLOCK_previousBlockHash").text('');
 		$("#BLOCK_nextBlockHash").text('');
+		$("#listOfTx").text('');
 	}
 
 	function MiseEnFormeInfoBlock(data){
