@@ -43,10 +43,8 @@ $(document).ready(function() {
 	function MiseEnFormeInfoBlock(data){
 		console.log(typeof data);
 		$("#infoBlock").show();
-		$("#tableBlock").show();
-		$("#erreurblock").show();
 		if (data){
-			$("#erreurblock").hide();
+			$("#tableBlock").show();
 			ClearResultatBlock();
 			$("#BLOCK_hash").append(data.hash);
 			$("#BLOCK_confirmation").append(data.confirmations);
@@ -60,7 +58,8 @@ $(document).ready(function() {
 				$("#listOfTx").append('<a href="javascript:testblocktx()"><div class="BLOCK_tx">'+data.tx[i]+'</div></a>');
 			}
 		} else{
-			$("#errorBlock").append("Error: block not find").show();
+			$("#erreurblock").show();
+			$("#errorBlock").append("Error: block not find");
 		}
 	}
 
