@@ -48,7 +48,7 @@ $(document).ready(function() {
 			$("#BLOCK_height").append(data.height);
 			$("#BLOCK_version").append(data.version);
 			$("#BLOCK_previousBlockHash").append('<a href="block.html?idBlock="'+data.previousblockhash+'">'+data.previousblockhash+'</a>');
-			$("#BLOCK_nextBlockHash")append('<a href="block.html?idBlock="'+data.nextblockhash+'">'+data.nextblockhash+'</a>');
+			$("#BLOCK_nextBlockHash").append('<a href="block.html?idBlock="'+data.nextblockhash+'">'+data.nextblockhash+'</a>');
 			for (var i = 0; i < data.tx.length; i++) {
 				$("#listOfTx").append('<a href="javascript:testblocktx()"><div class="BLOCK_tx">'+data.tx[i]+'</div></a>');
 			}
