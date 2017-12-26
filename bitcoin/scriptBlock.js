@@ -40,24 +40,25 @@ $(document).ready(function() {
 	}
 
 	function MiseEnFormeInfoBlock(data){
-		if (data){
-			$("#tableBlock").show();
-			ClearResultatBlock();
-			$("#BLOCK_hash").append(data.hash);
-			$("#BLOCK_confirmation").append(data.confirmations);
-			$("#BLOCK_size").append(data.size);
-			$("#BLOCK_weight").append(data.weight);
-			$("#BLOCK_height").append(data.height);
-			$("#BLOCK_version").append(data.version);
-			$("#BLOCK_previousBlockHash").append('<a href="block.html?hashBlock='+data.previousblockhash+'">'+data.previousblockhash+'</a>');
-			$("#BLOCK_nextBlockHash").append('<a href="block.html?hashBlock='+data.nextblockhash+'">'+data.nextblockhash+'</a>');
-			for (var i = 0; i < data.tx.length; i++) {
-				$("#listOfTx").append('<a href="javascript:testblocktx()"><div class="BLOCK_tx">'+data.tx[i]+'</div></a>');
-			}
-		} else{
-			$("#erreurBlock").show();
-			$("#erreurBlock").append("Error: block not find");
-		}
+		console.log("ok00");
+		// if (data){
+		// 	$("#tableBlock").show();
+		// 	ClearResultatBlock();
+		// 	$("#BLOCK_hash").append(data.hash);
+		// 	$("#BLOCK_confirmation").append(data.confirmations);
+		// 	$("#BLOCK_size").append(data.size);
+		// 	$("#BLOCK_weight").append(data.weight);
+		// 	$("#BLOCK_height").append(data.height);
+		// 	$("#BLOCK_version").append(data.version);
+		// 	$("#BLOCK_previousBlockHash").append('<a href="block.html?hashBlock='+data.previousblockhash+'">'+data.previousblockhash+'</a>');
+		// 	$("#BLOCK_nextBlockHash").append('<a href="block.html?hashBlock='+data.nextblockhash+'">'+data.nextblockhash+'</a>');
+		// 	for (var i = 0; i < data.tx.length; i++) {
+		// 		$("#listOfTx").append('<a href="javascript:testblocktx()"><div class="BLOCK_tx">'+data.tx[i]+'</div></a>');
+		// 	}
+		// } else{
+		// 	$("#erreurBlock").show();
+		// 	$("#erreurBlock").append("Error: block not find");
+		// }
 	}
 
 	//----------------------------------------------------------------------------
