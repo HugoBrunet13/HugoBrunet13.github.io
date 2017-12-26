@@ -8,7 +8,7 @@ $(document).ready(function() {
 	}
 
 	function RechercherBlockParHash(hashBlock,urlWS){
-		CacherDivInfo
+		CacherDivInfo();
 		var retourAjax = AppelWS(hashBlock,urlWS);
 		var data = retourAjax.responseJSON;
 		RechercherBlock(data.height,"https://bitcoin.mubiz.com/block/");
@@ -39,30 +39,29 @@ $(document).ready(function() {
 		$("#BLOCK_version").text('');
 		$("#BLOCK_previousBlockHash").text('');
 		$("#BLOCK_nextBlockHash").text('');
-		$(".BLOCK_tx").text('');
 	}
 
 	function MiseEnFormeInfoBlock(data){
 		console.log(typeof data);
 		$("#infoBlock").show();
-		if (data){
-			$("#tableBlock").show();
-			ClearResultatBlock();
-			$("#BLOCK_hash").append(data.hash);
-			$("#BLOCK_confirmation").append(data.confirmations);
-			$("#BLOCK_size").append(data.size);
-			$("#BLOCK_weight").append(data.weight);
-			$("#BLOCK_height").append(data.height);
-			$("#BLOCK_version").append(data.version);
-			$("#BLOCK_previousBlockHash").append('<a href="block.html?hashBlock='+data.previousblockhash+'">'+data.previousblockhash+'</a>');
-			$("#BLOCK_nextBlockHash").append('<a href="block.html?hashBlock='+data.nextblockhash+'">'+data.nextblockhash+'</a>');
-			for (var i = 0; i < data.tx.length; i++) {
-				$("#listOfTx").append('<a href="javascript:testblocktx()"><div class="BLOCK_tx">'+data.tx[i]+'</div></a>');
-			}
-		} else{
-			$("#erreurblock").show();
-			$("#errorBlock").append("Error: block not find");
-		}
+		// if (data){
+		// 	$("#tableBlock").show();
+		// 	ClearResultatBlock();
+		// 	$("#BLOCK_hash").append(data.hash);
+		// 	$("#BLOCK_confirmation").append(data.confirmations);
+		// 	$("#BLOCK_size").append(data.size);
+		// 	$("#BLOCK_weight").append(data.weight);
+		// 	$("#BLOCK_height").append(data.height);
+		// 	$("#BLOCK_version").append(data.version);
+		// 	$("#BLOCK_previousBlockHash").append('<a href="block.html?hashBlock='+data.previousblockhash+'">'+data.previousblockhash+'</a>');
+		// 	$("#BLOCK_nextBlockHash").append('<a href="block.html?hashBlock='+data.nextblockhash+'">'+data.nextblockhash+'</a>');
+		// 	for (var i = 0; i < data.tx.length; i++) {
+		// 		$("#listOfTx").append('<a href="javascript:testblocktx()"><div class="BLOCK_tx">'+data.tx[i]+'</div></a>');
+		// 	}
+		// } else{
+		// 	$("#erreurblock").show();
+		// 	$("#errorBlock").append("Error: block not find");
+		// }
 	}
 
 	//----------------------------------------------------------------------------
