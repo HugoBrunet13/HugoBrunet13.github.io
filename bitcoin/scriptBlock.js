@@ -45,7 +45,7 @@ $(document).ready(function() {
 		$("#infoBlock").show();
 		$("#tableBlock").show();
 		$("#erreurblock").show();
-		if (!data.error){
+		if (data){
 			$("#erreurblock").hide();
 			ClearResultatBlock();
 			$("#BLOCK_hash").append(data.hash);
