@@ -61,6 +61,7 @@ $(document).ready(function() {
 			}
 		} 
 		if (typeof data == 'undefined'){
+			console.log("dans le if");
 			$("#errorBlock").append("Error: block not find").show();
 		} else{
 			$("#errorBlock").append(data.error).show();
