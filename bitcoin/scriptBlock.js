@@ -1,14 +1,12 @@
 $(document).ready(function() {
 	function RechercherBlock(indexBLock,urlWS){
 		$("#Form_idBlock").val('');
-		CacherDivInfo();
 		var retourAjax = AppelWS(indexBLock,urlWS);
 		var data = retourAjax.responseJSON;
 		MiseEnFormeInfoBlock(data);
 	}
 
 	function RechercherBlockParHash(hashBlock,urlWS){
-		CacherDivInfo();
 		var retourAjax = AppelWS(hashBlock,urlWS);
 		var data = retourAjax.responseJSON;
 		RechercherBlock(data.height,"https://bitcoin.mubiz.com/block/");
@@ -42,7 +40,6 @@ $(document).ready(function() {
 	}
 
 	function MiseEnFormeInfoBlock(data){
-		console.log(typeof data);
 		if (data){
 			$("#tableBlock").show();
 			ClearResultatBlock();
@@ -58,8 +55,8 @@ $(document).ready(function() {
 				$("#listOfTx").append('<a href="javascript:testblocktx()"><div class="BLOCK_tx">'+data.tx[i]+'</div></a>');
 			}
 		} else{
-			//$("#tableBlock").hide();
-			$("#erreurBlock").append("Error: block not find").show();
+			$("#erreurBlock").show();
+			$("#erreurBlock").append("Error: block not find");
 		}
 	}
 
