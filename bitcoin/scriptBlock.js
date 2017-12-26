@@ -3,7 +3,6 @@ $(document).ready(function() {
 		$("#Form_idBlock").val('');
 		var retourAjax = AppelWS(indexBLock,urlWS);
 		var data = retourAjax.responseJSON;
-		console.log(data);
 		MiseEnFormeInfoBlock(data);
 	}
 
@@ -59,7 +58,9 @@ $(document).ready(function() {
 			for (var i = 0; i < data.tx.length; i++) {
 				$("#listOfTx").append('<a href="javascript:testblocktx()"><div class="BLOCK_tx">'+data.tx[i]+'</div></a>');
 			}
-		} else{
+		} else if (!data){
+			$("#errorBlock").append("Error: block not find").show()
+		}else{
 			$("#errorBlock").append(data.error).show()	;
 		}
 	}
