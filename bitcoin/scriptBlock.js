@@ -4,6 +4,7 @@ $(document).ready(function() {
 		var retourAjax = AppelWS(indexBLock,urlWS);
 		var data = retourAjax.responseJSON;
 		console.log(data);
+		console.log("yo");
 		console.log(indexBLock);
 		console.log(urlWS);
 
