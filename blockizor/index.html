@@ -50,10 +50,10 @@
                   <div class="intro-text">
                       <h1 class="name">Blockizor</h1>
                       <hr class="star-light">
-                      <span class="skills">Connectez vous à MetaMask</span>
+                      <span class="skills">Please connect to MetaMask</span>
                   </div>
                   <div>
-                    <button type="button" class="btn btn-primary btn-lg buttonspace" v-on:click="display_upload">Enregistrer un texte !</button>
+                    <button type="button" class="btn btn-primary btn-lg buttonspace" v-on:click="display_upload">Send a file!</button>
                   </div>
               </div>
           </div>
@@ -66,7 +66,7 @@
          <div class="col-lg-12 text-center">
            <div v-if="web3Missing">
              <p>
-                Merci d'installer l'extension <a href="https://metamask.io/" target="_blank">Metamask</a> pour Google Chrome ou Firefox pour utiliser Blockizor
+                Please install the extension  <a href="https://metamask.io/" target="_blank">Metamask</a> for Google Chrome or Firefox to use Blockizor
              </p>
            </div>
            <div v-if="!web3Missing">
@@ -78,27 +78,27 @@
                <strong>Drop Zone ...</strong>
              </div>
              <div v-if="hash"> 
-               <h2>Détails du fichier</h2>
+               <h2>File details</h2>
                <hr class="star-light">
                <table class="table">
-                 <tr><th>Nom</th><td>{{ name }}<span v-if="name.length==32">...</span></td></tr>
-                 <tr><th>Type de fichier</th><td>{{ type }}<span v-if="name.length==32">...</span></td></tr>
-                 <tr><th>Taille</th><td>{{ size }} bytes</td></tr>
-                 <tr><th>Dernière modification</th><td>{{ lastModified }}</td></tr>
+                 <tr><th>Name</th><td>{{ name }}<span v-if="name.length==32">...</span></td></tr>
+                 <tr><th>Type</th><td>{{ type }}<span v-if="name.length==32">...</span></td></tr>
+                 <tr><th>Size</th><td>{{ size }} bytes</td></tr>
+                 <tr><th>Last modified</th><td>{{ lastModified }}</td></tr>
                  <tr><th>Hash</th><td>{{ hash }}</td></tr>
                </table>
              </div>
              <div class="buttonspace" v-if="!animate">
-               <button type="button" class="btn btn-primary btn-lg" :disabled="!hash || !name || hash.length!=66" v-on:click="create_contract">Enregistrer</button>
-               <button type="button" class="btn btn-danger btn-lg"  v-on:click="cancel_upload">Annuler</button>
+               <button type="button" class="btn btn-primary btn-lg" :disabled="!hash || !name || hash.length!=66" v-on:click="create_contract">Register</button>
+               <button type="button" class="btn btn-danger btn-lg"  v-on:click="cancel_upload">Cancel</button>
              </div>
            </div>
            <div v-if="animate">
              <p v-if="!error"><img src="img/animation.gif" /></p>
-             <p v-if="!error"> Merci d'attendre que le contrat soit stocké dans la blockchain Ethereum. 
-               Cela peut prendre jusqu'à une minute. Lorsque cela sera fait, vous serez redigié vers la page de confirmation.</p> 
+             <p v-if="!error"> Please wait until the contract is stored in the Ethereum blockchain. 
+               This can take up to a minute. When this is done, you will be redirected to the confirmation page.</p> 
              <p><a v-bind:href="etherscanLink" target="_new">Transaction Blockchain : {{ tx }}</a></p>
-             <p v-if="error">Une erreur est survenue. L'erreur est : "{{ error }}".</p>
+             <p v-if="error">An error has occurred. The error is: "{{ error }}".</p>
            </div>
          </div>
        </div>
