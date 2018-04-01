@@ -20,7 +20,7 @@ $(document).ready(function() {
 		$("#BLOCK_size").text('');
 		$("#BLOCK_total").text('');
 		$("#BLOCK_height").text('');
-		$("#BLOCK_previousBlockHash").text('');
+		// $("#BLOCK_previousBlockHash").text('');
 		$("#listOfTx").text('');
 	}
 
@@ -35,7 +35,7 @@ $(document).ready(function() {
 			$("#BLOCK_size").append(data.size);
 			$("#BLOCK_total").append(data.total);
 			$("#BLOCK_height").append(data.height);
-			$("#BLOCK_previousBlockHash").append('<a href="block.html?hashBlock='+data.prev_block+'">'+data.prev_block+'</a>');
+			// $("#BLOCK_previousBlockHash").append('<a href="block.html?hashBlock='+data.prev_block+'">'+data.prev_block+'</a>');
 			for (var i = 0; i < data.txids.length; i++) {
 				$("#listOfTx").append('<a href="../transaction/transaction.html?hashTx='+data.txids[i]+'">'+data.txids[i]+'</a><br>');
 			}

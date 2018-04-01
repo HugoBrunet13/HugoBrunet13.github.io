@@ -21,8 +21,8 @@ $(document).ready(function() {
 			document.getElementById('tableTransac').style.visibility = 'visible';
 			ClearResultatTransaction();
 			$("#TX_hash").append(data.hash);
-			$("#TX_size").append(data.confirmed);
-			$("#TX_size").append(data.received);
+			$("#TX_confirmed").append(data.confirmed);
+			$("#TX_received").append(data.received);
 			$("#TX_size").append(data.size);
 			$("#TX_blockheight").append('<a href="../block/block.html?idBlock='+data.block_height+'">'+data.block_height+'</a>'); //todo lien vers block
 			$("#TX_confirmations").append(data.confirmations);
