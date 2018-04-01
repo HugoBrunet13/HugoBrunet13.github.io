@@ -25,7 +25,7 @@ $(document).ready(function() {
 	}
 
 	function MiseEnFormeInfoBlock(data){
-		if (data){
+		if(!data.error && data){
 			document.getElementById('tableBlock').style.visibility = 'visible';
 			ClearResultatBlock();
 			$("#BLOCK_hash").append(data.hash);
