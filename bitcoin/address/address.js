@@ -2,7 +2,7 @@ $(document).ready(function() {
 
 	function AddressResearch(adresse,urlWS){
  		$("#address").val('');
- 	 	var retourAjax = AppelWS2(adresse,urlWS);
+ 	 	var retourAjax = AppelWS(adresse,urlWS);
 		var data = retourAjax.responseJSON;
 		InfoAddressFormatting(data);
 	}

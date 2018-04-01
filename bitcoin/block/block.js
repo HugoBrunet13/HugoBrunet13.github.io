@@ -1,13 +1,13 @@
 $(document).ready(function() {
 	function BlockIdResearch(indexBLock,urlWS){
 		$("#idBlock").val('');
-		var retourAjax = AppelWS2(indexBLock,urlWS);
+		var retourAjax = AppelWS(indexBLock,urlWS);
 		var data = retourAjax.responseJSON;
 		MiseEnFormeInfoBlock(data);
 	}
 
 	function BlockHashResearch(hashBlock,urlWS){
-		var retourAjax = AppelWS2(hashBlock,urlWS);
+		var retourAjax = AppelWS(hashBlock,urlWS);
 		var data = retourAjax.responseJSON;
 		BlockIdResearch(data.height,"https://api.blockcypher.com/v1/btc/main/blocks/");
 	}
@@ -37,7 +37,7 @@ $(document).ready(function() {
 			$("#BLOCK_height").append(data.height);
 			$("#BLOCK_previousBlockHash").append('<a href="block.html?hashBlock='+data.prev_block+'">'+data.prev_block+'</a>');
 			for (var i = 0; i < data.tx.length; i++) {
-				$("#listOfTx").append('<a href="../transaction/transaction.html?hashTx='+data.tx[i]+'">'+data.tx[i]+'</a><br>');
+				$("#listOfTx").append('<a href="../transaction/transaction.html?hashTx='+data.txids[i]+'">'+data.txids[i]+'</a><br>');
 			}
 		} else{
 			document.getElementById('errorBlock').style.visibility = 'visible';

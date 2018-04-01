@@ -1,7 +1,7 @@
 $(document).ready(function() {
 	function TransactionResearch(idTransaction,urlWS){
  		$("#hashTx").val('');
- 	 	var retourAjax = AppelWS2(idTransaction,urlWS);
+ 	 	var retourAjax = AppelWS(idTransaction,urlWS);
 		var data = retourAjax.responseJSON;
 		MiseEnFormeInfoTransaction(data);
  	}
@@ -9,6 +9,8 @@ $(document).ready(function() {
  	function ClearResultatTransaction(){
 		$("#TX_hash").text('');
 		$("#TX_size").text('');
+		$("#TX_confirmed").text('');
+		$("#TX_received").text('');
 		$("#TX_blockheight").text('');
 		$("#TX_confirmations").text('');
 		$("#listAdr").text('');
@@ -19,6 +21,8 @@ $(document).ready(function() {
 			document.getElementById('tableTransac').style.visibility = 'visible';
 			ClearResultatTransaction();
 			$("#TX_hash").append(data.hash);
+			$("#TX_size").append(data.confirmed);
+			$("#TX_size").append(data.received);
 			$("#TX_size").append(data.size);
 			$("#TX_blockheight").append('<a href="../block/block.html?idBlock='+data.block_height+'">'+data.block_height+'</a>'); //todo lien vers block
 			$("#TX_confirmations").append(data.confirmations);
