@@ -36,7 +36,7 @@ $(document).ready(function() {
 			$("#BLOCK_total").append(data.total);
 			$("#BLOCK_height").append(data.height);
 			$("#BLOCK_previousBlockHash").append('<a href="block.html?hashBlock='+data.prev_block+'">'+data.prev_block+'</a>');
-			for (var i = 0; i < data.tx.length; i++) {
+			for (var i = 0; i < data.txids.length; i++) {
 				$("#listOfTx").append('<a href="../transaction/transaction.html?hashTx='+data.txids[i]+'">'+data.txids[i]+'</a><br>');
 			}
 		} else{
